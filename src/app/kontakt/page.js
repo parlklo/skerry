@@ -16,8 +16,7 @@ const TeamPage = () => {
       bio: `
 Jag läser just nu en master i ekonomi och finans vid HEC Paris och har en kandidatexamen i finans från University of Illinois at Chicago, där jag under fyra år kombinerade mina studier med att tävla som NCAA Division 1-tennisspelare.
 
-Min bakgrund är inom finans, med särskilt fokus på tech M&A. Jag har arbetat med både förvärv och försäljningar av mjukvaru- och IT-tjänstebolag – ofta i gränslandet mellan strategi och transaktion. Erfarenheten sträcker sig från entreprenörsledda tillväxtbolag till större industrikoncerner. Tidigare har jag även arbetat inom equity capital markets, där jag stöttat bolag i kapitalresningar och börsförberedelser.
-
+Min bakgrund är inom finans, med fokus på tech M&A, där jag samarbetat med bolag inom mjukvara, automation och IT-tjänster. Erfarenheten sträcker sig från entreprenörsledda tillväxtbolag till större industrikoncerner. Tidigare har jag även arbetat inom equity capital markets, där jag stöttat bolag i kapitalresningar och börsförberedelser. Parallellt har jag byggt upp teknisk kompetens inom dataanalys och programmering genom både studier och egna projekt.
 Under 2025 startade jag också en blogg om tech och AI, som ett sätt att hjälpa mig tänka klart och förstå det jag själv tycker är intressant.      `,
       email: "kasperparlklo@skerry.ai",
       phone: "+46 736 79 32 00",
