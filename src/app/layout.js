@@ -19,9 +19,9 @@ const notoSans = Noto_Sans({
 export default function RootLayout({ children }) {
   return (
     <html lang="sv" className={notoSans.variable}>
-      <body className="antialiased bg-gradient-to-br from-blue-700 to-blue-950 text-white flex flex-col min-h-screen">
+      <body className="antialiased text-white min-h-screen flex flex-col">
         <Navbar />
-        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+        <div className="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {children}
         </div>
         <Footer />

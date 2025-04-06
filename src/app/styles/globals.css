@@ -4,7 +4,8 @@
 
 @layer base {
   :root {
-    --background: 20 45 97;
+    --background-dark: 15 20 40; /* Darker blue-grey (mix of grey and #080E26) */
+    --background-light: 90 120 170; /* Lighter blue-grey, more blue-tinted */
     --foreground: 255 255 255;
   }
 
@@ -13,13 +14,11 @@
   }
 
   body {
-    background-color: rgb(var(--background));
+    background: linear-gradient(to bottom right, rgb(var(--background-dark)), rgb(var(--background-light)));
     color: rgb(var(--foreground));
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     line-height: 1.6;
   }
-
-
 
   button {
     font-weight: 500;
