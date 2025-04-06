@@ -36,7 +36,7 @@ const AboutPage = () => {
               För företag som börjar bygga kompetens och vana i att arbeta med AI idag, lägger grunden för ett arbetssätt som snart kommer att vara standard. Att skjuta upp adoptionen innebär inte att man undviker förändring – det innebär att man senare tvingas göra det under sämre villkor, i ett klimat där konkurrenter redan vant sig vid en ny hastighet. Skillnaderna börjar redan visa sig – mellan de som aktivt integrerar AI i sitt arbete och de som inte gör det – och resultatet är tydligt: AI skapar utrymme för mer kvalificerat och kreativt arbete. 
               </p>
               <p>
-              Samtidigt håller intelligens på att bli en handelsvara. När det som tidigare definierade kunskapsarbete i allt högre grad kan automatiseras, blir det avgörande att tänka länge och hårt på hur man fortfarande kan differentiera sig genom sitt mänskliga bidrag - och ett sådant bidrag handlar om förmågan att förstå och använda AI. För det är den reflektionen om att förstå vad som inte låter sig replikeras – och hur den omsätts i arbetet – som kommer att skilja bolag åt.              </p>
+              Samtidigt håller intelligens på att bli en handelsvara. När det som tidigare definierade kunskapsarbete i allt högre grad kan automatiseras, blir det avgörande att tänka länge och hårt på hur man fortfarande kan differentiera sig genom sitt mänskliga bidrag - och ett sådant bidrag handlar om förmågan att förstå och använda AI. För det är den reflektionen om att förstå vad som inte låter sig replikeras – och hur den omsätts i arbetet – som kommer att skilja bolag åt i den här nya AI-eran.              </p>
             </div>
           </section>
 
