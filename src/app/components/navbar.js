@@ -1,3 +1,5 @@
+"use client";
+
 // src/app/components/navbar.js
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,26 +8,20 @@ import { useState } from 'react';
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
   return (
     <nav className="bg-transparent pt-6 pb-2 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex justify-between items-center">
-          <div>
-            {/* Logo/Brand */}
-            <Link href="/" className="flex items-center">
-              <Image 
-                src="/skerry logo.png" 
-                alt="Skerry Logo"
-                width={80}
-                height={30}
-                className="h-auto brightness-0 invert"
-              />
-            </Link>
-          </div>
+          {/* Logo/Brand */}
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/skerry logo.png" 
+              alt="Skerry Logo"
+              width={80}
+              height={30}
+              className="h-auto brightness-0 invert"
+            />
+          </Link>
           
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-12">
@@ -40,37 +36,48 @@ const Navbar = () => {
             </Link>
           </div>
           
-          {/* Mobile menu button */}
+          {/* Mobile menu button - simplified with SVG hamburger icon */}
           <button 
-            className="md:hidden text-white border border-white/30 px-3 py-1 rounded hover:bg-white/10 transition-colors"
-            onClick={toggleMobileMenu}
+            className="md:hidden text-white p-2 focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            Menu
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </button>
         </div>
 
-        {/* Mobile menu dropdown */}
+        {/* Mobile menu - simplified fixed overlay */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 top-full mt-2 bg-gray-900/95 backdrop-blur-sm rounded-md shadow-lg z-50 border border-white/10 mx-4">
-            <div className="flex flex-col py-3">
+          <div className="md:hidden fixed inset-0 z-50 bg-gray-900/95 flex flex-col items-center justify-center">
+            <button 
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 text-white"
+              aria-label="Close menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="flex flex-col items-center space-y-8 text-xl">
               <Link 
                 href="/" 
-                className="text-white hover:bg-white/10 px-4 py-2"
+                className="text-white hover:text-blue-200 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Hem
               </Link>
               <Link 
                 href="/om-skerry" 
-                className="text-white hover:bg-white/10 px-4 py-2"
+                className="text-white hover:text-blue-200 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Om Skerry
               </Link>
               <Link 
                 href="/kontakt" 
-                className="text-white hover:bg-white/10 px-4 py-2"
+                className="text-white hover:text-blue-200 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontakt

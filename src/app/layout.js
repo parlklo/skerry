@@ -7,8 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 
 export const metadata = {
-  title: "AI Produktivitetslösningar",
-  description: "Vi hjälper ert företag att bli mer produktivt genom AI",
+  title: "Skerry",
+  description: "Skerry hjälper organisationer att förstå AIs möjligheter genom ett skifte i både arbetssätt och tankesätt",
 };
 
 const notoSans = Noto_Sans({
