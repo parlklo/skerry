@@ -3,6 +3,8 @@ import "./styles/globals.css";
 import { Noto_Sans } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import { Analytics } from "@vercel/analytics/react";
+
 
 export const metadata = {
   title: "AI Produktivitetslösningar",
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <Footer />
+        <Analytics /> {/* <-- Add this line here */}
       </body>
     </html>
   );
