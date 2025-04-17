@@ -14,8 +14,7 @@ const HomePage = () => {
             Artificiell intelligens omformar världen i en takt och omfattning som saknar motstycke bland tidigare teknologiska skiften. Förändringen påverkar allt – från hur länder styrs till hur företag byggs – och allt sker i ett rasande tempo.
           </p>
           <p>
-            Med det sagt så är det i denna nya verklighet lättare än någonsin att bli föråldrad. Traditionella arbetssätt har tappat sin relevans, samtidigt som förändringens höga tempo gör det svårt att navigera, skapa överblick och förstå utvecklingens riktning.
-          </p>
+          Med det sagt så är det i denna nya verklighet lättare än någonsin att bli föråldrad. Traditionella arbetssätt har tappat sin relevans, samtidigt som utvecklingen är fragmenterad, abstrakt och svår att överblicka – särskilt för dem som inte redan är tekniskt förankrade.          </p>
           <p className="text-base md:text-lg">
           Det är i den här kontexten Skerry verkar och hjälper er att navigera det som just nu förändrar spelreglerna för både produktivitet och problemlösning. För att använda AI handlar inte bara om att införa nya verktyg – det kräver också ett nytt sätt att tänka och förhålla sig på. Det innebär att omvärdera arbetsprocesser, hur information struktureras och hur man fördelar tid mest effektivt.
           </p>
