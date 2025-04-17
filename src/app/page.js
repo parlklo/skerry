@@ -11,15 +11,17 @@ const HomePage = () => {
         
         <div className="space-y-6 text-base md:text-lg">
           <p>
-            Artificiell intelligens omformar världen i en takt och omfattning som saknar motstycke bland tidigare teknologiska skiften. Förändringen påverkar allt – från hur länder styrs till hur företag byggs – och allt sker i ett rasande tempo.
+            Artificiell intelligens omformar världen i en takt och omfattning som saknar motstycke bland tidigare teknologiska skiften. Förändringen innebär att arbete, beslutsfattande och värdeskapande behöver omvärderas – och har introducerat helt nya standarder för produktivitet.
+
+
           </p>
           <p>
-          Med det sagt så är det i denna nya verklighet lättare än någonsin att bli föråldrad. Traditionella arbetssätt har tappat sin relevans, samtidigt som utvecklingen är fragmenterad, abstrakt och svår att överblicka – särskilt för dem som inte redan är tekniskt förankrade.          </p>
+          Samtidigt sker transformationen i ett rasande tempo, och det är lättare än någonsin att bli föråldrad. Traditionella arbetssätt har tappat sin relevans, samtidigt som utvecklingen är fragmenterad, abstrakt och svår att överblicka – särskilt för dem som inte redan är tekniskt förankrade.          </p>
           <p className="text-base md:text-lg">
-          Det är i den här kontexten Skerry verkar och hjälper er att navigera det som just nu förändrar spelreglerna för både produktivitet och problemlösning. För att använda AI handlar inte bara om att införa nya verktyg – det kräver också ett nytt sätt att tänka och förhålla sig på. Det innebär att omvärdera arbetsprocesser, hur information struktureras och hur man fördelar tid mest effektivt.
+          Det är i den här kontexten Skerry verkar och hjälper er att använda AI på ett modernt och praktiskt sätt. För att använda AI handlar inte bara om att införa nya verktyg – det kräver också ett nytt sätt att tänka och förhålla sig på. Det innebär att omvärdera arbetsprocesser, hur information struktureras och hur man fördelar tid mest effektivt.
           </p>
           <p>
-          Det handlar med andra ord om ett perspektivskifte – en mental omställning som utmanar invanda roller, hur värde skapas och prioriteringar sätts.
+          Det handlar med andra ord om ett perspektivskifte – en mental omställning som utmanar etablerade roller, invanda beteenden och grundläggande föreställningar om hur värde skapas.
           </p>
         </div>
       </header>
