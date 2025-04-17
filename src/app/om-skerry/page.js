@@ -32,7 +32,8 @@ const AboutPage = () => {
             <h3 className="text-xl font-medium mb-3">Hur Skerry arbetar och tänker</h3>
             <div className="space-y-3 text-base">
               <p>
-              Skerry föreläser, utbildar och erbjuder rådgivning inom AI – med målet att göra AI till en del av hur företag tänker och arbetar. Fokus ligger på att bygga upp tankemodeller för hur AI kan användas beroende på vilken information eller uppgift som ska hanteras, och genom att lära sig vilka AI-verktyg som passar för olika behov.
+              Skerry föreläser, utbildar och erbjuder rådgivning inom AI – med målet att göra AI till en del av hur företag tänker och arbetar. 
+              Fokus ligger på att bygga upp tankemodeller för hur AI kan användas beroende på vilken information eller uppgift som ska hanteras, och genom att lära sig vilka AI-verktyg som passar för olika behov.
               </p>
               <p>
               För företag som börjar bygga kompetens och vana i att arbeta med AI idag, lägger grunden för ett arbetssätt som snart kommer att vara standard. Att skjuta upp adoptionen innebär inte att man undviker förändring – det innebär att man senare tvingas göra det under sämre villkor, i ett klimat där konkurrenter redan vant sig vid en ny hastighet. Skillnaderna börjar redan visa sig – mellan de som aktivt integrerar AI i sitt arbete och de som inte gör det – och resultatet är tydligt: AI skapar utrymme för mer kvalificerat och kreativt arbete. 
