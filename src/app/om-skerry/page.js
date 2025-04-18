@@ -33,13 +33,14 @@ const AboutPage = () => {
             <div className="space-y-3 text-base">
               <p>
               Skerry föreläser, utbildar och erbjuder rådgivning inom AI – med målet att göra AI till en del av hur företag tänker och arbetar. 
+              <br />
               Fokus ligger på att bygga upp tankemodeller för hur AI kan användas beroende på vilken information eller uppgift som ska hanteras, och genom att lära sig vilka AI-verktyg som passar för olika behov.
               </p>
+              <h4 className="text-l font-medium mb-3">Generativ AI och språkmodeller</h4>
               <p>
-              För företag som börjar bygga kompetens och vana i att arbeta med AI idag, lägger grunden för ett arbetssätt som snart kommer att vara standard. Att skjuta upp adoptionen innebär inte att man undviker förändring – det innebär att man senare tvingas göra det under sämre villkor, i ett klimat där konkurrenter redan vant sig vid en ny hastighet. Skillnaderna börjar redan visa sig – mellan de som aktivt integrerar AI i sitt arbete och de som inte gör det – och resultatet är tydligt: AI skapar utrymme för mer kvalificerat och kreativt arbete. 
-              </p>
+              För moderna kontor har språkmodeller blivit ett verktyg i paritet med Excel, PowerPoint eller Google. Idag används de för i princip all textgenererad information – allt från intern kommunikation till research och analys – och börjar ersätta en hel kategori av repetitivt kunskapsarbete. Samtidigt har 2024 präglats av en våg av mer nischade AI-applikationer som nått marknaden. Många av dessa är nu på väg att integreras i organisationers arbetsflöden och bidra till operationell standardisering.              </p>
               <p>
-              Samtidigt håller intelligens på att bli en handelsvara. När det som tidigare definierade kunskapsarbete i allt högre grad kan automatiseras, blir det avgörande att tänka länge och hårt på hur man fortfarande kan differentiera sig genom sitt mänskliga bidrag - och ett sådant bidrag handlar om förmågan att förstå och använda AI. För det är den reflektionen om att förstå vad som inte låter sig replikeras – och hur den omsätts i arbetet – som kommer att skilja bolag åt i den här nya AI-eran.              </p>
+              Samtidigt håller intelligens på att bli en handelsvara genom användandet av dessa språkmodeller. När det som tidigare definierade kunskapsarbete i allt högre grad kan automatiseras, blir det avgörande att tänka länge och hårt på hur man fortfarande kan differentiera sig genom sitt mänskliga bidrag - och ett sådant bidrag handlar om förmågan att förstå och använda AI. För det är den reflektionen om att förstå vad som inte låter sig replikeras – och hur den omsätts i arbetet – som kommer att skilja bolag åt i den här nya AI-eran.              </p>
             </div>
           </section>
 
