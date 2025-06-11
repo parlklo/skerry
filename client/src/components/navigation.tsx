@@ -9,9 +9,7 @@ export function Navigation() {
 
   const navItems = [
     { path: "/", label: "Home" },
-    { path: "/tech-startups", label: "Tech Startups" },
-    { path: "/construction", label: "Construction" },
-    { path: "/about", label: "About" },
+    { path: "/services", label: "Services" },
     { path: "/contact", label: "Contact" },
   ];
 

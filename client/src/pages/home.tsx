@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Rocket, Hammer, ArrowRight, Zap } from "lucide-react";
+import { Globe, Wrench, ArrowRight, Zap, CheckCircle, TrendingUp } from "lucide-react";
 
 export default function Home() {
   return (
@@ -10,40 +10,61 @@ export default function Home() {
           <div className="lg:col-span-8 lg:col-start-1">
             <div className="max-w-4xl">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.9] mb-8 text-warm-gray-900">
-                Strategic thinking<br />
-                <span className="text-skerry-orange-500">meets execution</span>
+                Your digital partner<br />
+                <span className="text-skerry-orange-500">for growth</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-warm-gray-600 mb-12 leading-relaxed max-w-2xl">
-                Skerry helps startups move faster and real-world businesses work smarter. 
-                No corporate fluff—just tools, insights, and systems that actually work.
+              <p className="text-xl sm:text-2xl text-warm-gray-600 mb-8 leading-relaxed max-w-2xl">
+                We help small businesses modernize their digital presence with professional websites 
+                and ongoing maintenance. Catch up digitally and grow your local business.
               </p>
               
-              {/* Navigation CTAs */}
+              {/* Key Benefits */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-12">
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-500 mr-3" size={20} />
+                  <span className="text-warm-gray-700">Professional websites that convert</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-500 mr-3" size={20} />
+                  <span className="text-warm-gray-700">Ongoing maintenance included</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-500 mr-3" size={20} />
+                  <span className="text-warm-gray-700">Mobile-friendly design</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-500 mr-3" size={20} />
+                  <span className="text-warm-gray-700">Local SEO optimization</span>
+                </div>
+              </div>
+
+              {/* Main CTA */}
               <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                <Link href="/tech-startups">
-                  <Button className="group bg-warm-gray-900 text-warm-gray-50 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-warm-gray-800 transition-all duration-200 hover:shadow-lg h-auto">
-                    <Rocket className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    For Tech Startups
+                <Link href="/services">
+                  <Button className="group bg-skerry-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-skerry-orange-600 transition-all duration-200 hover:shadow-lg h-auto">
+                    <Globe className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    See Our Services
                   </Button>
                 </Link>
-                <Link href="/construction">
-                  <Button className="group bg-skerry-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-skerry-orange-600 transition-all duration-200 hover:shadow-lg h-auto">
-                    <Hammer className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    For Construction Companies
+                <Link href="/contact">
+                  <Button className="group bg-warm-gray-900 text-warm-gray-50 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-warm-gray-800 transition-all duration-200 hover:shadow-lg h-auto">
+                    <ArrowRight className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    Get Started
                   </Button>
                 </Link>
               </div>
 
-              {/* See What I Can Help With CTA */}
+              {/* Value Proposition */}
               <div className="bg-warm-gray-100 rounded-2xl p-8 lg:p-12 border border-warm-gray-200">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-warm-gray-900">Ready to build better stuff?</h3>
-                <p className="text-lg text-warm-gray-600 mb-6">Let's talk about what you're working on and how I can help make it happen faster.</p>
-                <Link href="/contact">
-                  <Button className="bg-warm-gray-900 text-warm-gray-50 px-6 py-3 rounded-lg font-semibold hover:bg-warm-gray-800 transition-colors">
-                    See what I can help with
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-warm-gray-900">Ready to modernize your business?</h3>
+                <p className="text-lg text-warm-gray-600 mb-6">
+                  Don't let outdated digital presence hold you back. We create websites that work 
+                  and maintain them so you can focus on what you do best.
+                </p>
+                <div className="flex items-center text-warm-gray-600">
+                  <TrendingUp className="text-skerry-orange-500 mr-2" size={20} />
+                  <span className="font-semibold">Average 40% increase in customer inquiries</span>
+                </div>
               </div>
             </div>
           </div>
@@ -59,10 +80,21 @@ export default function Home() {
                 <div className="absolute bottom-4 left-4 w-28 h-28 bg-warm-gray-300 rounded-2xl rotate-12"></div>
                 {/* Central element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-skerry-orange-400 to-skerry-orange-600 rounded-3xl shadow-xl flex items-center justify-center">
-                  <Zap className="text-white text-4xl" size={48} />
+                  <Globe className="text-white text-4xl" size={48} />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Trust indicators section */}
+        <div className="mt-20 text-center">
+          <p className="text-warm-gray-500 mb-8">Perfect for small businesses like:</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-warm-gray-600">
+            <div>Construction Companies</div>
+            <div>Restaurants & Cafés</div>
+            <div>Local Services</div>
+            <div>Trade Professionals</div>
           </div>
         </div>
       </div>

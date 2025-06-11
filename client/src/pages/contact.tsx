@@ -59,11 +59,12 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-black mb-6 text-warm-gray-900">
-            Say hey.<br />
-            <span className="text-skerry-orange-500">No pressure.</span>
+            Let's talk about<br />
+            <span className="text-skerry-orange-500">your project</span>
           </h1>
           <p className="text-xl text-warm-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Tell me what you're working on. If I can help, great. If not, I'll tell you that too.
+            Ready to modernize your business online? Let's discuss your goals and 
+            see how we can help you grow digitally.
           </p>
         </div>
 
@@ -73,7 +74,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="name" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  What should I call you?
+                  Your Name
                 </Label>
                 <Input
                   type="text"
@@ -88,7 +89,7 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="email" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  How can I reach you?
+                  Email Address
                 </Label>
                 <Input
                   type="email"
@@ -103,7 +104,7 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="message" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  What's on your mind?
+                  Tell us about your business and project
                 </Label>
                 <Textarea
                   id="message"
@@ -113,7 +114,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Tell me about your project, what you're stuck on, or just what you're thinking about..."
+                  placeholder="What type of business do you run? What are you hoping to achieve with a new website? Any specific features you need?"
                 />
               </div>
               
