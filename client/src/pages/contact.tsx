@@ -134,13 +134,13 @@ export default function Contact() {
             <div className="bg-warm-gray-100 rounded-2xl p-8">
               <div className="mb-4">
                 <Calendar className="text-skerry-orange-500 text-2xl mb-3" size={32} />
-                <h3 className="text-xl font-bold text-warm-gray-900 mb-2">Want to talk it through?</h3>
+                <h3 className="text-xl font-bold text-warm-gray-900 mb-2">Prefer to talk directly?</h3>
                 <p className="text-warm-gray-600 mb-4">
-                  Sometimes it's easier to just hop on a call. No slides, no pitch—just a conversation.
+                  Schedule a free consultation to discuss your website needs and get personalized recommendations.
                 </p>
               </div>
               <Button className="bg-warm-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-warm-gray-800 transition-colors">
-                Book a 15-minute call
+                Book a Free Consultation
               </Button>
             </div>
 
