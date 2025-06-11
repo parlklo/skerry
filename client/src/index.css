@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(24, 9.8%, 10%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(24, 95%, 53%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.75rem;
+  
+  /* Custom Skerry colors */
+  --warm-gray-50: hsl(60, 9%, 98%);
+  --warm-gray-100: hsl(60, 5%, 96%);
+  --warm-gray-200: hsl(20, 6%, 90%);
+  --warm-gray-300: hsl(24, 6%, 83%);
+  --warm-gray-400: hsl(24, 5%, 64%);
+  --warm-gray-500: hsl(25, 5%, 45%);
+  --warm-gray-600: hsl(33, 5%, 32%);
+  --warm-gray-700: hsl(30, 6%, 25%);
+  --warm-gray-800: hsl(12, 6%, 15%);
+  --warm-gray-900: hsl(24, 10%, 10%);
+  
+  --skerry-orange-50: hsl(33, 100%, 96%);
+  --skerry-orange-100: hsl(34, 100%, 92%);
+  --skerry-orange-200: hsl(32, 98%, 83%);
+  --skerry-orange-300: hsl(31, 97%, 72%);
+  --skerry-orange-400: hsl(27, 96%, 61%);
+  --skerry-orange-500: hsl(24, 95%, 53%);
+  --skerry-orange-600: hsl(21, 92%, 46%);
+  --skerry-orange-700: hsl(17, 88%, 40%);
+  --skerry-orange-800: hsl(15, 79%, 34%);
+  --skerry-orange-900: hsl(15, 75%, 28%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(24, 95%, 53%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-warm-gray-50 text-warm-gray-900;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .text-warm-gray-50 { color: var(--warm-gray-50); }
+  .text-warm-gray-100 { color: var(--warm-gray-100); }
+  .text-warm-gray-200 { color: var(--warm-gray-200); }
+  .text-warm-gray-300 { color: var(--warm-gray-300); }
+  .text-warm-gray-400 { color: var(--warm-gray-400); }
+  .text-warm-gray-500 { color: var(--warm-gray-500); }
+  .text-warm-gray-600 { color: var(--warm-gray-600); }
+  .text-warm-gray-700 { color: var(--warm-gray-700); }
+  .text-warm-gray-800 { color: var(--warm-gray-800); }
+  .text-warm-gray-900 { color: var(--warm-gray-900); }
+  
+  .bg-warm-gray-50 { background-color: var(--warm-gray-50); }
+  .bg-warm-gray-100 { background-color: var(--warm-gray-100); }
+  .bg-warm-gray-200 { background-color: var(--warm-gray-200); }
+  .bg-warm-gray-300 { background-color: var(--warm-gray-300); }
+  .bg-warm-gray-400 { background-color: var(--warm-gray-400); }
+  .bg-warm-gray-500 { background-color: var(--warm-gray-500); }
+  .bg-warm-gray-600 { background-color: var(--warm-gray-600); }
+  .bg-warm-gray-700 { background-color: var(--warm-gray-700); }
+  .bg-warm-gray-800 { background-color: var(--warm-gray-800); }
+  .bg-warm-gray-900 { background-color: var(--warm-gray-900); }
+  
+  .text-skerry-orange-50 { color: var(--skerry-orange-50); }
+  .text-skerry-orange-100 { color: var(--skerry-orange-100); }
+  .text-skerry-orange-200 { color: var(--skerry-orange-200); }
+  .text-skerry-orange-300 { color: var(--skerry-orange-300); }
+  .text-skerry-orange-400 { color: var(--skerry-orange-400); }
+  .text-skerry-orange-500 { color: var(--skerry-orange-500); }
+  .text-skerry-orange-600 { color: var(--skerry-orange-600); }
+  .text-skerry-orange-700 { color: var(--skerry-orange-700); }
+  .text-skerry-orange-800 { color: var(--skerry-orange-800); }
+  .text-skerry-orange-900 { color: var(--skerry-orange-900); }
+  
+  .bg-skerry-orange-50 { background-color: var(--skerry-orange-50); }
+  .bg-skerry-orange-100 { background-color: var(--skerry-orange-100); }
+  .bg-skerry-orange-200 { background-color: var(--skerry-orange-200); }
+  .bg-skerry-orange-300 { background-color: var(--skerry-orange-300); }
+  .bg-skerry-orange-400 { background-color: var(--skerry-orange-400); }
+  .bg-skerry-orange-500 { background-color: var(--skerry-orange-500); }
+  .bg-skerry-orange-600 { background-color: var(--skerry-orange-600); }
+  .bg-skerry-orange-700 { background-color: var(--skerry-orange-700); }
+  .bg-skerry-orange-800 { background-color: var(--skerry-orange-800); }
+  .bg-skerry-orange-900 { background-color: var(--skerry-orange-900); }
+  
+  .border-warm-gray-200 { border-color: var(--warm-gray-200); }
+  .border-warm-gray-300 { border-color: var(--warm-gray-300); }
+  .border-skerry-orange-200 { border-color: var(--skerry-orange-200); }
+  .border-skerry-orange-300 { border-color: var(--skerry-orange-300); }
+  
+  .hover\:bg-warm-gray-800:hover { background-color: var(--warm-gray-800); }
+  .hover\:bg-skerry-orange-600:hover { background-color: var(--skerry-orange-600); }
+  .hover\:text-skerry-orange-500:hover { color: var(--skerry-orange-500); }
+  .hover\:text-warm-gray-900:hover { color: var(--warm-gray-900); }
+  
+  .focus\:ring-skerry-orange-500:focus {
+    --tw-ring-color: var(--skerry-orange-500);
+  }
+}
