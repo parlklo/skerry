@@ -3,9 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { Calendar, Mail, MapPin, Clock } from "lucide-react";
 
 interface ContactFormData {
@@ -20,32 +17,6 @@ export default function Contact() {
     email: "",
     message: "",
   });
-  const { toast } = useToast();
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out! I'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error sending message",
-        description: error.message,
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    contactMutation.mutate(formData);
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -71,7 +42,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-warm-gray-200">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <Label htmlFor="name" className="block text-sm font-semibold text-warm-gray-700 mb-2">
                   Your Name
@@ -120,10 +91,9 @@ export default function Contact() {
               
               <Button
                 type="submit"
-                disabled={contactMutation.isPending}
                 className="w-full bg-skerry-orange-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-skerry-orange-600 transition-colors h-auto"
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                Send Message
               </Button>
             </form>
           </div>

@@ -1,7 +1,5 @@
 import React from "react";
 import { Switch, Route } from "wouter";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { Toaster } from "@/components/ui/toaster";
 import { Navigation } from "@/components/navigation";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
@@ -24,10 +22,7 @@ function Router() {
 
 function App() {
   return (
-    <TooltipProvider>
-      <Toaster />
-      <Router />
-    </TooltipProvider>
+    <Router />
   );
 }
 
