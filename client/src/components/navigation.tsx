@@ -8,9 +8,9 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/services", label: "Services" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: "Hem" },
+    { path: "/services", label: "Tjänster" },
+    { path: "/contact", label: "Kontakt" },
   ];
 
   const isActive = (path: string) => {

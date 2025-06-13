@@ -30,12 +30,12 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-black mb-6 text-warm-gray-900">
-            Let's talk about<br />
-            <span className="text-skerry-orange-500">your project</span>
+            Låt oss prata om<br />
+            <span className="text-skerry-orange-500">ditt projekt</span>
           </h1>
           <p className="text-xl text-warm-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Ready to modernize your business online? Let's discuss your goals and 
-            see how we can help you grow digitally.
+            Redo att modernisera ditt företag online? Låt oss diskutera dina mål och 
+            se hur vi kan hjälpa dig att växa digitalt.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function Contact() {
             <form className="space-y-6">
               <div>
                 <Label htmlFor="name" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  Your Name
+                  Ditt Namn
                 </Label>
                 <Input
                   type="text"
@@ -60,7 +60,7 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="email" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  Email Address
+                  E-postadress
                 </Label>
                 <Input
                   type="email"
@@ -75,7 +75,7 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="message" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  Tell us about your business and project
+                  Berätta om ditt företag och projekt
                 </Label>
                 <Textarea
                   id="message"
@@ -85,7 +85,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="What type of business do you run? What are you hoping to achieve with a new website? Any specific features you need?"
+                  placeholder="Vilken typ av verksamhet driver du? Vad hoppas du uppnå med en ny webbplats? Några specifika funktioner du behöver?"
                 />
               </div>
               
@@ -93,7 +93,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full bg-skerry-orange-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-skerry-orange-600 transition-colors h-auto"
               >
-                Send Message
+                Skicka Meddelande
               </Button>
             </form>
           </div>
@@ -104,19 +104,19 @@ export default function Contact() {
             <div className="bg-warm-gray-100 rounded-2xl p-8">
               <div className="mb-4">
                 <Calendar className="text-skerry-orange-500 text-2xl mb-3" size={32} />
-                <h3 className="text-xl font-bold text-warm-gray-900 mb-2">Prefer to talk directly?</h3>
+                <h3 className="text-xl font-bold text-warm-gray-900 mb-2">Föredrar du att prata direkt?</h3>
                 <p className="text-warm-gray-600 mb-4">
-                  Schedule a free consultation to discuss your website needs and get personalized recommendations.
+                  Boka en kostnadsfri konsultation för att diskutera dina webbplatsbehov och få personliga rekommendationer.
                 </p>
               </div>
               <Button className="bg-warm-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-warm-gray-800 transition-colors">
-                Book a Free Consultation
+                Boka Kostnadsfri Konsultation
               </Button>
             </div>
 
             {/* Direct Contact */}
             <div className="bg-white rounded-2xl p-8 border border-warm-gray-200">
-              <h3 className="text-xl font-bold text-warm-gray-900 mb-4">Or reach out directly</h3>
+              <h3 className="text-xl font-bold text-warm-gray-900 mb-4">Eller kontakta oss direkt</h3>
               <div className="space-y-3">
                 <div className="flex items-center text-warm-gray-600">
                   <Mail className="mr-3 text-skerry-orange-500" size={20} />
@@ -124,7 +124,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center text-warm-gray-600">
                   <MapPin className="mr-3 text-skerry-orange-500" size={20} />
-                  <span>Remote, but happy to meet in person if you're nearby</span>
+                  <span>Distansarbete, men gärna personligt möte om du finns i närheten</span>
                 </div>
               </div>
             </div>
@@ -134,8 +134,8 @@ export default function Contact() {
               <div className="flex items-start">
                 <Clock className="text-green-500 mr-3 mt-1" size={20} />
                 <div>
-                  <div className="font-semibold text-green-800 mb-1">Usually respond within 24 hours</div>
-                  <div className="text-green-700 text-sm">Often much faster, but I want to give you a thoughtful response.</div>
+                  <div className="font-semibold text-green-800 mb-1">Svarar vanligtvis inom 24 timmar</div>
+                  <div className="text-green-700 text-sm">Ofta mycket snabbare, men jag vill ge dig ett genomtänkt svar.</div>
                 </div>
               </div>
             </div>
