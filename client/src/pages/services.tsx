@@ -27,14 +27,14 @@ export default function Services() {
               <div className="mb-4">
                 <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-2">Kom igång från</div>
                 <div className="flex items-end gap-2 mb-2">
-                  <span className="text-3xl font-extrabold text-warm-gray-900">14 995 kr</span>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">6 455 kr</span>
                   <span className="text-base text-warm-gray-500">engångsavgift</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-2xl font-bold text-skerry-orange-500">495 kr</span>
+                  <span className="text-2xl font-bold text-skerry-orange-500">295 kr</span>
                   <span className="text-base text-warm-gray-600">/mån i 3 månader</span>
                 </div>
-                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">995 kr/mån</span></div>
+                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">445 kr/mån</span></div>
                 <div className="inline-block bg-warm-gray-100 text-warm-gray-700 text-xs rounded px-2 py-1 mb-2">Ingen bindningstid</div>
               </div>
               <ul className="space-y-3 text-warm-gray-600 mb-8 mt-2">
@@ -72,14 +72,14 @@ export default function Services() {
               <div className="mb-4 mt-4">
                 <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-2">Kom igång från</div>
                 <div className="flex items-end gap-2 mb-2">
-                  <span className="text-3xl font-extrabold text-warm-gray-900">24 995 kr</span>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">6 455 kr</span>
                   <span className="text-base text-warm-gray-500">engångsavgift</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-2xl font-bold text-skerry-orange-500">995 kr</span>
+                  <span className="text-2xl font-bold text-skerry-orange-500">495 kr</span>
                   <span className="text-base text-warm-gray-600">/mån i 3 månader</span>
                 </div>
-                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">1 995 kr/mån</span></div>
+                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">945 kr/mån</span></div>
                 <div className="inline-block bg-warm-gray-100 text-warm-gray-700 text-xs rounded px-2 py-1 mb-2">Ingen bindningstid</div>
               </div>
               <ul className="space-y-3 text-warm-gray-600 mb-8 mt-2">
