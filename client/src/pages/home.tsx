@@ -65,10 +65,6 @@ export default function Home() {
                   Låt inte en föråldrad digital närvaro hålla dig tillbaka. Vi skapar webbplatser som fungerar 
                   och underhåller dem så att du kan fokusera på det du gör bäst.
                 </p>
-                <div className="flex items-center text-warm-gray-600">
-                  <TrendingUp className="text-skerry-orange-500 mr-2" size={20} />
-                  <span className="font-semibold">I genomsnitt 40% ökning av kundförfrågningar</span>
-                </div>
               </div>
             </div>
           </div>
@@ -91,53 +87,60 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trust indicators section */}
-        <div className="mt-20">
-          <p className="text-warm-gray-500 mb-8 text-center text-lg">Perfekt för små företag som:</p>
+        {/* Trust indicators section - snyggare version */}
+        <div className="bg-warm-gray-50 rounded-2xl py-16 px-4 sm:px-8 mt-20 mb-0">
+          <div className="flex flex-col items-center mb-10">
+            <div className="flex items-center justify-center mb-3">
+              <Sparkles className="text-skerry-orange-500 mr-2" size={28} />
+              <span className="text-2xl sm:text-3xl font-extrabold text-warm-gray-900">Perfekt för små företag som:</span>
+            </div>
+            <div className="h-1 w-16 bg-skerry-orange-200 rounded-full mt-2"></div>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            {/* Korten för företagskategorierna, förbättrade */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Building2 className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Byggföretag</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Wrench className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Hantverkare</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Coffee className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Restauranger & Caféer</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Store className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Lokala tjänster</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Scissors className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Frisörer & Skönhet</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Sparkles className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Nagelsalonger</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Flower2 className="text-skerry-orange-500" size={24} />
               </div>
               <span className="text-warm-gray-700 font-medium">Blombutiker</span>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Car className="text-skerry-orange-500" size={24} />
               </div>
@@ -240,6 +243,20 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* CTA Section: Redo att Komma Igång? */}
+        <div className="bg-skerry-orange-500 rounded-2xl p-8 lg:p-12 text-center mt-24 mb-0">
+          <h3 className="text-3xl font-bold mb-4 text-white">Redo att Komma Igång?</h3>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            Låt oss diskutera ditt projekt och skapa en digital närvaro som får ditt företag att växa.
+          </p>
+          <Link href="/services">
+            <Button className="bg-white text-skerry-orange-500 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-warm-gray-50 transition-colors h-auto">
+              Se prisplaner & tjänster
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

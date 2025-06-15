@@ -25,8 +25,9 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-              <button className="text-2xl font-bold text-warm-gray-900 hover:text-skerry-orange-500 transition-colors">
-                Skerry
+              <button className="flex items-center gap-2 hover:text-skerry-orange-500 transition-colors">
+                <img src="/skerry logo.png" alt="Skerry Logo" className="h-8 w-8 object-contain" />
+                <span className="text-2xl font-bold text-warm-gray-900">Skerry</span>
               </button>
             </Link>
           </div>
