@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="absolute bottom-4 left-4 w-28 h-28 bg-warm-gray-300 rounded-2xl rotate-12"></div>
                 {/* Central element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-skerry-orange-400 to-skerry-orange-600 rounded-3xl shadow-xl flex items-center justify-center">
-                  <Globe className="text-white text-4xl" size={48} />
+                  <img src="/skerry logo.png" alt="Skerry Logo" className="w-24 h-24 object-contain" />
                 </div>
               </div>
             </div>

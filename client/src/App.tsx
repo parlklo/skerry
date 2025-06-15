@@ -5,6 +5,8 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import Success from "@/pages/success";
+import Cancel from "@/pages/cancel";
 
 function Router() {
   return (
@@ -14,6 +16,8 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/services" component={Services} />
         <Route path="/contact" component={Contact} />
+        <Route path="/success" component={Success} />
+        <Route path="/cancel" component={Cancel} />
         <Route component={NotFound} />
       </Switch>
     </>

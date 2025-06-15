@@ -8,6 +8,8 @@ export default async function handler(req, res) {
   }
   const { plan, price } = req.body;
   try {
+    const isLocal = req.headers.host && req.headers.host.startsWith('localhost:5174');
+    const domain = isLocal ? 'http://localhost:5174' : 'https://skerry.ai';
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -23,8 +25,8 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
-      success_url: 'https://skerry.ai/success',
-      cancel_url: 'https://skerry.ai/cancel',
+      success_url: `${domain}/success`,
+      cancel_url: `${domain}/cancel`,
     });
     res.status(200).json({ id: session.id });
   } catch (err) {
