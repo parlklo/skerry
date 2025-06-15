@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Globe, UserRound, ArrowRight, Zap, CheckCircle, TrendingUp } from "lucide-react";
+import { Globe, UserRound, ArrowRight, Zap, CheckCircle, TrendingUp, Building2, Coffee, Wrench, Store, Scissors, Flower2, Car, Sparkles } from "lucide-react";
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import React, { useState, useRef } from "react";
 
@@ -8,8 +8,8 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const kasperCardRef = useRef(null);
   return (
-    <div className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="pt-24 pb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[70vh]">
           <div className="lg:col-span-8 lg:col-start-1">
             <div className="max-w-4xl">
@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">Löpande underhåll ingår</span>
+                  <span className="text-warm-gray-700">Löpande underhåll</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="text-green-500 mr-3" size={20} />
@@ -38,7 +38,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">Lokal SEO-optimering</span>
+                  <span className="text-warm-gray-700">SEO-optimering</span>
                 </div>
               </div>
 
@@ -92,20 +92,64 @@ export default function Home() {
         </div>
 
         {/* Trust indicators section */}
-        <div className="mt-20 text-center">
-          <p className="text-warm-gray-500 mb-8">Perfekt för små företag som:</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-warm-gray-600">
-            <div>Byggföretag</div>
-            <div>Restauranger & Caféer</div>
-            <div>Lokala tjänster</div>
-            <div>Hantverkare</div>
+        <div className="mt-20">
+          <p className="text-warm-gray-500 mb-8 text-center text-lg">Perfekt för små företag som:</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Building2 className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Byggföretag</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Wrench className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Hantverkare</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Coffee className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Restauranger & Caféer</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Store className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Lokala tjänster</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Scissors className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Frisörer & Skönhet</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Sparkles className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Nagelsalonger</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Flower2 className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Blombutiker</span>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
+              <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Car className="text-skerry-orange-500" size={24} />
+              </div>
+              <span className="text-warm-gray-700 font-medium">Transport & Logistik</span>
+            </div>
           </div>
         </div>
 
         {/* Team section */}
         <div className="mt-20 relative">
           <h2 className="text-3xl font-bold text-center mb-8">Vårt Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Founder */}
             <Card ref={kasperCardRef} className="flex flex-col items-center p-8 relative">
               <CardHeader className="flex flex-col items-center">
@@ -167,7 +211,7 @@ export default function Home() {
                 </>
               )}
             </Card>
-            {/* Other Person */}
+            {/* Marketing */}
             <Card className="flex flex-col items-center p-8">
               <CardHeader className="flex flex-col items-center">
                 <div className="flex items-center justify-center w-28 h-28 rounded-full bg-warm-gray-200 mb-4">
@@ -178,6 +222,20 @@ export default function Home() {
               </CardHeader>
               <CardContent className="flex flex-col items-center">
                 <p className="text-center text-sm text-gray-600 mb-1">Kontakt: elinnystrom@skerry.ai</p>
+                <p className="text-center text-sm text-transparent select-none">placeholder</p>
+              </CardContent>
+            </Card>
+            {/* Sales */}
+            <Card className="flex flex-col items-center p-8">
+              <CardHeader className="flex flex-col items-center">
+                <div className="flex items-center justify-center w-28 h-28 rounded-full bg-warm-gray-200 mb-4">
+                  <UserRound className="text-warm-gray-500" size={48} />
+                </div>
+                <CardTitle className="text-center">Edward Leiman</CardTitle>
+                <CardDescription className="text-center text-base mt-1">Sälj & Affärsutveckling</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col items-center">
+                <p className="text-center text-sm text-gray-600 mb-1">Kontakt: edwardleiman@skerry.ai</p>
                 <p className="text-center text-sm text-transparent select-none">placeholder</p>
               </CardContent>
             </Card>
