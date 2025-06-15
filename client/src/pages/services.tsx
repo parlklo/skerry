@@ -1,8 +1,24 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight } from "lucide-react";
+import { initiateBasicPlanPayment } from "@/lib/stripe";
+import { useState } from "react";
 
 export default function Services() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleBasicPlanClick = async () => {
+    try {
+      setIsLoading(true);
+      await initiateBasicPlanPayment();
+    } catch (error) {
+      console.error('Failed to initiate payment:', error);
+      // Här kan du lägga till felhantering, t.ex. visa en toast-notification
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -70,12 +86,14 @@ export default function Services() {
                 </li>
               </ul>
               <div className="mt-auto">
-                <Link href="/contact">
-                  <Button className="w-full bg-skerry-orange-500 text-white hover:bg-skerry-orange-600 h-auto py-3 text-base font-semibold rounded-xl">
-                    Välj Basic
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                <Button 
+                  onClick={handleBasicPlanClick}
+                  disabled={isLoading}
+                  className="w-full bg-skerry-orange-500 text-white hover:bg-skerry-orange-600 h-auto py-3 text-base font-semibold rounded-xl"
+                >
+                  {isLoading ? 'Laddar...' : 'Välj Basic'}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
                 <div className="text-xs text-warm-gray-400 text-center mt-2">Inga dolda avgifter • Alltid support<br/>Alla priser är exklusive moms.</div>
               </div>
             </div>
