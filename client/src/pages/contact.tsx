@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Calendar, Mail, MapPin, Clock } from "lucide-react";
+import { Calendar, Mail, MapPin, Clock, Globe } from "lucide-react";
 
 interface ContactFormData {
   name: string;
@@ -120,11 +120,15 @@ export default function Contact() {
               <div className="space-y-3">
                 <div className="flex items-center text-warm-gray-600">
                   <Mail className="mr-3 text-skerry-orange-500" size={20} />
-                  <span>hello@skerry.co</span>
+                  <span>kasperparlklo@skerry.ai</span>
+                </div>
+                <div className="flex items-center text-warm-gray-600">
+                  <Globe className="mr-3 text-skerry-orange-500" size={20} />
+                  <span>Remote Office</span>
                 </div>
                 <div className="flex items-center text-warm-gray-600">
                   <MapPin className="mr-3 text-skerry-orange-500" size={20} />
-                  <span>Distansarbete, men gärna personligt möte om du finns i närheten</span>
+                  <span>Stockholm, Sverige</span>
                 </div>
               </div>
             </div>
@@ -135,7 +139,7 @@ export default function Contact() {
                 <Clock className="text-green-500 mr-3 mt-1" size={20} />
                 <div>
                   <div className="font-semibold text-green-800 mb-1">Svarar vanligtvis inom 24 timmar</div>
-                  <div className="text-green-700 text-sm">Ofta mycket snabbare, men jag vill ge dig ett genomtänkt svar.</div>
+                  <div className="text-green-700 text-sm">Vi återkommer till dig så snart som möjligt.</div>
                 </div>
               </div>
             </div>

@@ -24,18 +24,32 @@ export default function Services() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Basic Plan */}
             <div className="relative bg-white rounded-2xl p-8 shadow-sm border border-warm-gray-200 hover:shadow-md transition-shadow flex flex-col">
-              <div className="mb-4">
-                <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-2">Kom igång från</div>
-                <div className="flex items-end gap-2 mb-2">
-                  <span className="text-3xl font-extrabold text-warm-gray-900">6 455 kr</span>
-                  <span className="text-base text-warm-gray-500">engångsavgift</span>
+              <div className="mb-6">
+                <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-4">Kom igång från</div>
+                {/* Webbplatsutveckling */}
+                <div className="mb-2">
+                  <span className="inline-block bg-skerry-orange-100 text-skerry-orange-700 text-sm font-bold px-3 py-1 rounded mb-2">För webbplatsutveckling</span>
                 </div>
-                <div className="flex items-baseline gap-2 mb-1">
+                <div className="flex items-end gap-2">
+                  <span className="text-4xl font-extrabold text-warm-gray-900">6 455 kr</span>
+                  <span className="text-base text-warm-gray-500 font-medium mb-1">engångsavgift</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-xs text-warm-gray-400 line-through">9 455 kr</span>
+                  <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded">Rabatt!</span>
+                </div>
+                <div className="text-xs text-warm-gray-400 mt-1 mb-4">exkl. moms</div>
+                <div className="my-2 border-t border-warm-gray-100"></div>
+                {/* Hosting, drift & support */}
+                <div className="mb-2">
+                  <span className="inline-block bg-blue-100 text-blue-700 text-sm font-bold px-3 py-1 rounded mb-2">För hosting, drift & support</span>
+                </div>
+                <div className="flex items-end gap-2">
                   <span className="text-2xl font-bold text-skerry-orange-500">295 kr</span>
                   <span className="text-base text-warm-gray-600">/mån i 3 månader</span>
                 </div>
-                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">445 kr/mån</span></div>
-                <div className="inline-block bg-warm-gray-100 text-warm-gray-700 text-xs rounded px-2 py-1 mb-2">Ingen bindningstid</div>
+                <div className="text-xs text-warm-gray-400 mt-1">exkl. moms</div>
+                <div className="text-sm text-warm-gray-500 mt-2">Därefter <span className="font-semibold text-warm-gray-700">445 kr/mån</span></div>
               </div>
               <ul className="space-y-3 text-warm-gray-600 mb-8 mt-2">
                 <li className="flex items-start">
@@ -62,25 +76,38 @@ export default function Services() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <div className="text-xs text-warm-gray-400 text-center mt-2">Inga dolda avgifter • Alltid support</div>
+                <div className="text-xs text-warm-gray-400 text-center mt-2">Inga dolda avgifter • Alltid support<br/>Alla priser är exklusive moms.</div>
               </div>
             </div>
 
             {/* Premium Plan */}
-            <div className="relative bg-white rounded-2xl p-8 shadow-lg border-2 border-skerry-orange-500 hover:scale-105 transition-transform flex flex-col">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-skerry-orange-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow">Mest populär</div>
-              <div className="mb-4 mt-4">
-                <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-2">Kom igång från</div>
-                <div className="flex items-end gap-2 mb-2">
-                  <span className="text-3xl font-extrabold text-warm-gray-900">6 455 kr</span>
-                  <span className="text-base text-warm-gray-500">engångsavgift</span>
+            <div className="relative bg-white rounded-2xl p-8 shadow-lg border-2 border-skerry-orange-500 hover:shadow-md transition-shadow flex flex-col">
+              <div className="mb-6">
+                <div className="text-sm font-semibold text-skerry-orange-500 uppercase tracking-wide mb-4">Kom igång från</div>
+                {/* Webbplatsutveckling */}
+                <div className="mb-2">
+                  <span className="inline-block bg-skerry-orange-100 text-skerry-orange-700 text-sm font-bold px-3 py-1 rounded mb-2">För webbplatsutveckling</span>
                 </div>
-                <div className="flex items-baseline gap-2 mb-1">
+                <div className="flex items-end gap-2">
+                  <span className="text-4xl font-extrabold text-warm-gray-900">6 455 kr</span>
+                  <span className="text-base text-warm-gray-500 font-medium mb-1">engångsavgift</span>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-xs text-warm-gray-400 line-through">9 455 kr</span>
+                  <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded">Rabatt!</span>
+                </div>
+                <div className="text-xs text-warm-gray-400 mt-1 mb-4">exkl. moms</div>
+                <div className="my-2 border-t border-warm-gray-100"></div>
+                {/* Hosting, drift & support */}
+                <div className="mb-2">
+                  <span className="inline-block bg-blue-100 text-blue-700 text-sm font-bold px-3 py-1 rounded mb-2">För hosting, drift & support</span>
+                </div>
+                <div className="flex items-end gap-2">
                   <span className="text-2xl font-bold text-skerry-orange-500">495 kr</span>
                   <span className="text-base text-warm-gray-600">/mån i 3 månader</span>
                 </div>
-                <div className="text-sm text-warm-gray-500 mb-2">Därefter <span className="font-semibold text-warm-gray-700">945 kr/mån</span></div>
-                <div className="inline-block bg-warm-gray-100 text-warm-gray-700 text-xs rounded px-2 py-1 mb-2">Ingen bindningstid</div>
+                <div className="text-xs text-warm-gray-400 mt-1">exkl. moms</div>
+                <div className="text-sm text-warm-gray-500 mt-2">Därefter <span className="font-semibold text-warm-gray-700">945 kr/mån</span></div>
               </div>
               <ul className="space-y-3 text-warm-gray-600 mb-8 mt-2">
                 <li className="flex items-start">
@@ -111,7 +138,7 @@ export default function Services() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <div className="text-xs text-warm-gray-400 text-center mt-2">Inga dolda avgifter • Alltid support</div>
+                <div className="text-xs text-warm-gray-400 text-center mt-2">Inga dolda avgifter • Alltid support<br/>Alla priser är exklusive moms.</div>
               </div>
             </div>
           </div>

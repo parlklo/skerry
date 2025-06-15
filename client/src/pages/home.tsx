@@ -23,10 +23,10 @@ export default function Home() {
               </p>
               
               {/* Key Benefits */}
-              <div className="grid sm:grid-cols-2 gap-4 mb-12">
+              <div className="grid sm:grid-cols-2 gap-y-4 gap-x-12 mb-12">
                 <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">Professionella webbplatser som konverterar</span>
+                  <CheckCircle className="text-green-500 mr-3 shrink-0" size={20} />
+                  <span className="text-warm-gray-700 whitespace-nowrap">Professionella webbplatser som konverterar</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="text-green-500 mr-3" size={20} />
