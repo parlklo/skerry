@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight } from "lucide-react";
+import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { initiateBasicPlanPayment } from "@/lib/stripe";
 import { useState } from "react";
 
@@ -34,48 +34,34 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Så fungerar det - timeline layout */}
-        <div className="max-w-2xl mx-auto mb-16">
-          <h2 className="text-2xl font-bold mb-10 text-center text-warm-gray-900">Så fungerar det</h2>
-          <div className="relative border-l-2 border-skerry-orange-200 pl-8">
-            {/* Steg 1 */}
-            <div className="flex items-center mb-10">
-              <div className="absolute -left-5 flex items-center justify-center w-10 h-10 rounded-full bg-skerry-orange-500 text-white font-bold text-lg border-4 border-white shadow">1</div>
-              <div className="ml-6">
-                <div className="font-semibold text-warm-gray-900 mb-1">Välj och betala för en prisplan</div>
-                <div className="text-warm-gray-700 text-sm">Du väljer mellan Basic och Premium – betalning sker enkelt online.</div>
+        {/* Så fungerar det - 2x2 grid, ny text */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-warm-gray-100 rounded-2xl p-8 lg:p-12">
+            <h2 className="text-2xl font-bold mb-10 text-center text-warm-gray-900">Så fungerar det</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-16">
+              {/* Steg 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">1</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Välj paket & betala</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Välj det paket som passar dig bäst och betala smidigt online.</div>
               </div>
-            </div>
-            {/* Steg 2 */}
-            <div className="flex items-center mb-10">
-              <div className="absolute -left-5 flex items-center justify-center w-10 h-10 rounded-full bg-skerry-orange-500 text-white font-bold text-lg border-4 border-white shadow">2</div>
-              <div className="ml-6">
-                <div className="font-semibold text-warm-gray-900 mb-1">Fyll i ett kort formulär</div>
-                <div className="text-warm-gray-700 text-sm">Vi skickar ett formulär där du beskriver ditt företag och vad du vill ha på hemsidan. Vid behov bokar vi ett kort samtal.</div>
+              {/* Steg 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">2</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Beskriv ditt företag</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Fyll i ett kort formulär så att vi lär känna ditt företag och dina önskemål.</div>
               </div>
-            </div>
-            {/* Steg 3 */}
-            <div className="flex items-center mb-10">
-              <div className="absolute -left-5 flex items-center justify-center w-10 h-10 rounded-full bg-skerry-orange-500 text-white font-bold text-lg border-4 border-white shadow">3</div>
-              <div className="ml-6">
-                <div className="font-semibold text-warm-gray-900 mb-1">Vi bygger ett första förslag</div>
-                <div className="text-warm-gray-700 text-sm">Du får ett utkast på hemsidan baserat på dina önskemål.</div>
+              {/* Steg 3 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">3</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Förslag med nöjdhetsgaranti</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Du får ett första utkast. Vi justerar tills du är helt nöjd – annars får du pengarna tillbaka.</div>
               </div>
-            </div>
-            {/* Steg 4 */}
-            <div className="flex items-center mb-10">
-              <div className="absolute -left-5 flex items-center justify-center w-10 h-10 rounded-full bg-skerry-orange-500 text-white font-bold text-lg border-4 border-white shadow">4</div>
-              <div className="ml-6">
-                <div className="font-semibold text-warm-gray-900 mb-1">Du ger feedback – vi justerar</div>
-                <div className="text-warm-gray-700 text-sm">Vi gör revideringar tills allt känns rätt.</div>
-              </div>
-            </div>
-            {/* Steg 5 */}
-            <div className="flex items-center">
-              <div className="absolute -left-5 flex items-center justify-center w-10 h-10 rounded-full bg-skerry-orange-500 text-white font-bold text-lg border-4 border-white shadow">5</div>
-              <div className="ml-6">
-                <div className="font-semibold text-warm-gray-900 mb-1">Lansering & fortsatt support</div>
-                <div className="text-warm-gray-700 text-sm">Sidan publiceras. Sedan ingår drift – och med Premium även löpande ändringar och support.</div>
+              {/* Steg 4 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">4</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Lansering & långsiktig support</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Vi lanserar sidan och ser till att allt fungerar som det ska, även framåt.</div>
               </div>
             </div>
           </div>
@@ -87,26 +73,16 @@ export default function Services() {
         <div className="max-w-4xl mx-auto mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Basic badge */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl px-6 py-4 flex flex-col items-center text-center shadow-sm">
-              <Wrench className="text-blue-400 mt-1 flex-shrink-0" size={28} />
-              <div>
-                <div className="font-bold text-blue-800 text-lg mb-1">Basic</div>
-                <div className="text-blue-900 text-sm font-medium mb-1">Statisk hemsida</div>
-                <div className="text-blue-800 text-xs leading-snug">
-                  Vi bygger och lanserar en professionell hemsida. Därefter ligger den kvar som den är. Behöver du ändra något i framtiden (t.ex. byta bild eller ändra öppettider) kan du enkelt höra av dig – vi fakturerar då per timme.
-                </div>
-              </div>
+            <div className="bg-blue-50 border border-blue-200 rounded-xl px-6 py-6 flex flex-col items-center text-center shadow-sm">
+              <Wrench className="text-blue-400 mb-3" size={32} />
+              <div className="font-bold text-blue-800 text-xl mb-2">Basic</div>
+              <div className="text-blue-700 text-base">🛠 För dig som sällan gör ändringar på hemsidan</div>
             </div>
             {/* Premium badge */}
-            <div className="bg-orange-50 border border-skerry-orange-200 rounded-xl px-6 py-4 flex flex-col items-center text-center shadow-sm">
-              <Zap className="text-skerry-orange-400 mt-1 flex-shrink-0" size={28} />
-              <div>
-                <div className="font-bold text-skerry-orange-800 text-lg mb-1">Premium</div>
-                <div className="text-skerry-orange-900 text-sm font-medium mb-1">Allt ingår</div>
-                <div className="text-skerry-orange-800 text-xs leading-snug">
-                  Vi tar hand om drift, uppdateringar och ändringar. Du får en levande hemsida och en digital partner.
-                </div>
-              </div>
+            <div className="bg-orange-50 border border-skerry-orange-200 rounded-xl px-6 py-6 flex flex-col items-center text-center shadow-sm">
+              <Zap className="text-skerry-orange-400 mb-3" size={32} />
+              <div className="font-bold text-skerry-orange-800 text-xl mb-2">Premium</div>
+              <div className="text-skerry-orange-700 text-base">⚡️ För dig som ändrar innehållet flera gånger per månad</div>
             </div>
           </div>
         </div>
@@ -145,15 +121,19 @@ export default function Services() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Drift & hosting</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
                   <span>Mobilanpassad design</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Kontaktformulär</span>
+                  <span>SEO-optimering</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Grundläggande SEO</span>
+                  <MessageCircle className="text-blue-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Design & utökad funktionalitet vid behov (separat kostnad)</span>
                 </li>
               </ul>
               <div className="mt-auto">
@@ -231,31 +211,34 @@ export default function Services() {
               </div>
               <h3 className="text-2xl font-bold mb-3 text-warm-gray-900">Professionell Webbplatsutveckling</h3>
               <p className="text-warm-gray-600 mb-6 text-lg">
-                Skräddarsydda webbplatser som ser professionella ut, laddar snabbt och konverterar besökare till kunder. 
-                Designad specifikt för ditt företag och din bransch.
+                Vi bygger moderna, professionella hemsidor som stärker ditt varumärke och hjälper dig nå fler kunder.
               </p>
               <ul className="space-y-3 text-warm-gray-600 mb-6">
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Mobilanpassad design som fungerar på alla enheter</span>
+                  <span>Trygg, snabb hemsida byggd med modern teknik</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Kontaktformulär och integration av onlinebokning</span>
+                  <span>Design som matchar ditt varumärke och målgrupp</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Professionell fotografering och innehållsskapande</span>
+                  <span>Optimerad för att besökare ska höra av sig eller köpa</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Lokal SEO-optimering för bättre synlighet</span>
+                  <span>Mobilanpassad och sökmotoroptimerad från start</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span>Nöjd-kund-garanti – annars får du pengarna tillbaka</span>
                 </li>
               </ul>
-            </div>
-            <div className="bg-warm-gray-50 rounded-xl p-4 border border-warm-gray-200">
-              <div className="text-sm text-warm-gray-500 mb-2">Typisk projekttid</div>
-              <div className="text-2xl font-bold text-skerry-orange-500">2-3 veckor</div>
+              <div className="bg-warm-gray-50 rounded-xl p-4 border border-warm-gray-200">
+                <div className="text-sm text-warm-gray-500 mb-2">Typisk projekttid</div>
+                <div className="text-2xl font-bold text-skerry-orange-500">~1 vecka</div>
+              </div>
             </div>
           </div>
 
@@ -267,31 +250,34 @@ export default function Services() {
               </div>
               <h3 className="text-2xl font-bold mb-3 text-warm-gray-900">Löpande Underhåll & Support</h3>
               <p className="text-warm-gray-600 mb-6 text-lg">
-                Din webbplats behöver regelbunden vård för att förbli säker, snabb och effektiv. 
-                Vi hanterar allt tekniskt underhåll så att du slipper oroa dig för det.
+                Vi säkerställer att din webbplats är snabb, säker och alltid tillgänglig genom vår moderna hosting-infrastruktur.
               </p>
               <ul className="space-y-3 text-warm-gray-600 mb-6">
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Regelbundna säkerhetsuppdateringar och backuper</span>
+                  <span>Professionell hosting med automatisk skalning</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Innehållsuppdateringar och ändringar vid behov</span>
+                  <span>SSL-certifikat och säker domänhantering</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Prestandaövervakning och optimering</span>
+                  <span>Globalt CDN-nätverk för snabb laddning</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
-                  <span>Prioriterad support när du behöver hjälp</span>
+                  <span>Kontinuerlig övervakning av prestanda och tillgänglighet</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span>Versionshantering med snabb återställning</span>
                 </li>
               </ul>
             </div>
             <div className="bg-green-50 rounded-xl p-4 border border-green-200">
-              <div className="text-sm text-green-700 mb-2">Månadsunderhåll</div>
-              <div className="text-2xl font-bold text-green-600">Alltid inkluderat</div>
+              <div className="text-sm text-green-700 mb-2">Support & tillgänglighet</div>
+              <div className="text-2xl font-bold text-green-600">Svar inom 24h</div>
             </div>
           </div>
         </div>
