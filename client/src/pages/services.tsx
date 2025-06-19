@@ -2,10 +2,24 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { initiateBasicPlanPayment } from "@/lib/stripe";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Services() {
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Check if URL has #prisplaner hash
+    if (window.location.hash === '#prisplaner') {
+      // Find the element
+      const element = document.getElementById('prisplaner');
+      if (element) {
+        // Add a small delay to ensure the page is fully rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, []); // Empty dependency array means this runs once when component mounts
 
   const handleBasicPlanClick = async () => {
     try {
@@ -35,10 +49,10 @@ export default function Services() {
         </div>
 
         {/* Så fungerar det - 2x2 grid, ny text */}
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-warm-gray-100 rounded-2xl p-8 lg:p-12">
             <h2 className="text-2xl font-bold mb-10 text-center text-warm-gray-900">Så fungerar det</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-16 max-w-4xl mx-auto">
               {/* Steg 1 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">1</div>
@@ -51,15 +65,23 @@ export default function Services() {
                 <div className="font-bold text-lg text-warm-gray-900 mb-2">Beskriv ditt företag</div>
                 <div className="text-warm-gray-700 text-base max-w-xs">Fyll i ett kort formulär så att vi lär känna ditt företag och dina önskemål.</div>
               </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-16 gap-y-16 mt-16 max-w-6xl mx-auto">
               {/* Steg 3 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">3</div>
-                <div className="font-bold text-lg text-warm-gray-900 mb-2">Förslag med nöjdhetsgaranti</div>
-                <div className="text-warm-gray-700 text-base max-w-xs">Du får ett första utkast. Vi justerar tills du är helt nöjd – annars får du pengarna tillbaka.</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Första utkastet</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Du får ett första utkast och vi justerar det tillsammans utifrån dina synpunkter.</div>
               </div>
               {/* Steg 4 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">4</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Nöjdhetsgaranti</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Skulle du mot förmodan inte bli nöjd – så får du självklart pengarna tillbaka.</div>
+              </div>
+              {/* Steg 5 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">5</div>
                 <div className="font-bold text-lg text-warm-gray-900 mb-2">Lansering & långsiktig support</div>
                 <div className="text-warm-gray-700 text-base max-w-xs">Vi lanserar sidan och ser till att allt fungerar som det ska, även framåt.</div>
               </div>
@@ -68,7 +90,7 @@ export default function Services() {
         </div>
 
         {/* Våra Prisplaner */}
-        <h2 className="text-3xl font-bold mb-8 text-center text-warm-gray-900">Våra Prisplaner</h2>
+        <h2 id="prisplaner" className="text-3xl font-bold mb-8 text-center text-warm-gray-900">Våra Prisplaner</h2>
         {/* Visual badges for Basic and Premium */}
         <div className="max-w-4xl mx-auto mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -134,6 +156,10 @@ export default function Services() {
                 <li className="flex items-start">
                   <MessageCircle className="text-blue-500 mr-3 mt-1 flex-shrink-0" size={18} />
                   <span>Design & utökad funktionalitet vid behov (separat kostnad)</span>
+                </li>
+                <li className="flex items-start">
+                  <Shield className="text-red-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Inga avancerade system (bokningssystem, e-handel, etc.)</span>
                 </li>
               </ul>
               <div className="mt-auto">

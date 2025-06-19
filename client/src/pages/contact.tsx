@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Calendar, Mail, MapPin, Clock, Globe } from "lucide-react";
+import { Mail, MapPin, Clock, Globe, Phone } from "lucide-react";
+import { Link } from "wouter";
 
 interface ContactFormData {
   name: string;
@@ -34,8 +35,8 @@ export default function Contact() {
             <span className="text-skerry-orange-500">ditt projekt</span>
           </h1>
           <p className="text-xl text-warm-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Redo att modernisera ditt företag online? Låt oss diskutera dina mål och 
-            se hur vi kan hjälpa dig att växa digitalt.
+            Har du frågor om våra tjänster eller vill diskutera ditt projekt? 
+            Skicka ett meddelande så återkommer vi så snart som möjligt.
           </p>
         </div>
 
@@ -75,7 +76,7 @@ export default function Contact() {
               
               <div>
                 <Label htmlFor="message" className="block text-sm font-semibold text-warm-gray-700 mb-2">
-                  Berätta om ditt företag och projekt
+                  Meddelande
                 </Label>
                 <Textarea
                   id="message"
@@ -85,7 +86,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Vilken typ av verksamhet driver du? Vad hoppas du uppnå med en ny webbplats? Några specifika funktioner du behöver?"
+                  placeholder="Berätta kort om vad du vill diskutera eller ställ dina frågor här..."
                 />
               </div>
               
@@ -98,33 +99,19 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Alternative Contact Options */}
+          {/* Contact Information */}
           <div className="space-y-8">
-            {/* Book Meeting */}
-            <div className="bg-warm-gray-100 rounded-2xl p-8">
-              <div className="mb-4">
-                <Calendar className="text-skerry-orange-500 text-2xl mb-3" size={32} />
-                <h3 className="text-xl font-bold text-warm-gray-900 mb-2">Föredrar du att prata direkt?</h3>
-                <p className="text-warm-gray-600 mb-4">
-                  Boka en kostnadsfri konsultation för att diskutera dina webbplatsbehov och få personliga rekommendationer.
-                </p>
-              </div>
-              <Button className="bg-warm-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-warm-gray-800 transition-colors">
-                Boka Kostnadsfri Konsultation
-              </Button>
-            </div>
-
             {/* Direct Contact */}
             <div className="bg-white rounded-2xl p-8 border border-warm-gray-200">
-              <h3 className="text-xl font-bold text-warm-gray-900 mb-4">Eller kontakta oss direkt</h3>
+              <h3 className="text-xl font-bold text-warm-gray-900 mb-4">Kontakta oss direkt</h3>
               <div className="space-y-3">
                 <div className="flex items-center text-warm-gray-600">
                   <Mail className="mr-3 text-skerry-orange-500" size={20} />
                   <span>kasperparlklo@skerry.ai</span>
                 </div>
                 <div className="flex items-center text-warm-gray-600">
-                  <Globe className="mr-3 text-skerry-orange-500" size={20} />
-                  <span>Remote Office</span>
+                  <Phone className="mr-3 text-skerry-orange-500" size={20} />
+                  <span>+46 73 679 32 00</span>
                 </div>
                 <div className="flex items-center text-warm-gray-600">
                   <MapPin className="mr-3 text-skerry-orange-500" size={20} />
@@ -141,6 +128,21 @@ export default function Contact() {
                   <div className="font-semibold text-green-800 mb-1">Svarar vanligtvis inom 24 timmar</div>
                   <div className="text-green-700 text-sm">Vi återkommer till dig så snart som möjligt.</div>
                 </div>
+              </div>
+            </div>
+
+            {/* Info Box */}
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+              <div className="text-blue-800">
+                <div className="font-semibold mb-2">Redo att komma igång?</div>
+                <div className="text-sm mb-3">
+                  Om du redan vet vad du vill ha och är redo att börja, kan du kolla våra prisplaner och komma igång direkt.
+                </div>
+                <Link href="/services#prisplaner">
+                  <Button variant="ghost" className="text-blue-600 hover:text-blue-700 text-sm p-0 h-auto hover:bg-transparent">
+                    Se prisplaner →
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
