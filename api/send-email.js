@@ -2,6 +2,36 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Simple in-memory rate limiting (resets on server restart)
+const rateLimitMap = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const windowMs = 60000; // 1 minute
+  const maxRequests = 3; // Max 3 emails per minute per IP
+  
+  const requests = rateLimitMap.get(ip) || [];
+  const validRequests = requests.filter(time => now - time < windowMs);
+  
+  if (validRequests.length >= maxRequests) {
+    return true;
+  }
+  
+  validRequests.push(now);
+  rateLimitMap.set(ip, validRequests);
+  return false;
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function containsSpam(text) {
+  const spamKeywords = ['viagra', 'casino', 'lottery', 'winner', 'congratulations', 'urgent', 'act now'];
+  const lowercaseText = text.toLowerCase();
+  return spamKeywords.some(keyword => lowercaseText.includes(keyword));
+}
+
 export default async function handler(req, res) {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -19,11 +49,35 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Rate limiting
+    const clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
+    if (isRateLimited(clientIp)) {
+      return res.status(429).json({ 
+        message: 'För många förfrågningar. Försök igen om en minut.',
+        success: false 
+      });
+    }
+
     const { name, email, message } = req.body;
 
     // Validate required fields
     if (!name || !email || !message) {
       return res.status(400).json({ message: 'Alla fält är obligatoriska' });
+    }
+
+    // Validate field lengths
+    if (name.length > 100 || email.length > 100 || message.length > 1000) {
+      return res.status(400).json({ message: 'För långa fält' });
+    }
+
+    // Validate email format
+    if (!isValidEmail(email)) {
+      return res.status(400).json({ message: 'Ogiltig e-postadress' });
+    }
+
+    // Basic spam detection
+    if (containsSpam(name + ' ' + message)) {
+      return res.status(400).json({ message: 'Meddelandet innehåller otillåtet innehåll' });
     }
 
     // Send email using Resend
