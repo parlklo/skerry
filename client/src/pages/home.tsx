@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Globe, UserRound, ArrowRight, Zap, CheckCircle, TrendingUp, Building2, Coffee, Wrench, Store, Scissors, Flower2, Car, Sparkles } from "lucide-react";
+import { Globe, UserRound, ArrowRight, Zap, CheckCircle, TrendingUp, Building2, Coffee, Wrench, Store, Scissors, Flower2, Car, Sparkles, Heart, Hammer, Sparkles as SparklesIcon } from "lucide-react";
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import React, { useState, useRef } from "react";
 
@@ -100,9 +100,9 @@ export default function Home() {
             {/* Korten för företagskategorierna, förbättrade */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Building2 className="text-skerry-orange-500" size={24} />
+                <Hammer className="text-skerry-orange-500" size={24} />
               </div>
-              <span className="text-warm-gray-700 font-medium">Byggföretag</span>
+              <span className="text-warm-gray-700 font-medium">Byggentreprenör</span>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -118,9 +118,9 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Store className="text-skerry-orange-500" size={24} />
+                <SparklesIcon className="text-skerry-orange-500" size={24} />
               </div>
-              <span className="text-warm-gray-700 font-medium">Lokala tjänster</span>
+              <span className="text-warm-gray-700 font-medium">Städfirmor</span>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -142,9 +142,9 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-warm-gray-100 flex flex-col items-center text-center group">
               <div className="w-12 h-12 bg-skerry-orange-100 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Car className="text-skerry-orange-500" size={24} />
+                <Heart className="text-skerry-orange-500" size={24} />
               </div>
-              <span className="text-warm-gray-700 font-medium">Transport & Logistik</span>
+              <span className="text-warm-gray-700 font-medium">Naprapat</span>
             </div>
           </div>
         </div>
