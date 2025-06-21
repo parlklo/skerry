@@ -33,11 +33,13 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('Form submitted!', formData); // Debug log
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
     try {
+      console.log('Sending to API...'); // Debug log
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -46,7 +48,9 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response:', response); // Debug log
       const data = await response.json();
+      console.log('Response data:', data); // Debug log
 
       if (response.ok) {
         setSubmitStatus({
@@ -89,7 +93,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-warm-gray-200">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6" onSubmit={handleSubmit} method="POST" noValidate>
               {/* Status Messages */}
               {submitStatus.type && (
                 <div className={`p-4 rounded-lg ${
