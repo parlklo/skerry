@@ -40,7 +40,7 @@ export default function Contact() {
 
     try {
       console.log('Sending to API...'); // Debug log
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://skerry.ai/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
