@@ -63,27 +63,27 @@ export default function Services() {
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">2</div>
                 <div className="font-bold text-lg text-warm-gray-900 mb-2">Beskriv ditt företag</div>
-                <div className="text-warm-gray-700 text-base max-w-xs">Fyll i ett kort formulär så att vi lär känna ditt företag och dina önskemål.</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Du får ett formulär där du fyller i information om ditt företag.</div>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-16 gap-y-16 mt-16 max-w-6xl mx-auto">
               {/* Steg 3 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">3</div>
-                <div className="font-bold text-lg text-warm-gray-900 mb-2">Första utkastet</div>
-                <div className="text-warm-gray-700 text-base max-w-xs">Du får ett första utkast och vi justerar det tillsammans utifrån dina synpunkter.</div>
+                <div className="font-bold text-lg text-warm-gray-900 mb-2">Vi skapar din webbplats</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Vi designar och utvecklar din webbplats baserat på dina önskemål.</div>
               </div>
               {/* Steg 4 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">4</div>
                 <div className="font-bold text-lg text-warm-gray-900 mb-2">Nöjdhetsgaranti</div>
-                <div className="text-warm-gray-700 text-base max-w-xs">Skulle du mot förmodan inte bli nöjd – så får du självklart pengarna tillbaka.</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Vi visar din färdiga webbplats. Begär ändringar eller få pengarna tillbaka.</div>
               </div>
               {/* Steg 5 */}
               <div className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 bg-skerry-orange-500 text-white rounded-full flex items-center justify-center mb-4 text-2xl font-bold shadow">5</div>
                 <div className="font-bold text-lg text-warm-gray-900 mb-2">Lansering & långsiktig support</div>
-                <div className="text-warm-gray-700 text-base max-w-xs">Vi lanserar sidan och ser till att allt fungerar som det ska, även framåt.</div>
+                <div className="text-warm-gray-700 text-base max-w-xs">Vi lanserar sidan och sköter hosting, support och underhåll.</div>
               </div>
             </div>
           </div>
@@ -122,12 +122,8 @@ export default function Services() {
                 
                 {/* Webbplatsutveckling */}
                 <div className="mb-4">
-                  <div className="text-sm text-warm-gray-600 mb-2">Webbplatsutveckling (engångskostnad)</div>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-3xl font-extrabold text-warm-gray-900">6 455 SEK</span>
-                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded">Rabatt!</span>
-                  </div>
-                  <div className="text-sm text-warm-gray-400 line-through">Ord. pris 9 455 SEK</div>
+                  <div className="text-sm text-warm-gray-600 mb-2">Komplett hemsida</div>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">9 455 SEK</span>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
@@ -137,6 +133,8 @@ export default function Services() {
                   <div className="text-sm text-warm-gray-600 mb-2">Löpande support & hosting</div>
                   <div className="text-2xl font-bold text-warm-gray-900">445 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
                 </div>
+                
+                <div className="border-t border-warm-gray-200 my-4"></div>
               </div>
               
               <ul className="space-y-3 text-warm-gray-600 mb-8 flex-grow">
@@ -195,12 +193,8 @@ export default function Services() {
                 
                 {/* Webbplatsutveckling */}
                 <div className="mb-4">
-                  <div className="text-sm text-warm-gray-600 mb-2">Webbplatsutveckling (engångskostnad)</div>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-3xl font-extrabold text-warm-gray-900">6 455 SEK</span>
-                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded">Rabatt!</span>
-                  </div>
-                  <div className="text-sm text-warm-gray-400 line-through">Ord. pris 9 455 SEK</div>
+                  <div className="text-sm text-warm-gray-600 mb-2">Komplett hemsida</div>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">9 455 SEK</span>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
@@ -210,6 +204,8 @@ export default function Services() {
                   <div className="text-sm text-warm-gray-600 mb-2">Löpande support & hosting</div>
                   <div className="text-2xl font-bold text-warm-gray-900">945 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
                 </div>
+                
+                <div className="border-t border-warm-gray-200 my-4"></div>
               </div>
               
               <ul className="space-y-3 text-warm-gray-600 mb-8 flex-grow">
