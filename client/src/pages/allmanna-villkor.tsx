@@ -6,9 +6,6 @@ export default function AlmannaVillkor() {
           <h1 className="text-4xl sm:text-5xl font-black mb-6 text-warm-gray-900">
             Allmänna villkor
           </h1>
-          <p className="text-xl text-warm-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Allmänna villkor för Skerry
-          </p>
           <p className="text-sm text-warm-gray-500 mt-4">
             Senast uppdaterad: 15-06-2024
           </p>
@@ -20,7 +17,7 @@ export default function AlmannaVillkor() {
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">1. Tjänster</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Skerry tillhandahåller webbutvecklingstjänster, inklusive design, utveckling och lansering av hemsidor. Hosting via tredjepartsleverantör ingår som en del av erbjudandet, och är kopplad till en löpande månadsavgift. I den återkommande tjänsten kan även viss teknisk support, säkerhetsuppdateringar och innehållsändringar ingå, beroende på vald plan.
+                  Skerry tillhandahåller webbutvecklingstjänster, inklusive design, utveckling och lansering av hemsidor. Hosting via tredjepartsleverantör ingår som en del av erbjudandet och är kopplad till en löpande månadsavgift. I den återkommande tjänsten kan även viss teknisk support, säkerhetsuppdateringar och innehållsändringar ingå, beroende på vald plan.
                 </p>
               </div>
 
@@ -33,114 +30,112 @@ export default function AlmannaVillkor() {
 
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">3. Uppsägning och bindningstid</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
+                <p className="text-warm-gray-700 leading-relaxed mb-4">
                   Löpande tjänster kan sägas upp med 30 dagars uppsägningstid. Uppsägningstid räknas från dagen då Skerry mottagit skriftligt besked via e-post. Tjänsten fortsätter till slutet av din nuvarande månad plus 30 dagar från uppsägningsdatum. Redan betalda avgifter återbetalas inte.
                 </p>
+                <div>
+                  <h4 className="font-semibold mb-2 text-warm-gray-900">Datauttag:</h4>
+                  <p className="text-warm-gray-700 leading-relaxed">
+                    Efter uppsägning ges kunden 30 dagar att begära uttag av sitt innehåll.
+                  </p>
+                </div>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">4. Kundens ansvar</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
-                  Kunden ansvarar för att tillhandahålla korrekt material (t.ex. texter, bilder och företagsuppgifter) samt att kontrollera att slutprodukten motsvarar deras förväntningar. Kunden ansvarar också för att innehållet på hemsidan inte strider mot svensk lag.
+                <p className="text-warm-gray-700 leading-relaxed mb-4">
+                  Kunden ansvarar för att:
                 </p>
+                <ul className="list-disc pl-6 space-y-2 text-warm-gray-700">
+                  <li>Tillhandahålla korrekt material (texter, bilder och företagsuppgifter)</li>
+                  <li>Kontrollera att slutprodukten motsvarar deras förväntningar</li>
+                  <li>Säkerställa att innehållet på hemsidan inte strider mot svensk lag</li>
+                </ul>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">5. Drift och underhåll</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Skerry strävar efter hög tillgänglighet och säkerhet men kan inte garantera oavbruten drift. Driftstörningar kan förekomma vid exempelvis tekniska uppdateringar eller avbrott hos tredjepartsleverantörer.
+                  Skerry strävar efter hög tillgänglighet och säkerhet men kan inte garantera oavbruten drift. Driftstörningar kan förekomma vid exempelvis tekniska uppdateringar eller avbrott hos tredjepartsleverantörer. Skerry utför regelbundna säkerhetskopior men kunden ansvarar för att säkerställa att viktigt innehåll säkerhetskopieras separat.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">6. Äganderätt och användarrätt</h2>
-                <p className="text-warm-gray-700 leading-relaxed mb-6">
-                  Efter slutförd betalning äger kunden rätten att använda hemsidan så länge den löpande tjänsten är aktiv. Vid uppsägning eller utebliven betalning upphör kundens rätt att använda hemsidan och all data raderas. Skerry förbehåller sig rätten att återanvända generella mallar eller kodkomponenter i andra projekt.
-                </p>
-                
-                <h3 className="text-xl font-semibold text-warm-gray-900 mb-3">Äganderätt och licens</h3>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">6. Äganderätt och licens</h2>
                 <div className="space-y-4 text-warm-gray-700">
                   <div>
-                    <h4 className="font-semibold mb-2">1. Immateriella rättigheter</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Immateriella rättigheter:</h4>
                     <p className="leading-relaxed">
-                      All källkod, struktur, mallar, designkomponenter och tekniska lösningar som utvecklats av Skerry AB förblir Skerry ABs egendom, om inte annat uttryckligen avtalats. Kunden erhåller en icke-exklusiv, icke-överlåtbar licens att använda den färdiga webbplatsen så länge avtalet är i kraft och betalning sker enligt överenskommelse.
+                      All källkod, struktur, mallar, designkomponenter och tekniska lösningar som utvecklats av Skerry förblir Skerrys egendom, om inte annat uttryckligen avtalats. Kunden erhåller en icke-exklusiv, icke-överlåtbar licens att använda den färdiga webbplatsen så länge avtalet är i kraft och betalning sker enligt överenskommelse.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold mb-2">2. Kundens innehåll</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Kundens innehåll:</h4>
                     <p className="leading-relaxed">
-                      Kunden äger samtliga rättigheter till det material som denne själv tillhandahåller, såsom logotyp, texter, bilder och övrigt innehåll. Skerry AB har rätt att använda detta material i syfte att skapa och underhålla webbplatsen, men förvärvar inga rättigheter till innehållet i sig.
+                      Kunden äger samtliga rättigheter till det material som denne själv tillhandahåller, såsom logotyp, texter, bilder och övrigt innehåll. Skerry har rätt att använda detta material i syfte att skapa och underhålla webbplatsen, men förvärvar inga rättigheter till innehållet i sig.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold mb-2">3. Begränsningar</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Begränsningar:</h4>
                     <p className="leading-relaxed">
                       Kunden får inte utan skriftligt medgivande kopiera, återanvända eller distribuera delar av webbplatsens kod eller design för andra syften än den avsedda webbplatsen.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Vid uppsägning:</h4>
+                    <p className="leading-relaxed">
+                      När avtalet upphör förlorar kunden rätten att använda webbplatsen och all data raderas. Skerry förbehåller sig rätten att återanvända generella mallar eller kodkomponenter i andra projekt.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">7. Ångerrätt</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">7. Personuppgifter och GDPR</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Konsumenter har 14 dagars ångerrätt från köpdatum. Ångerrätten gäller inte om arbetet påbörjats på kundens uttryckliga begäran.
+                  Skerry behandlar personuppgifter i enlighet med GDPR och svensk dataskyddslagstiftning. Personuppgifter som samlas in används endast för att fullgöra avtalet och tillhandahålla tjänster. Kunden har rätt att begära information om, rättelse av eller radering av sina personuppgifter. Mer information finns i vår integritetspolicy.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">8. Ansvarsbegränsning</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">8. Ångerrätt</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Skerry ansvarar inte för indirekta skador, utebliven vinst eller dataförlust. Eventuellt skadestånd är begränsat till det belopp kunden betalat under de senaste 6 månaderna.
+                  Konsumenter har 14 dagars ångerrätt från köpdatum enligt distansavtalslagen. Ångerrätten gäller inte om arbetet påbörjats på kundens uttryckliga begäran och kunden har bekräftat att ångerrätten därmed upphör.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">9. Ändringar av villkor</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
-                  Skerry förbehåller sig rätten att uppdatera dessa villkor. Vid större förändringar meddelas kunden via e-post minst 14 dagar i förväg.
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">9. Support och responstider</h2>
+                <p className="text-warm-gray-700 leading-relaxed mb-4">
+                  Support tillhandahålls primärt via e-post. Vi strävar efter att svara inom 2 arbetsdagar. Omfattningen av inkluderad support varierar beroende på vald plan och specificeras i respektive tjänsteavtal.
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">10. Tvist</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
-                  Eventuella tvister regleras enligt svensk lag med Stockholms tingsrätt som första instans.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">11. Force Majeure</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
-                  Skerry AB är inte ansvarig för förseningar eller bristande prestanda som orsakas av omständigheter utanför vårt rimliga inflytande, inklusive men inte begränsat till naturkatastrofer, krig, terrorism, pandemier, myndighetsbeslut, avbrott i telekommunikationer eller internet, eller fel hos tredjepartsleverantörer av hosting eller andra kritiska tjänster. Vid sådana omständigheter kan projektleveranser eller tjänster tillfälligt pausas utan att Skerry AB blir ersättningsskyldigt.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">12. Support och responstider</h2>
-                <p className="text-warm-gray-700 leading-relaxed">
-                  Support tillhandahålls primärt via e-post. Omfattningen av inkluderad support varierar beroende på vald plan och specificeras i respektive tjänsteavtal.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">13. Ändringar och tilläggsarbete</h2>
-                <div className="space-y-4 text-warm-gray-700">
-                  <p className="leading-relaxed">
-                    Ändringar av projektets omfattning eller specifikationer ska begäras skriftligt via e-post. Skerry AB bedömer om ändringen påverkar projekttid och kostnad.
+                <div>
+                  <h4 className="font-semibold mb-2 text-warm-gray-900">Akut support:</h4>
+                  <p className="text-warm-gray-700 leading-relaxed">
+                    Vid kritiska problem som påverkar webbplatsens tillgänglighet strävar vi efter snabbare responstid, men kan inte garantera detta.
                   </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">10. Ändringar och tilläggsarbete</h2>
+                <p className="text-warm-gray-700 leading-relaxed mb-4">
+                  Ändringar av projektets omfattning eller specifikationer ska begäras skriftligt via e-post. Skerry bedömer om ändringen påverkar projekttid och kostnad.
+                </p>
+                <div className="space-y-4 text-warm-gray-700">
                   <div>
-                    <h4 className="font-semibold mb-2">Mindre ändringar</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Mindre ändringar:</h4>
                     <p className="leading-relaxed">
-                      Mindre justeringar som textändringar, bildbyten eller mindre designjusteringar kan ingå i den löpande tjänsten beroende på vald plan och omfattning. Detta omfattar normalt upp till 2-3 mindre ändringar per månad. Vid omfattande eller ovanligt frekventa ändringsönskemål förbehåller sig Skerry rätten att debitera för överarbete.
+                      Textändringar, bildbyten eller mindre designjusteringar kan ingå i den löpande tjänsten beroende på vald plan. Detta omfattar normalt upp till 3 mindre ändringar per månad där varje ändring tar maximalt 30 minuter att genomföra. Vid omfattande eller ovanligt frekventa ändringsönskemål förbehåller sig Skerry rätten att debitera för överarbete.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Större ändringar och tilläggsarbete</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Större ändringar och tilläggsarbete:</h4>
                     <p className="leading-relaxed">
-                      Väsentliga förändringar av design, funktionalitet eller struktur betraktas som tilläggsarbete och faktureras separat. Kostnadsförslag lämnas innan arbetet påbörjas. Kunden ansvarar för att godkänna kostnaden innan tilläggsarbetet utförs.
+                      Väsentliga förändringar av design, funktionalitet eller struktur betraktas som tilläggsarbete och faktureras separat. Kostnadsförslag lämnas innan arbetet påbörjas. Kunden ansvarar för att godkänna kostnaden skriftligt innan tilläggsarbetet utförs.
                     </p>
                   </div>
                   <p className="leading-relaxed">
@@ -150,9 +145,43 @@ export default function AlmannaVillkor() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">14. Tvist</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">11. Ansvarsbegränsning</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Eventuella tvister regleras enligt svensk lag med Stockholms tingsrätt som första instans.
+                  Skerry ansvarar inte för indirekta skador, utebliven vinst, dataförlust eller skador som uppstår till följd av tredje parts handlingar.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">12. Force Majeure</h2>
+                <p className="text-warm-gray-700 leading-relaxed">
+                  Skerry är inte ansvarig för förseningar eller bristande prestanda som orsakas av omständigheter utanför vårt rimliga inflytande, inklusive men inte begränsat till naturkatastrofer, krig, terrorism, pandemier, myndighetsbeslut, avbrott i telekommunikationer eller internet, eller fel hos tredjepartsleverantörer av hosting eller andra kritiska tjänster. Vid sådana omständigheter kan projektleveranser eller tjänster tillfälligt pausas utan att Skerry blir ersättningsskyldigt.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">13. Konkurs och betalningsinställelse</h2>
+                <p className="text-warm-gray-700 leading-relaxed">
+                  Vid kundens konkurs, betalningsinställelse eller liknande upphör avtalet omedelbart. Skerry förbehåller sig rätten att begära säkerhet för framtida betalningar om kundens ekonomiska situation försämras väsentligt.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">14. Ändringar av villkor</h2>
+                <p className="text-warm-gray-700 leading-relaxed">
+                  Skerry förbehåller sig rätten att uppdatera dessa villkor. Vid väsentliga förändringar meddelas kunden via e-post minst 30 dagar i förväg. Fortsatt användning av tjänsten efter meddelad ändring innebär att kunden accepterar de nya villkoren.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">15. Tvist och tillämplig lag</h2>
+                <p className="text-warm-gray-700 leading-relaxed">
+                  Eventuella tvister regleras enligt svensk lag med Stockholms tingsrätt som första instans. Parterna förbinder sig att i första hand försöka lösa eventuella tvister genom förhandling.
+                </p>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-warm-gray-200">
+                <p className="text-warm-gray-700 leading-relaxed font-medium">
+                  <strong>Dessa villkor träder i kraft vid godkännande av offert eller vid första beställning och gäller till dess att nya villkor träder i kraft.</strong>
                 </p>
               </div>
             </div>
