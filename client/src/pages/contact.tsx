@@ -18,12 +18,58 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Meddelandet har skickats!'
+        });
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message || 'Ett fel uppstod. Försök igen senare.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Ett fel uppstod. Kontrollera din internetanslutning och försök igen.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -43,7 +89,18 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-warm-gray-200">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Status Messages */}
+              {submitStatus.type && (
+                <div className={`p-4 rounded-lg ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
+              
               <div>
                 <Label htmlFor="name" className="block text-sm font-semibold text-warm-gray-700 mb-2">
                   Ditt Namn
@@ -55,6 +112,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
+                  disabled={isSubmitting}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors"
                 />
               </div>
@@ -70,6 +128,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
+                  disabled={isSubmitting}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors"
                 />
               </div>
@@ -85,6 +144,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
+                  disabled={isSubmitting}
                   className="w-full px-4 py-3 border border-warm-gray-300 rounded-lg focus:ring-2 focus:ring-skerry-orange-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Berätta kort om vad du vill diskutera eller ställ dina frågor här..."
                 />
@@ -92,9 +152,10 @@ export default function Contact() {
               
               <Button
                 type="submit"
-                className="w-full bg-skerry-orange-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-skerry-orange-600 transition-colors h-auto"
+                disabled={isSubmitting}
+                className="w-full bg-skerry-orange-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-skerry-orange-600 transition-colors h-auto disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Skicka Meddelande
+                {isSubmitting ? 'Skickar...' : 'Skicka Meddelande'}
               </Button>
             </form>
           </div>
