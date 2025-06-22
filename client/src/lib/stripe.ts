@@ -17,7 +17,7 @@ export const initiateBasicPlanPayment = async () => {
     const stripe = await stripePromise;
     if (!stripe) throw new Error('Stripe failed to initialize');
 
-    console.log('Initiating payment with priceId: price_1RciBvJxMBUPVMd5pGToECOw');
+    console.log('Initiating payment with priceId: price_1Rcjm2JxMBUPVMd5MZmS3wn3');
 
     // Skapa en checkout session via din backend
     const response = await fetch(getApiUrl(), {

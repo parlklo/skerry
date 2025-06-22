@@ -54,6 +54,8 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
+      allow_promotion_codes: true, // Aktiverar automatiskt promo code-fält
+      billing_address_collection: 'required', // Kräver att kunden fyller i sin faktureringsadress
       success_url: `${domain}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${domain}/cancel`,
       metadata: {
