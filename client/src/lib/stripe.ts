@@ -24,7 +24,6 @@ export const initiateBasicPlanPayment = async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        plan: 'basic',
         priceId: 'price_1RciBvJxMBUPVMd5pGToECOw', // Basic plan price ID
       }),
     });
