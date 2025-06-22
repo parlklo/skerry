@@ -4,7 +4,7 @@ const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Whitelist of allowed price IDs (säkerhetsåtgärd)
 const ALLOWED_PRICE_IDS = [
-  'price_1RciBvJxMBUPVMd5pGToECOw', // Basic plan
+  'price_1Rcjm2JxMBUPVMd5MZmS3wn3', // Basic plan (updated)
   // Lägg till fler price IDs här när du skapar dem
 ];
 
