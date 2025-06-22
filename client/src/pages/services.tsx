@@ -108,7 +108,8 @@ export default function Services() {
                 {/* Webbplatsutveckling */}
                 <div className="mb-4">
                   <div className="text-sm text-warm-gray-600 mb-2">Komplett hemsida</div>
-                  <span className="text-3xl font-extrabold text-warm-gray-900">9 455 SEK</span>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">9 440 SEK</span>
+                  <span className="text-sm text-warm-gray-500 ml-2">exkl. moms</span>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
@@ -116,7 +117,8 @@ export default function Services() {
                 {/* Support */}
                 <div className="mb-4">
                   <div className="text-sm text-warm-gray-600 mb-2">Löpande support & hosting</div>
-                  <div className="text-2xl font-bold text-warm-gray-900">445 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
+                  <div className="text-2xl font-bold text-warm-gray-900">480 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
+                  <div className="text-sm text-warm-gray-500">exkl. moms</div>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
@@ -162,7 +164,7 @@ export default function Services() {
               </ul>
               
               <a 
-                href="https://buy.stripe.com/00w3cwe4jcZe7d4aKx9MY00"
+                href="https://buy.stripe.com/6oU5kE0dt5wMgNEf0N9MY01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -182,7 +184,8 @@ export default function Services() {
                 {/* Webbplatsutveckling */}
                 <div className="mb-4">
                   <div className="text-sm text-warm-gray-600 mb-2">Komplett hemsida</div>
-                  <span className="text-3xl font-extrabold text-warm-gray-900">9 455 SEK</span>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">9 440 SEK</span>
+                  <span className="text-sm text-warm-gray-500 ml-2">exkl. moms</span>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
@@ -190,7 +193,8 @@ export default function Services() {
                 {/* Support */}
                 <div className="mb-4">
                   <div className="text-sm text-warm-gray-600 mb-2">Löpande support & hosting</div>
-                  <div className="text-2xl font-bold text-warm-gray-900">945 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
+                  <div className="text-2xl font-bold text-warm-gray-900">1 250 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
+                  <div className="text-sm text-warm-gray-500">exkl. moms</div>
                 </div>
                 
                 <div className="border-t border-warm-gray-200 my-4"></div>
