@@ -1,7 +1,7 @@
 import { loadStripe } from '@stripe/stripe-js';
 
-// Din Stripe public key
-const stripePromise = loadStripe('pk_test_51RZQy3FQ7WKVqZ7c7MrnzPsE8F2PCH4Z9GzW6NhZDRP4tnTUAWqZ6VOkeptHlNDeN9DWSBPAlE4yTFp48TqtH5Yg00ob4iIjRk');
+// Din Stripe public key - KORREKT LIVE KEY
+const stripePromise = loadStripe('pk_live_51RZQxvJxMBUPVMd5SwY9b0kpg3WskuIm7bgV7b1OI6jPQqCkD1OiEkoqoDpXXKTwsxrLP6F85p0EOILTiWQOhpDW00aoadjN0x');
 
 function getApiUrl() {
   // Om du kör Vercel lokalt med vercel dev, är /api rätt.
