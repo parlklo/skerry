@@ -17,6 +17,8 @@ export const initiateBasicPlanPayment = async () => {
     const stripe = await stripePromise;
     if (!stripe) throw new Error('Stripe failed to initialize');
 
+    console.log('Initiating payment with priceId: price_1RciBvJxMBUPVMd5pGToECOw');
+
     // Skapa en checkout session via din backend
     const response = await fetch(getApiUrl(), {
       method: 'POST',
@@ -28,7 +30,20 @@ export const initiateBasicPlanPayment = async () => {
       }),
     });
 
+    console.log('Response status:', response.status);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('API Error:', errorText);
+      throw new Error(`HTTP ${response.status}: ${errorText}`);
+    }
+
     const session = await response.json();
+    console.log('Session received:', session);
+
+    if (!session.id) {
+      throw new Error('No session ID received from server');
+    }
 
     // Omdirigera till Stripe Checkout
     const result = await stripe.redirectToCheckout({
