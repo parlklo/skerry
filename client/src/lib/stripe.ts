@@ -25,7 +25,7 @@ export const initiateBasicPlanPayment = async () => {
       },
       body: JSON.stringify({
         plan: 'basic',
-        price: 6455, // Pris i öre (6455 kr)
+        priceId: 'price_1RciBvJxMBUPVMd5pGToECOw', // Basic plan price ID
       }),
     });
 
