@@ -15,6 +15,9 @@ export default function Services() {
           element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
+    } else {
+      // No hash - scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, []); // Empty dependency array means this runs once when component mounts
 
@@ -25,11 +28,11 @@ export default function Services() {
         <div className="text-center mb-16">
           <h1 className="text-5xl sm:text-6xl font-black mb-6 text-warm-gray-900">
             Digitala Tjänster<br />
-            <span className="text-skerry-orange-500">Som Faktiskt Fungerar</span>
+            <span className="text-skerry-orange-500">Som Bara Fungerar</span>
           </h1>
           <p className="text-xl text-warm-gray-600 max-w-3xl mx-auto leading-relaxed">
             Vi skapar professionella webbplatser och hanterar allt det tekniska så att du kan 
-            fokusera på att driva ditt företag. Ingen jargong, inga krångliga processer—bara resultat.
+            fokusera på att driva ditt företag.
           </p>
         </div>
 
@@ -207,15 +210,15 @@ export default function Services() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Aktiv support & snabba svar</span>
+                  <span>Prioriterad support</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Uppdateringar av innehåll: priser, bilder, öppettider osv</span>
+                  <span>Regelbundna uppdateringar av innehåll: priser, bilder, öppettider osv</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Enkla funktionsförbättringar</span>
+                  <span>Tillägg av nya sidor och förbättringar av befintliga funktioner</span>
                 </li>
               </ul>
               
@@ -306,7 +309,7 @@ export default function Services() {
             </div>
             <div className="bg-green-50 rounded-xl p-4 border border-green-200">
               <div className="text-sm text-green-700 mb-2">Support & tillgänglighet</div>
-              <div className="text-2xl font-bold text-green-600">Svar inom 24h</div>
+              <div className="text-2xl font-bold text-green-600">Tillgänglig support</div>
             </div>
           </div>
         </div>
