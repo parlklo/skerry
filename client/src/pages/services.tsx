@@ -1,12 +1,9 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight, MessageCircle, Building2 } from "lucide-react";
-import { initiateBasicPlanPayment } from "@/lib/stripe";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Services() {
-  const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     // Check if URL has #prisplaner hash
     if (window.location.hash === '#prisplaner') {
@@ -20,18 +17,6 @@ export default function Services() {
       }
     }
   }, []); // Empty dependency array means this runs once when component mounts
-
-  const handleBasicPlanClick = async () => {
-    try {
-      setIsLoading(true);
-      await initiateBasicPlanPayment();
-    } catch (error) {
-      console.error('Failed to initiate payment:', error);
-      // Här kan du lägga till felhantering, t.ex. visa en toast-notification
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
     <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -176,14 +161,17 @@ export default function Services() {
                 </li>
               </ul>
               
-              <Button 
-                onClick={handleBasicPlanClick}
-                disabled={isLoading}
-                className="w-full bg-blue-500 text-white hover:bg-blue-600 h-auto py-3 text-base font-semibold rounded-xl"
+              <a 
+                href="https://buy.stripe.com/00w3cwe4jcZe7d4aKx9MY00"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                {isLoading ? 'Laddar...' : 'Välj Basic Paket'}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+                <Button className="w-full bg-blue-500 text-white hover:bg-blue-600 h-auto py-3 text-base font-semibold rounded-xl">
+                  Välj Basic Paket
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </div>
 
             {/* Premium Package */}
