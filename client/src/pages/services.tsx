@@ -141,7 +141,7 @@ export default function Services() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Annonskampanj (~100 klick)</span>
+                  <span>Annonskampanj</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
