@@ -152,9 +152,9 @@ export default function Home() {
         {/* Team section */}
         <div className="mt-20 relative">
           <h2 className="text-3xl font-bold text-center mb-8">Vårt Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col md:flex-row gap-8 justify-center">
             {/* Founder */}
-            <Card ref={kasperCardRef} className="flex flex-col items-center p-8 relative">
+            <Card ref={kasperCardRef} className="flex flex-col items-center p-8 relative max-w-sm">
               <CardHeader className="flex flex-col items-center">
                 <div className="flex items-center justify-center w-28 h-28 rounded-full bg-skerry-orange-100 mb-4">
                   <UserRound className="text-skerry-orange-500" size={48} />
@@ -214,22 +214,8 @@ export default function Home() {
                 </>
               )}
             </Card>
-            {/* Marketing */}
-            <Card className="flex flex-col items-center p-8">
-              <CardHeader className="flex flex-col items-center">
-                <div className="flex items-center justify-center w-28 h-28 rounded-full bg-warm-gray-200 mb-4">
-                  <UserRound className="text-warm-gray-500" size={48} />
-                </div>
-                <CardTitle className="text-center">Elin Nyström</CardTitle>
-                <CardDescription className="text-center text-base mt-1">Marknadsföring & kundkontakt</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center">
-                <p className="text-center text-sm text-gray-600 mb-1">Kontakt: elinnystrom@skerry.ai</p>
-                <p className="text-center text-sm text-transparent select-none">placeholder</p>
-              </CardContent>
-            </Card>
             {/* Sales */}
-            <Card className="flex flex-col items-center p-8">
+            <Card className="flex flex-col items-center p-8 relative max-w-sm">
               <CardHeader className="flex flex-col items-center">
                 <div className="flex items-center justify-center w-28 h-28 rounded-full bg-warm-gray-200 mb-4">
                   <UserRound className="text-warm-gray-500" size={48} />

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight, MessageCircle, Building2 } from "lucide-react";
+import { Globe, Wrench, Search, PaintBucket, Shield, Zap, CheckCircle, ArrowRight, MessageCircle, Building2, Sun } from "lucide-react";
 import { useEffect } from "react";
 
 export default function Services() {
@@ -83,17 +83,25 @@ export default function Services() {
           Alla våra paket innehåller både webbplatsutveckling och löpande support. Välj det paket som passar ditt företags behov bäst.
         </p>
         
-        {/* Visual badges for Basic and Premium */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Visual badges for Sommar, Basic and Premium */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Sommar badge */}
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+              <Sun className="text-yellow-400 mb-3" size={32} />
+              <div className="font-bold text-yellow-800 text-xl mb-2">Sommarerbjudande</div>
+              <div className="text-yellow-700 text-base">🌞 För dig som saknar hemsida och vill komma igång</div>
+            </div>
+
             {/* Basic badge */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl px-6 py-6 flex flex-col items-center text-center shadow-sm">
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
               <Wrench className="text-blue-400 mb-3" size={32} />
               <div className="font-bold text-blue-800 text-xl mb-2">Basic Paket</div>
               <div className="text-blue-700 text-base">🛠 För dig som sällan gör ändringar på hemsidan</div>
             </div>
+
             {/* Premium badge */}
-            <div className="bg-orange-50 border border-skerry-orange-200 rounded-xl px-6 py-6 flex flex-col items-center text-center shadow-sm">
+            <div className="bg-orange-50 border border-skerry-orange-200 rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
               <Zap className="text-skerry-orange-400 mb-3" size={32} />
               <div className="font-bold text-skerry-orange-800 text-xl mb-2">Premium Paket</div>
               <div className="text-skerry-orange-700 text-base">⚡️ För dig som ändrar innehållet flera gånger per månad</div>
@@ -102,7 +110,77 @@ export default function Services() {
         </div>
 
         <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Sommarerbjudande Package */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-yellow-400 hover:shadow-md transition-shadow flex flex-col">
+              <div className="mb-6">
+                <div className="text-sm font-semibold text-yellow-500 uppercase tracking-wide mb-4">Sommarerbjudande</div>
+                {/* Hemsida + Annonskampanj */}
+                <div className="mb-4">
+                  <div className="text-sm text-warm-gray-600 mb-2">Hemsida + Annonskampanj</div>
+                  <span className="text-3xl font-extrabold text-warm-gray-900">7&nbsp;800 SEK</span>
+                  <span className="text-sm text-warm-gray-500 ml-2">exkl. moms</span>
+                </div>
+                
+                <div className="border-t border-warm-gray-200 my-4"></div>
+
+                {/* Support */}
+                <div className="mb-4">
+                  <div className="text-sm text-warm-gray-600 mb-2">Löpande support & hosting</div>
+                  <div className="text-2xl font-bold text-warm-gray-900">180 SEK<span className="text-base font-normal text-warm-gray-500">/mån</span></div>
+                  <div className="text-sm text-warm-gray-500">exkl. moms</div>
+                </div>
+
+                <div className="border-t border-warm-gray-200 my-4"></div>
+              </div>
+              
+              <ul className="space-y-3 text-warm-gray-600 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Professionell webbplats</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Annonskampanj (~100 klick)</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>1 månads drift & support ingår</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>SEO-optimering</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Professionell hosting & drift</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>SSL-certifikat & säkerhet</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Automatiska backuper</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
+                  <span>Teknisk support vid problem</span>
+                </li>
+              </ul>
+              
+              <a 
+                href="https://buy.stripe.com/dRmaEYf8n6AQdBs8Cp9MY02" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block w-full"
+              >
+                <Button className="w-full bg-yellow-500 text-white hover:bg-yellow-600 h-auto py-3 text-base font-semibold rounded-xl">
+                  Välj Sommarerbjudande
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+            </div>
             {/* Basic Package */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-warm-gray-200 hover:shadow-md transition-shadow flex flex-col">
               <div className="mb-6">
@@ -130,7 +208,7 @@ export default function Services() {
               <ul className="space-y-3 text-warm-gray-600 mb-8 flex-grow">
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Professionell webbplats med 5 sidor</span>
+                  <span>Professionell webbplats med 7 sidor</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
@@ -155,10 +233,6 @@ export default function Services() {
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-3 mt-1 flex-shrink-0" size={18} />
                   <span>Teknisk support vid problem</span>
-                </li>
-                <li className="flex items-start">
-                  <MessageCircle className="text-blue-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                  <span>Design & utökad funktionalitet vid behov (separat kostnad)</span>
                 </li>
                 <li className="flex items-start">
                   <Shield className="text-red-500 mr-3 mt-1 flex-shrink-0" size={18} />
