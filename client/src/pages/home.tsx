@@ -188,7 +188,7 @@ export default function Home() {
                       </button>
                       <h3 className="text-2xl font-bold mb-4 text-skerry-orange-600">Om Kasper Pärlklo</h3>
                       <p className="text-gray-700 text-base leading-relaxed">
-                        Jag har en bakgrund inom företagsförvärv och affärsanalys, med fokus på teknikbolag men har också erfarenhet inom programmering och webbutveckling, och har jag byggt ett dussintals egna webbaserade projekt. Jag driver idag Skerry med målet att hjälpa mindre företag förbättra sin digitala närvaro – framför allt genom moderna, lättskötta hemsidor och smartare arbetsflöden.
+                        Jag har en bakgrund inom företagsförvärv och affärsanalys med fokus på teknikbolag, men har också erfarenhet av programmering och webbutveckling. Under de senaste åren har jag byggt ett flertal egna webbaserade projekt – från enkla hemsidor till mer avancerade projekt. Idag driver jag Skerry med målet att hjälpa mindre företag stärka sin digitala närvaro, framför allt genom moderna, lättskötta hemsidor och smartare sätt att arbeta.
                       </p>
                     </div>
                   </div>
