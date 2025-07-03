@@ -156,9 +156,11 @@ export default function Home() {
             {/* Founder */}
             <Card ref={kasperCardRef} className="flex flex-col items-center p-8 relative max-w-sm">
               <CardHeader className="flex flex-col items-center">
-                <div className="flex items-center justify-center w-28 h-28 rounded-full bg-skerry-orange-100 mb-4">
-                  <UserRound className="text-skerry-orange-500" size={48} />
-                </div>
+                <img
+                  src="/Kasper%20portratt%20bild.jpg"
+                  alt="Kasper Pärlklo porträtt"
+                  className="w-28 h-28 rounded-full object-cover mb-4"
+                />
                 <CardTitle className="text-center">Kasper Pärlklo</CardTitle>
                 <CardDescription className="text-center text-base mt-1">Grundare</CardDescription>
               </CardHeader>
