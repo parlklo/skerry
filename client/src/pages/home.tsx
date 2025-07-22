@@ -15,56 +15,39 @@ export default function Home() {
             <div className="max-w-4xl">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.9] mb-8 text-warm-gray-900">
                 Din digitala partner<br />
-                <span className="text-skerry-orange-500">för tillväxt</span>
+                <span className="text-skerry-orange-500">för lokala företag</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-warm-gray-600 mb-8 leading-relaxed max-w-2xl">
-                Vi hjälper små företag att modernisera sin digitala närvaro med professionella webbplatser 
-                och löpande underhåll. Kom ikapp digitalt och utveckla ditt lokala företag.
+              <p className="text-xl sm:text-2xl text-warm-gray-600 mb-12 leading-relaxed max-w-2xl">
+                Vi hjälper små, lokala företag att växa digitalt – med hemsidor, digital marknadsföring och annan support.
               </p>
-              
-              {/* Key Benefits */}
-              <div className="grid sm:grid-cols-2 gap-y-4 gap-x-12 mb-12">
-                <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3 shrink-0" size={20} />
-                  <span className="text-warm-gray-700 whitespace-nowrap">Professionella webbplatser som konverterar</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">Löpande underhåll</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">Mobilanpassad design</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-green-500 mr-3" size={20} />
-                  <span className="text-warm-gray-700">SEO-optimering</span>
-                </div>
-              </div>
 
-              {/* Main CTA */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                <Link href="/services">
-                  <Button className="group bg-skerry-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-skerry-orange-600 transition-all duration-200 hover:shadow-lg h-auto">
-                    <Globe className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    Se våra tjänster
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button className="group bg-warm-gray-900 text-warm-gray-50 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-warm-gray-800 transition-all duration-200 hover:shadow-lg h-auto">
-                    <ArrowRight className="mr-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    Kom igång
-                  </Button>
-                </Link>
-              </div>
+              {/* Enhanced CTA Section - Now the main focus */}
+              <div className="bg-warm-gray-900 rounded-3xl p-10 mb-12 text-white relative overflow-hidden">
+                {/* Speed banner matching home page */}
+                <div className="absolute -top-1 left-0 right-0 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-center py-2 font-black text-sm tracking-wide">
+                  ⚡ LEVERANS INOM CIRKA 1 VECKA ⚡
+                </div>
+                
+                <div className="flex items-center mb-5 mt-7">
+                  <span className="bg-skerry-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide">Startpaket</span>
+                </div>
+                <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Hemsida + Google Ads-kampanj</h3>
 
-              {/* Value Proposition */}
-              <div className="bg-warm-gray-100 rounded-2xl p-8 lg:p-12 border border-warm-gray-200">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-warm-gray-900">Redo att modernisera ditt företag?</h3>
-                <p className="text-lg text-warm-gray-600 mb-6">
-                  Låt inte en föråldrad digital närvaro hålla dig tillbaka. Vi skapar webbplatser som fungerar 
-                  och underhåller dem så att du kan fokusera på det du gör bäst.
-                </p>
+                <div className="mb-7">
+                  <span className="text-5xl sm:text-6xl font-black text-white">7 800 SEK</span>
+                  <span className="text-xl ml-3 text-gray-300">exkl. moms</span>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+                  <Link href="/services#prisplaner">
+                    <Button className="group bg-skerry-orange-500 text-white px-9 py-4 rounded-xl text-lg font-bold hover:bg-skerry-orange-600 transition-all duration-200 hover:shadow-lg h-auto">
+                      🚀 Starta mitt företags digitala resa
+                      <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                  <div className="text-sm text-gray-300">
+                    ✅ Pengar tillbaka om du inte är nöjd med hemsidan
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -87,12 +70,194 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Competitive Comparison */}
+        <div className="mt-16 mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-warm-gray-900 mb-4">
+              Varför välja <span className="text-skerry-orange-500">Skerry?</span>
+            </h2>
+            <p className="text-xl text-warm-gray-600 max-w-3xl mx-auto">
+              Jämför vårt erbjudande med traditionella webbyråer på marknaden
+            </p>
+          </div>
+
+          {/* Table Layout */}
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+              {/* Table Header */}
+              <div className="grid grid-cols-3 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200">
+                <div className="p-8"></div>
+                <div className="p-8 text-center border-l border-gray-200">
+                  <h3 className="text-xl font-bold text-gray-800">Traditionella webbyråer</h3>
+                  <p className="text-sm text-gray-600 mt-2">Vanliga marknadspriser</p>
+                </div>
+                <div className="p-8 text-center border-l border-gray-200 bg-gradient-to-br from-skerry-orange-100 to-warm-orange-100 relative">
+                  <h3 className="text-xl font-bold text-skerry-orange-800">Skerry</h3>
+                  <p className="text-sm text-skerry-orange-600 mt-2">Modernt och effektivt</p>
+                </div>
+              </div>
+
+              {/* Table Rows */}
+              <div className="grid grid-cols-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-200">
+                <div className="p-8 flex items-center">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl mr-4 flex items-center justify-center">
+                      <span className="text-blue-600 text-lg">⏰</span>
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800">Leveranstid</span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center flex flex-col justify-center">
+                  <div className="text-xl font-semibold text-gray-800 mb-2">Varierande</div>
+                  <div className="text-sm text-gray-600">Längre processer</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                      <span className="text-yellow-600 text-sm">⚠</span>
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center bg-gradient-to-br from-skerry-orange-50 to-warm-orange-50 flex flex-col justify-center">
+                  <div className="text-xl font-bold text-skerry-orange-800 mb-2">Cirka 1 vecka</div>
+                  <div className="text-sm text-skerry-orange-600">Effektiv process</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-200">
+                <div className="p-8 flex items-center">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-xl mr-4 flex items-center justify-center">
+                      <span className="text-green-600 text-lg">💰</span>
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800">Kostnad</span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center flex flex-col justify-center">
+                  <div className="text-xl font-semibold text-gray-800 mb-2">10 000+ SEK</div>
+                  <div className="text-sm text-gray-600">För hemsidan</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-red-500 text-sm">✕</span>
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center bg-gradient-to-br from-skerry-orange-50 to-warm-orange-50 flex flex-col justify-center">
+                  <div className="text-xl font-bold text-skerry-orange-800 mb-2">7 900 SEK</div>
+                  <div className="text-sm text-skerry-orange-600">Komplett paket</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-200">
+                <div className="p-8 flex items-center">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-yellow-100 rounded-xl mr-4 flex items-center justify-center">
+                      <span className="text-yellow-600 text-lg">📢</span>
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800">Google Ads</span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center flex flex-col justify-center">
+                  <div className="text-xl font-semibold text-gray-800 mb-2">Tillkommer extra</div>
+                  <div className="text-sm text-gray-600">Setup + löpande hantering kostar extra</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-red-500 text-sm">✕</span>
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center bg-gradient-to-br from-skerry-orange-50 to-warm-orange-50 flex flex-col justify-center">
+                  <div className="text-xl font-bold text-skerry-orange-800 mb-2">Inkluderat</div>
+                  <div className="text-sm text-skerry-orange-600">Setup + 1 500 SEK annonsbudget ingår</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 border-b border-gray-200 hover:bg-gray-50 transition-all duration-200">
+                <div className="p-8 flex items-center">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl mr-4 flex items-center justify-center">
+                      <span className="text-purple-600 text-lg">🚀</span>
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800">Teknik</span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center flex flex-col justify-center">
+                  <div className="text-xl font-semibold text-gray-800 mb-2">Varierande</div>
+                  <div className="text-sm text-gray-600">Ibland mallar och äldre system</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                      <span className="text-yellow-600 text-sm">⚠</span>
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center bg-gradient-to-br from-skerry-orange-50 to-warm-orange-50 flex flex-col justify-center">
+                  <div className="text-xl font-bold text-skerry-orange-800 mb-2">Senaste tekniken</div>
+                  <div className="text-sm text-skerry-orange-600">Modern, responsiv och skräddarsydd</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 border-t border-gray-200 hover:bg-gray-50 transition-all duration-200">
+                <div className="p-8 flex items-center">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl mr-4 flex items-center justify-center">
+                      <span className="text-blue-600 text-lg">🛠️</span>
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800">Support & Hosting</span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center flex flex-col justify-center">
+                  <div className="text-xl font-semibold text-gray-800 mb-2">150-300 SEK/mån</div>
+                  <div className="text-sm text-gray-600">Vanliga marknadspriser</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
+                      <span className="text-gray-500 text-sm">-</span>
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 border-l border-gray-200 text-center bg-gradient-to-br from-skerry-orange-50 to-warm-orange-50 flex flex-col justify-center">
+                  <div className="text-xl font-bold text-skerry-orange-800 mb-2">180 SEK/mån</div>
+                  <div className="text-sm text-skerry-orange-600">I linje med marknaden</div>
+                  <div className="mt-3 flex justify-center">
+                    <span className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
+                      <span className="text-gray-500 text-sm">-</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm text-warm-gray-500">
+              *Baserat på priser från svenska webbyråer som <a href="https://hemsidelab.se/vad-kostar-en-hemsida/" target="_blank" rel="noopener noreferrer" className="text-skerry-orange-500 hover:underline">Hemsidelab</a> (2024-2025)
+            </p>
+          </div>
+        </div>
+
         {/* Trust indicators section - snyggare version */}
         <div className="bg-warm-gray-50 rounded-2xl py-16 px-4 sm:px-8 mt-20 mb-0">
           <div className="flex flex-col items-center mb-10">
             <div className="flex items-center justify-center mb-3">
               <Sparkles className="text-skerry-orange-500 mr-2" size={28} />
-              <span className="text-2xl sm:text-3xl font-extrabold text-warm-gray-900">Perfekt för små företag som:</span>
+              <span className="text-2xl sm:text-3xl font-extrabold text-warm-gray-900">Hjälper lokala företag att växa:</span>
             </div>
             <div className="h-1 w-16 bg-skerry-orange-200 rounded-full mt-2"></div>
           </div>
@@ -235,13 +400,13 @@ export default function Home() {
 
         {/* CTA Section: Redo att Komma Igång? */}
         <div className="bg-skerry-orange-500 rounded-2xl p-8 lg:p-12 text-center mt-24 mb-0">
-          <h3 className="text-3xl font-bold mb-4 text-white">Redo att Komma Igång?</h3>
+          <h3 className="text-3xl font-bold mb-4 text-white">Redo att växa digitalt?</h3>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Låt oss diskutera ditt projekt och skapa en digital närvaro som får ditt företag att växa.
+            Låt oss hjälpa ditt lokala företag att synas online och få fler kunder genom vår kompletta digitala lösning.
           </p>
           <Link href="/services">
             <Button className="bg-white text-skerry-orange-500 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-warm-gray-50 transition-colors h-auto">
-              Se prisplaner & tjänster
+              Se startpaket & priser
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
