@@ -142,4 +142,39 @@
   .focus\:ring-skerry-orange-500:focus {
     --tw-ring-color: var(--skerry-orange-500);
   }
+  
+  /* Custom animations for startpaket section */
+  @keyframes pulse-subtle {
+    0%, 100% { 
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(251, 146, 60, 0.1);
+    }
+    50% { 
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(251, 146, 60, 0.2);
+    }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { 
+      opacity: 0;
+      background-position: 0% 50%;
+    }
+    50% { 
+      opacity: 1;
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+  
+  .animate-gradient-shift {
+    animation: gradient-shift 4s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+  
+  /* Custom orange glow shadow for CTA button */
+  .hover\:shadow-skerry-orange-500\/50:hover {
+    box-shadow: 0 25px 50px -12px rgba(251, 146, 60, 0.5), 0 0 0 1px rgba(251, 146, 60, 0.1);
+  }
 }
