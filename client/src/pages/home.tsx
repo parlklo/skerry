@@ -139,7 +139,7 @@ export default function Home() {
                     <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
                     7 900 SEK
                   </div>
-                  <div className="text-xs text-skerry-orange-600">Komplett paket</div>
+                  <div className="text-xs text-skerry-orange-600">För hemsida</div>
                 </div>
               </div>
 
@@ -161,7 +161,7 @@ export default function Home() {
                     <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
                     Inkluderat
                   </div>
-                  <div className="text-xs text-skerry-orange-600">Setup + 1 500 SEK annonsbudget</div>
+                  <div className="text-xs text-skerry-orange-600">Marknadsföringsmaterial + 1 500 SEK annonsbudget</div>
                 </div>
               </div>
 
