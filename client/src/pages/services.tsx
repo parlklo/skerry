@@ -110,7 +110,7 @@ export default function Services() {
 
                 {/* Support */}
                 <div className="mb-4 relative z-10">
-                  <div className="text-sm text-gray-300 mb-1">Löpande support & hosting</div>
+                  <div className="text-sm text-gray-300 mb-1">Löpande drift & hosting</div>
                   <div className="text-xl font-bold text-white">180 SEK<span className="text-base font-normal text-gray-300">/mån</span></div>
                   <div className="text-sm text-gray-400">exkl. moms</div>
                 </div>
@@ -128,7 +128,7 @@ export default function Services() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-sm">1 månads drift & support ingår</span>
+                    <span className="text-sm">1 månads drift & hosting ingår</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
@@ -144,7 +144,7 @@ export default function Services() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-sm">Automatiska backuper</span>
+                    <span className="text-sm">Automatiska säkerhetskopior</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
@@ -156,15 +156,15 @@ export default function Services() {
                   href="https://buy.stripe.com/dRmaEYf8n6AQdBs8Cp9MY02" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="block w-full mb-3 relative z-10"
+                  className="block w-full mb-4 relative z-10"
                 >
                   <Button className="w-full bg-gradient-to-r from-skerry-orange-500 to-orange-500 text-white hover:from-skerry-orange-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 h-auto py-3 text-base font-semibold rounded-xl border-2 border-skerry-orange-400/50 hover:shadow-skerry-orange-500/50">
-                    🚀 Starta mitt företags digitala resa
+                    Beställ ditt startpaket
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
                 
-                <div className="text-sm text-gray-300 text-center relative z-10 mb-2">
+                <div className="text-sm text-gray-300 text-center relative z-10 mb-3">
                   ✅ Pengar tillbaka om du inte godkänner hemsidan
                 </div>
                 
@@ -207,7 +207,7 @@ export default function Services() {
                 {/* Results Dashboard - Updated with theme colors */}
                 <div className="flex-1 relative z-10">
                   <div className="flex items-center justify-between mb-3">
-                    <h5 className="text-base font-bold text-white">Förväntade Resultat</h5>
+                    <h5 className="text-base font-bold text-white">Exempel på resultat</h5>
                     <div className="text-xs text-gray-300 bg-gray-700 px-2 py-1 rounded-full">
                       Med 1 500 SEK budget
                     </div>
@@ -371,7 +371,7 @@ export default function Services() {
                 <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3">
                   <Wrench className="text-green-500" size={28} />
                 </div>
-                <h4 className="text-xl font-bold text-warm-gray-900 mb-2">Service & Support</h4>
+                <h4 className="text-xl font-bold text-warm-gray-900 mb-2">Drift & Support</h4>
                 <p className="text-warm-gray-600 text-sm mb-4">
                   Säker hosting och support så din webbplats alltid fungerar.
                 </p>
@@ -395,7 +395,11 @@ export default function Services() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="text-green-500 mr-2 mt-0.5 flex-shrink-0" size={14} />
-                  <span>Versionshantering & backup</span>
+                  <span>Automatiska säkerhetskopior</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-500 mr-2 mt-0.5 flex-shrink-0" size={14} />
+                  <span>Support vid tekniska problem</span>
                 </li>
               </ul>
             </div>

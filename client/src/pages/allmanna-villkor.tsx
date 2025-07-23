@@ -7,7 +7,7 @@ export default function AlmannaVillkor() {
             Allmänna villkor
           </h1>
           <p className="text-sm text-warm-gray-500 mt-4">
-            Senast uppdaterad: 15-06-2024
+            Senast uppdaterad: 23-07-2025
           </p>
         </div>
 
@@ -110,12 +110,12 @@ export default function AlmannaVillkor() {
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">9. Support och responstider</h2>
                 <p className="text-warm-gray-700 leading-relaxed mb-4">
-                  Support tillhandahålls primärt via e-post. Vi strävar efter att svara inom 2 arbetsdagar. Omfattningen av inkluderad support varierar beroende på vald plan och specificeras i respektive tjänsteavtal.
+                  Support tillhandahålls via e-post och telefon. Vi strävar efter att svara så snabbt vi kan på alla förfrågningar.
                 </p>
                 <div>
                   <h4 className="font-semibold mb-2 text-warm-gray-900">Akut support:</h4>
                   <p className="text-warm-gray-700 leading-relaxed">
-                    Vid kritiska problem som påverkar webbplatsens tillgänglighet strävar vi efter snabbare responstid, men kan inte garantera detta.
+                    Vid kritiska problem som påverkar webbplatsens tillgänglighet prioriterar vi dessa ärenden.
                   </p>
                 </div>
               </div>
@@ -123,24 +123,31 @@ export default function AlmannaVillkor() {
               <div>
                 <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">10. Ändringar och tilläggsarbete</h2>
                 <p className="text-warm-gray-700 leading-relaxed mb-4">
-                  Ändringar av projektets omfattning eller specifikationer ska begäras skriftligt via e-post. Skerry bedömer om ändringen påverkar projekttid och kostnad.
+                  Den löpande månadsavgiften täcker hosting, drift, säkerhet och teknisk support. Alla innehållsändringar och uppdateringar av webbplatsen faktureras separat.
                 </p>
                 <div className="space-y-4 text-warm-gray-700">
                   <div>
-                    <h4 className="font-semibold mb-2 text-warm-gray-900">Mindre ändringar:</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Ändringar och uppdateringar:</h4>
+                    <p className="leading-relaxed mb-2">
+                      Alla ändringar av innehåll, design eller funktionalitet faktureras enligt vår timdebitering på <strong>1 000 SEK per timme exklusive moms</strong>. Detta inkluderar men är inte begränsat till:
+                    </p>
+                    <ul className="list-disc pl-6 space-y-1 mb-3">
+                      <li>Textändringar och innehållsuppdateringar</li>
+                      <li>Bildbyten och nya bilder</li>
+                      <li>Designjusteringar</li>
+                      <li>Nya sidor eller funktioner</li>
+                      <li>SEO-optimeringar</li>
+                    </ul>
                     <p className="leading-relaxed">
-                      Textändringar, bildbyten eller mindre designjusteringar kan ingå i den löpande tjänsten beroende på vald plan. Detta omfattar normalt upp till 3 mindre ändringar per månad där varje ändring tar maximalt 30 minuter att genomföra. Vid omfattande eller ovanligt frekventa ändringsönskemål förbehåller sig Skerry rätten att debitera för överarbete.
+                      <strong>Fakturering sker per påbörjad kvart (15 minuter)</strong> med en minimidebitering om 15 minuter per ärende. Ändringar ska begäras skriftligt via e-post och kostnadsförslag lämnas innan arbetet påbörjas vid större uppdrag.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2 text-warm-gray-900">Större ändringar och tilläggsarbete:</h4>
+                    <h4 className="font-semibold mb-2 text-warm-gray-900">Godkännande av arbete:</h4>
                     <p className="leading-relaxed">
-                      Väsentliga förändringar av design, funktionalitet eller struktur betraktas som tilläggsarbete och faktureras separat. Kostnadsförslag lämnas innan arbetet påbörjas. Kunden ansvarar för att godkänna kostnaden skriftligt innan tilläggsarbetet utförs.
+                      För arbete som överstiger 2 timmar lämnas kostnadsförslag innan arbetet påbörjas. Kunden ansvarar för att godkänna kostnaden skriftligt. Mindre ändringar (under 2 timmar) utförs direkt och faktureras enligt ovanstående.
                     </p>
                   </div>
-                  <p className="leading-relaxed">
-                    Tilläggsarbete faktureras enligt gällande timpriser eller som fast pris efter överenskommelse.
-                  </p>
                 </div>
               </div>
 
