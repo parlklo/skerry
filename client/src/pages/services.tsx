@@ -85,62 +85,70 @@ export default function Services() {
 
           <div className="mb-16">
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Startpaket - Now takes 50% width */}
-              <div className="bg-warm-gray-900 rounded-2xl p-8 text-white relative overflow-hidden">
-                <div className="flex items-center mb-4">
-                  <span className="bg-skerry-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Startpaket</span>
+              {/* Startpaket - Enhanced dark styling to match home page exactly */}
+              <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-gray-600 rounded-2xl p-6 text-white relative overflow-hidden shadow-2xl backdrop-blur-sm animate-pulse-subtle">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-skerry-orange-500/20 via-orange-500/15 to-skerry-orange-500/20 opacity-0 animate-gradient-shift rounded-2xl"></div>
+                
+                {/* Professional header with orange accent like home page */}
+                <div className="border-l-4 border-skerry-orange-500 pl-6 mb-4 relative z-10">
+                  <span className="inline-block bg-skerry-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide mb-3 shadow-lg">
+                    Startpaket
+                  </span>
+                  <h4 className="text-2xl font-bold mb-2 text-white">Hemsida + Google Ads Kampanj</h4>
                 </div>
                 
-                <h4 className="text-2xl font-bold mb-4 text-white">Hemsida + Google Ads Kampanj</h4>
-                
-                <div className="mb-4">
-                  <span className="text-4xl font-extrabold text-white">7 800 SEK</span>
-                  <span className="text-lg ml-2 text-gray-300">exkl. moms</span>
+                {/* Price with lines above and below */}
+                <div className="mb-4 relative z-10">
+                  <div className="border-t border-gray-500 mb-3"></div>
+                  <div className="mb-3">
+                    <span className="text-4xl font-extrabold text-white">7 800 SEK</span>
+                    <span className="text-lg ml-2 text-gray-300">exkl. moms</span>
+                  </div>
+                  <div className="border-t border-gray-500 mb-3"></div>
                 </div>
-                
-                <div className="border-t border-gray-600 my-4"></div>
 
                 {/* Support */}
-                <div className="mb-6">
-                  <div className="text-sm text-gray-300 mb-2">Löpande support & hosting</div>
+                <div className="mb-4 relative z-10">
+                  <div className="text-sm text-gray-300 mb-1">Löpande support & hosting</div>
                   <div className="text-xl font-bold text-white">180 SEK<span className="text-base font-normal text-gray-300">/mån</span></div>
                   <div className="text-sm text-gray-400">exkl. moms</div>
                 </div>
 
-                <div className="border-t border-gray-600 my-6"></div>
+                <div className="border-t border-gray-600 my-4 relative z-10"></div>
                 
-                <ul className="space-y-3 text-gray-200 mb-8">
+                <ul className="space-y-2 text-gray-200 mb-5 relative z-10">
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>Professionell webbplats</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">Professionell webbplats</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>Google Ads-kampanj med annonsbudget</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">Google Ads-kampanj med annonsbudget</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>1 månads drift & support ingår</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">1 månads drift & support ingår</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>SEO-optimering</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">SEO-optimering</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>Professionell hosting & drift</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">Professionell hosting & drift</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>SSL-certifikat & säkerhet</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">SSL-certifikat & säkerhet</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>Automatiska backuper</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">Automatiska backuper</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span>Teknisk support vid problem</span>
+                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-1 flex-shrink-0" size={16} />
+                    <span className="text-sm">Teknisk support vid problem</span>
                   </li>
                 </ul>
                 
@@ -148,34 +156,37 @@ export default function Services() {
                   href="https://buy.stripe.com/dRmaEYf8n6AQdBs8Cp9MY02" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="block w-full mb-4"
+                  className="block w-full mb-3 relative z-10"
                 >
-                  <Button className="w-full bg-skerry-orange-500 text-white hover:bg-skerry-orange-600 h-auto py-3 text-base font-semibold rounded-xl">
+                  <Button className="w-full bg-gradient-to-r from-skerry-orange-500 to-orange-500 text-white hover:from-skerry-orange-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 h-auto py-3 text-base font-semibold rounded-xl border-2 border-skerry-orange-400/50 hover:shadow-skerry-orange-500/50">
                     🚀 Starta mitt företags digitala resa
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
                 
-                <div className="text-sm text-gray-300 text-center">
+                <div className="text-sm text-gray-300 text-center relative z-10 mb-2">
                   ✅ Pengar tillbaka om du inte godkänner hemsidan
                 </div>
                 
-                <div className="text-xs text-gray-400 text-center mt-2">
+                <div className="text-xs text-gray-400 text-center relative z-10">
                   Alla priser är exklusive moms.
                 </div>
               </div>
 
-              {/* Google Ads Details - Now takes 50% width with harmonious design */}
-              <div className="bg-white rounded-2xl p-8 border-2 border-skerry-orange-200 shadow-lg relative overflow-hidden flex flex-col h-full">
-                <div className="flex items-center mb-4">
-                  <span className="bg-skerry-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Del av startpaketet</span>
+              {/* Google Ads Details - Enhanced dark styling to match */}
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-skerry-orange-300/30 rounded-2xl p-6 shadow-2xl relative overflow-hidden flex flex-col h-full">
+                {/* Subtle background animation */}
+                <div className="absolute inset-0 bg-gradient-to-r from-skerry-orange-500/10 via-orange-500/5 to-skerry-orange-500/10 opacity-50 animate-gradient-shift rounded-2xl"></div>
+                
+                <div className="flex items-center mb-3 relative z-10">
+                  <span className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">Del av startpaketet</span>
                 </div>
                 
-                <h4 className="text-2xl font-bold mb-4 text-warm-gray-900">Google Ads Kampanj</h4>
+                <h4 className="text-2xl font-bold mb-3 text-white relative z-10">Google Ads Kampanj</h4>
                 
-                {/* Budget Highlight - More Compressed */}
-                <div className="relative mb-5">
-                  <div className="bg-orange-500 rounded-2xl p-4 text-white relative overflow-hidden shadow-lg">
+                {/* Budget Highlight - Enhanced styling */}
+                <div className="relative mb-4 z-10">
+                  <div className="bg-gradient-to-r from-orange-500 to-skerry-orange-500 rounded-2xl p-4 text-white relative overflow-hidden shadow-xl border border-orange-400/50">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 rounded-full -mr-10 -mt-10"></div>
                     <div className="absolute bottom-0 left-0 w-12 h-12 bg-white bg-opacity-5 rounded-full -ml-6 -mb-6"></div>
                     <div className="relative z-10">
@@ -193,86 +204,86 @@ export default function Services() {
                   </div>
                 </div>
 
-                {/* Results Dashboard - Compressed */}
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-4">
-                    <h5 className="text-base font-bold text-warm-gray-900">Förväntade Resultat</h5>
-                    <div className="text-xs text-warm-gray-600 bg-warm-gray-100 px-2 py-1 rounded-full">
+                {/* Results Dashboard - Updated with theme colors */}
+                <div className="flex-1 relative z-10">
+                  <div className="flex items-center justify-between mb-3">
+                    <h5 className="text-base font-bold text-white">Förväntade Resultat</h5>
+                    <div className="text-xs text-gray-300 bg-gray-700 px-2 py-1 rounded-full">
                       Med 1 500 SEK budget
                     </div>
                   </div>
                   
-                  {/* Expanded Metric Cards */}
-                  <div className="space-y-4">
-                    {/* Impressions */}
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-300 h-20">
+                  {/* Enhanced Metric Cards with theme colors */}
+                  <div className="space-y-3">
+                    {/* Impressions - Orange theme */}
+                    <div className="bg-gradient-to-br from-skerry-orange-600/30 to-orange-700/40 border border-skerry-orange-500/40 rounded-xl p-4 h-20">
                       <div className="flex items-center justify-between h-full">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
-                            <span className="text-white text-lg">👁️</span>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-10 h-10 bg-skerry-orange-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
+                            <span className="text-white text-base">👁️</span>
                           </div>
                           <div className="flex-1">
-                            <div className="text-xl font-black text-blue-900 leading-tight">3 000 - 8 000</div>
-                            <div className="text-sm font-medium text-blue-800">Annonsvisningar</div>
+                            <div className="text-lg font-black text-white leading-tight">3 000 - 8 000</div>
+                            <div className="text-xs font-medium text-gray-300">Annonsvisningar</div>
                           </div>
                         </div>
-                        <div className="w-24 bg-blue-200 rounded-full h-2 ml-4 flex-shrink-0">
-                          <div className="bg-blue-600 h-2 rounded-full w-4/5"></div>
+                        <div className="w-20 bg-skerry-orange-900/50 rounded-full h-2 ml-3 flex-shrink-0">
+                          <div className="bg-skerry-orange-400 h-2 rounded-full w-4/5"></div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Website Visits */}
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-300 h-20">
+                    {/* Website Visits - Warm gray theme */}
+                    <div className="bg-gradient-to-br from-warm-gray-600/30 to-warm-gray-700/40 border border-warm-gray-500/40 rounded-xl p-4 h-20">
                       <div className="flex items-center justify-between h-full">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
-                            <span className="text-white text-lg">🌐</span>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-10 h-10 bg-warm-gray-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
+                            <span className="text-white text-base">🌐</span>
                           </div>
                           <div className="flex-1">
-                            <div className="text-xl font-black text-green-900 leading-tight">50 - 100</div>
-                            <div className="text-sm font-medium text-green-800">Besökare till hemsida</div>
+                            <div className="text-lg font-black text-white leading-tight">50 - 100</div>
+                            <div className="text-xs font-medium text-gray-300">Besökare till hemsida</div>
                           </div>
                         </div>
-                        <div className="w-24 bg-green-200 rounded-full h-2 ml-4 flex-shrink-0">
-                          <div className="bg-green-600 h-2 rounded-full w-3/5"></div>
+                        <div className="w-20 bg-warm-gray-900/50 rounded-full h-2 ml-3 flex-shrink-0">
+                          <div className="bg-warm-gray-400 h-2 rounded-full w-3/5"></div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Contacts */}
-                    <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 border border-amber-400 h-20">
+                    {/* Contacts - Green theme for positive outcome */}
+                    <div className="bg-gradient-to-br from-green-600/30 to-green-700/40 border border-green-500/40 rounded-xl p-4 h-20">
                       <div className="flex items-center justify-between h-full">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
-                            <span className="text-white text-lg">📞</span>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center shadow-sm flex-shrink-0">
+                            <span className="text-white text-base">📞</span>
                           </div>
                           <div className="flex-1">
-                            <div className="text-xl font-black text-amber-900 leading-tight">2 - 5</div>
-                            <div className="text-sm font-medium text-amber-800">Nya kontakter</div>
+                            <div className="text-lg font-black text-white leading-tight">2 - 5</div>
+                            <div className="text-xs font-medium text-gray-300">Nya kontakter</div>
                           </div>
                         </div>
-                        <div className="w-24 bg-amber-200 rounded-full h-2 ml-4 flex-shrink-0">
-                          <div className="bg-amber-600 h-2 rounded-full w-2/5"></div>
+                        <div className="w-20 bg-green-900/50 rounded-full h-2 ml-3 flex-shrink-0">
+                          <div className="bg-green-400 h-2 rounded-full w-2/5"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Compact Warning Design */}
-                <div className="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-3 mt-4">
+                {/* Enhanced Warning Design with yellow theme */}
+                <div className="bg-yellow-900/40 border-l-4 border-yellow-500 rounded-r-lg p-3 mt-4 relative z-10">
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
-                      <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-red-600 text-xs">⚠️</span>
+                      <div className="w-6 h-6 bg-yellow-800/50 rounded-full flex items-center justify-center">
+                        <span className="text-yellow-400 text-sm">⚠️</span>
                       </div>
                     </div>
                     <div className="ml-2">
-                      <h6 className="text-xs font-bold text-red-900 mb-1">
+                      <h6 className="text-xs font-bold text-yellow-300 mb-1">
                         Viktigt att komma ihåg
                       </h6>
-                      <p className="text-xs text-red-800">
+                      <p className="text-xs text-yellow-200 leading-relaxed">
                         Resultaten ovan är exempel baserade på branschsnitt. Verkliga resultat kan variera kraftigt beroende på bransch, konkurrens och kampanjoptimering. <span className="font-semibold">Inga garantier ges för specifika resultat.</span>
                       </p>
                     </div>
