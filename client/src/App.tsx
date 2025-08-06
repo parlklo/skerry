@@ -4,6 +4,9 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
+import Website from "@/pages/website";
+import DigitalMarketing from "@/pages/digital-marketing";
+import Automation from "@/pages/automation";
 import Contact from "@/pages/contact";
 import AlmannaVillkor from "@/pages/allmanna-villkor";
 import Integritetspolicy from "@/pages/integritetspolicy";
@@ -19,6 +22,9 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/services" component={Services} />
+          <Route path="/website" component={Website} />
+          <Route path="/digital-marketing" component={DigitalMarketing} />
+          <Route path="/automation" component={Automation} />
           <Route path="/contact" component={Contact} />
           <Route path="/allmanna-villkor" component={AlmannaVillkor} />
           <Route path="/integritetspolicy" component={Integritetspolicy} />
