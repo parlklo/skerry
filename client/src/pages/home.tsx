@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Gift } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
 import React from "react";
 
@@ -31,15 +31,7 @@ export default function Home() {
                   Billigt, modernt och enkelt att komma igång
                 </p>
 
-                {/* CTA Button */}
-                <div className="mb-12">
-                  <Link href="/services">
-                    <Button className="bg-skerry-orange-500 hover:bg-skerry-orange-600 text-white px-10 py-5 text-xl font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-skerry-orange-400/20 hover:border-skerry-orange-300">
-                      Kom igång nu
-                      <ArrowRight className="ml-3 h-6 w-6" />
-                    </Button>
-                  </Link>
-                </div>
+
 
                 {/* Quick Trust Indicators */}
                 <div className="flex flex-wrap gap-6 text-base text-white animate-fade-in-up" style={{ animationDelay: '0.6s', animationFillMode: 'both', textShadow: '0 4px 8px rgba(0, 0, 0, 0.4)' }}>
@@ -63,20 +55,20 @@ export default function Home() {
             <div className="lg:col-span-5 lg:col-start-8">
               <div className="relative animate-fade-in-up" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
                 {/* Floating Card */}
-                <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30 hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30">
                   {/* Header */}
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-4 border border-white/30">
-                      <img src="/skerry logo.png" alt="Skerry Logo" className="w-10 h-10 object-contain" />
+                      <Gift className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">Startpaket - Hemsida</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Kostnadsfri hemsida</h3>
                     <div className="h-0.5 w-12 bg-white/50 mx-auto"></div>
                   </div>
 
                   {/* Price */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-black text-white mb-1">7 800 SEK</div>
-                    <div className="text-sm text-white/80 font-medium">exklusive moms</div>
+                    <div className="text-4xl font-black text-white mb-1">0 SEK</div>
+                    <div className="text-sm text-white/80 font-medium">Du betalar bara om du är nöjd</div>
                     <div className="inline-block bg-skerry-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full mt-3 shadow-lg">
                       Leverans inom cirka 1 vecka
                     </div>
@@ -86,22 +78,22 @@ export default function Home() {
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-white font-medium">Skräddarsydd responsiv hemsida</span>
+                      <span className="text-sm text-white font-medium">Komplett responsiv hemsida</span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-white font-medium">Google Ads med 1 500 SEK budget</span>
+                      <span className="text-sm text-white font-medium">Baserat på dina önskemål</span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-white font-medium">Marknadsföringsmaterial</span>
+                      <span className="text-sm text-white font-medium">Professionell design</span>
                     </div>
                   </div>
 
                   {/* CTA in card */}
-                  <Link href="/services">
+                  <Link href="/website">
                     <Button className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300">
-                      Se alla paket
+                      Läs mer
                     </Button>
                   </Link>
                 </div>

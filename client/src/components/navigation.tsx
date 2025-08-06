@@ -81,17 +81,26 @@ export function Navigation() {
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                   >
-                    <button
-                      className={`flex items-center gap-1 transition-all duration-300 h-10 px-3 py-2 rounded-lg font-medium ${
-                        isActive(item.path)
-                          ? "text-white bg-white/10 font-semibold"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
-                      }`}
-                      style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.6)' }}
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
-                    </button>
+                    <div className="flex items-center gap-1">
+                      <Link href={item.path}>
+                        <button
+                          className={`transition-all duration-300 h-10 px-3 py-2 rounded-lg font-medium ${
+                            isActive(item.path)
+                              ? "text-white bg-white/10 font-semibold"
+                              : "text-white/80 hover:text-white hover:bg-white/10"
+                          }`}
+                          style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.6)' }}
+                        >
+                          {item.label}
+                        </button>
+                      </Link>
+                      <button
+                        className="transition-all duration-300 h-10 px-1 rounded-lg font-medium text-white/80 hover:text-white hover:bg-white/10"
+                        style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.6)' }}
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                    </div>
                     
                     {/* Dropdown Menu with enhanced dark theme */}
                     {isServicesDropdownOpen && (
@@ -152,17 +161,25 @@ export function Navigation() {
                 <div key={item.path}>
                   {item.hasDropdown ? (
                     <div>
-                      <button
-                        onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                        className={`flex items-center justify-between w-full text-left py-3 px-2 rounded-lg transition-all duration-300 ${
-                          isActive(item.path)
-                            ? "text-white bg-white/10 font-semibold"
-                            : "text-white/80 hover:text-white hover:bg-white/10"
-                        }`}
-                      >
-                        {item.label}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
-                      </button>
+                      <div className="flex items-center justify-between w-full">
+                        <Link href={item.path}>
+                          <button
+                            className={`text-left py-3 px-2 rounded-lg transition-all duration-300 ${
+                              isActive(item.path)
+                                ? "text-white bg-white/10 font-semibold"
+                                : "text-white/80 hover:text-white hover:bg-white/10"
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        </Link>
+                        <button
+                          onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                          className="py-3 px-2 rounded-lg transition-all duration-300 text-white/80 hover:text-white hover:bg-white/10"
+                        >
+                          <ChevronDown className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                      </div>
                       {isServicesDropdownOpen && (
                         <div className="pl-4 space-y-1 mt-1">
                           {item.dropdownItems?.map((dropdownItem) => (

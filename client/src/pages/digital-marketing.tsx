@@ -290,6 +290,96 @@ export default function DigitalMarketing() {
             </Link>
           </div>
 
+          {/* Exempel på Google Ads Kampanj */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Exempel: Google Ads Kampanj
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Se vad du kan förvänta dig med en av våra Google Ads kampanjer
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-skerry-orange-500/20 rounded-full -mr-12 -mt-12"></div>
+                <div className="absolute bottom-0 left-0 w-20 h-20 bg-skerry-orange-500/20 rounded-full -ml-10 -mb-10"></div>
+                
+                <div className="relative z-10">
+                  {/* Header with Target Icon */}
+                  <div className="flex items-center justify-center mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
+                      <Target className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="text-2xl font-bold text-white">Google Ads Kampanj</h3>
+                      <p className="text-gray-300">Inkluderad Annonsbudget: <span className="text-skerry-orange-400 font-bold">1 500 SEK</span></p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 text-center mb-8 leading-relaxed">
+                    Vi sätter upp kampanjen och arbetar för att hjälpa dig få nya kunder via din hemsida
+                  </p>
+                  
+                  {/* Results Grid */}
+                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                    {/* Annonsvisningar */}
+                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Eye className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-2">3 000 - 8 000</div>
+                      <div className="text-sm text-gray-300">Annonsvisningar</div>
+                    </div>
+                    
+                    {/* Besökare */}
+                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <Globe className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-2">50 - 100</div>
+                      <div className="text-sm text-gray-300">Besökare till hemsida</div>
+                    </div>
+                    
+                    {/* Nya kontakter */}
+                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
+                      <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <MessageSquare className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-2">2 - 5</div>
+                      <div className="text-sm text-gray-300">Nya kontakter</div>
+                    </div>
+                  </div>
+                  
+                  {/* Budget Info */}
+                  <div className="text-center mb-6">
+                    <div className="inline-block bg-skerry-orange-500/20 border border-skerry-orange-500/30 rounded-xl px-6 py-3">
+                      <span className="text-skerry-orange-300 font-semibold">Med 1 500 SEK budget</span>
+                    </div>
+                  </div>
+                  
+                  {/* Disclaimer */}
+                  <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6">
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                        <span className="text-black text-sm font-bold">!</span>
+                      </div>
+                      <div>
+                        <h4 className="text-yellow-300 font-bold mb-2">Viktigt att komma ihåg</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Resultaten ovan är exempel baserade på branschsnitt. Verkliga resultat kan variera kraftigt 
+                          beroende på bransch, konkurrens och kampanjoptimering. Inga garantier ges för specifika resultat.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           {/* CTA Section */}
           <div className="text-center max-w-4xl mx-auto">

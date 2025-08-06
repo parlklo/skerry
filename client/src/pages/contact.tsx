@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
-import { Mail, MapPin, Clock, Globe, Phone, UserRound } from "lucide-react";
+import { Mail, MapPin, Clock, Phone, UserRound } from "lucide-react";
 import { Link } from "wouter";
 
 interface ContactFormData {
@@ -25,7 +24,6 @@ export default function Contact() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
-  const [isKasperModalOpen, setIsKasperModalOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -80,22 +78,23 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+      <section className="pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl font-black mb-6 text-white" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.6)' }}>
               Låt oss prata om<br />
               <span className="text-skerry-orange-400">ditt projekt</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.6)' }}>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.6)' }}>
               Har du frågor om våra tjänster eller vill diskutera ditt projekt? 
               Skicka ett meddelande så återkommer vi så snart som möjligt.
             </p>
           </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Contact Form */}
-          <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
+          <div className="lg:col-span-3 bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Skicka meddelande</h2>
             <form className="space-y-6" onSubmit={handleSubmit} method="POST" noValidate>
               {/* Status Messages */}
               {submitStatus.type && (
@@ -168,127 +167,84 @@ export default function Contact() {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="lg:col-span-2 space-y-6">
+            {/* Team Section */}
+            <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl">
+              <h3 className="text-lg font-bold text-white mb-6 text-center">Teamet bakom Skerry</h3>
+              <div className="flex gap-4 justify-center">
+                {/* Kasper */}
+                <div className="text-center">
+                  <div className="relative mb-3 mx-auto w-16 h-16">
+                    <img
+                      src="/Kasper%20portratt%20bild.jpg"
+                      alt="Kasper Pärlklo"
+                      className="w-16 h-16 rounded-xl object-cover shadow-lg ring-2 ring-skerry-orange-400/50"
+                    />
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold text-xs mb-1">Kasper Pärlklo</div>
+                  <div className="text-skerry-orange-300 text-xs">Founder</div>
+                </div>
+
+                {/* Edward */}
+                <div className="text-center">
+                  <div className="relative mb-3 mx-auto w-16 h-16">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-skerry-orange-500 to-orange-600 flex items-center justify-center shadow-lg ring-2 ring-skerry-orange-400/50">
+                      <UserRound className="text-white" size={24} />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-black flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold text-xs mb-1">Edward Leiman</div>
+                  <div className="text-skerry-orange-300 text-xs">Sälj & Affärsutveckling</div>
+                </div>
+              </div>
+            </div>
+
             {/* Direct Contact */}
-            <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-              <h3 className="text-xl font-bold text-white mb-4">Kontakta oss direkt</h3>
-              <div className="space-y-3">
+            <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl">
+              <h3 className="text-lg font-bold text-white mb-4">Kontaktinfo</h3>
+              <div className="space-y-4">
                 <div className="flex items-center text-gray-300">
-                  <Mail className="mr-3 text-skerry-orange-400" size={20} />
-                  <span>kasperparlklo@skerry.ai</span>
+                  <Mail className="mr-3 text-skerry-orange-400 flex-shrink-0" size={18} />
+                  <span className="text-sm">kasperparlklo@skerry.ai</span>
                 </div>
                 <div className="flex items-center text-gray-300">
-                  <Phone className="mr-3 text-skerry-orange-400" size={20} />
-                  <span>+46 73 679 32 00</span>
+                  <Phone className="mr-3 text-skerry-orange-400 flex-shrink-0" size={18} />
+                  <span className="text-sm">+46 73 679 32 00</span>
                 </div>
                 <div className="flex items-center text-gray-300">
-                  <MapPin className="mr-3 text-skerry-orange-400" size={20} />
-                  <span>Stockholm, Sverige</span>
+                  <MapPin className="mr-3 text-skerry-orange-400 flex-shrink-0" size={18} />
+                  <span className="text-sm">Stockholm, Sverige</span>
                 </div>
               </div>
             </div>
 
             {/* Response Time */}
-            <div className="bg-green-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
+            <div className="bg-green-500/20 backdrop-blur-sm rounded-2xl p-5 border border-green-400/30">
               <div className="flex items-start">
-                <Clock className="text-green-400 mr-3 mt-1" size={20} />
+                <Clock className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={18} />
                 <div>
-                  <div className="font-semibold text-green-300 mb-1">Svarar vanligtvis inom 24 timmar</div>
-                  <div className="text-green-200 text-sm">Vi återkommer till dig så snart som möjligt.</div>
+                  <div className="font-semibold text-green-300 mb-1 text-sm">Svar inom 24h</div>
+                  <div className="text-green-200 text-xs">Vi återkommer snabbt</div>
                 </div>
               </div>
             </div>
 
-            {/* Info Box */}
-            <div className="bg-skerry-orange-500/20 backdrop-blur-sm rounded-xl p-6 border border-skerry-orange-400/30">
-              <div className="text-white">
-                <div className="font-semibold mb-2">Redo att komma igång?</div>
-                <div className="text-sm mb-3 text-gray-300">
-                  Om du redan vet vad du vill ha och är redo att börja, kan du kolla våra prisplaner och komma igång direkt.
-                </div>
-                <Link href="/services#prisplaner">
-                  <Button variant="ghost" className="text-skerry-orange-300 hover:text-skerry-orange-200 text-sm p-0 h-auto hover:bg-transparent">
-                    Se prisplaner →
-                  </Button>
-                </Link>
-              </div>
-            </div>
+
+
+
           </div>
         </div>
 
-        {/* Team section */}
-        <div className="mt-20 relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4" style={{ textShadow: '0 4px 8px rgba(0, 0, 0, 0.6)' }}>Vårt Team</h2>
-            <div className="h-1 w-16 bg-skerry-orange-400 rounded-full mx-auto"></div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
-            {/* Founder */}
-            <Card className="flex flex-col items-center p-8 relative max-w-sm bg-black/30 backdrop-blur-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:border-skerry-orange-400/50 shadow-xl">
-              <CardHeader className="flex flex-col items-center">
-                <div className="relative">
-                  <img
-                    src="/Kasper%20portratt%20bild.jpg"
-                    alt="Kasper Pärlklo porträtt"
-                    className="w-32 h-32 rounded-full object-cover mb-4 ring-4 ring-skerry-orange-100"
-                  />
-                </div>
-                <CardTitle className="text-center text-xl text-white">Kasper Pärlklo</CardTitle>
-                <CardDescription className="text-center text-base mt-1 text-skerry-orange-400 font-medium">Grundare</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center">
-                <p className="text-center text-sm text-gray-300 mb-3">Kontakt: kasperparlklo@skerry.ai</p>
-                <button
-                  className="mt-2 text-skerry-orange-400 hover:text-skerry-orange-300 hover:underline text-sm font-medium transition-colors"
-                  onClick={() => setIsKasperModalOpen(true)}
-                >
-                  Läs mer om Kasper →
-                </button>
-              </CardContent>
-              {/* Modal för Kasper */}
-              {isKasperModalOpen && (
-                <>
-                  {/* Overlay över kortet */}
-                  <div className="absolute inset-0 bg-black/30 rounded-xl z-40 animate-fadeIn" onClick={() => setIsKasperModalOpen(false)} />
-                  {/* Modal ovanpå kortet */}
-                  <div className="absolute left-1/2 top-1/2 z-50 w-full -translate-x-1/2 -translate-y-1/2 animate-slideUp">
-                    <div className="flex flex-col items-center p-8 relative bg-white rounded-xl shadow-2xl border-2 border-transparent max-w-sm mx-auto">
-                      <button
-                        className="absolute top-4 right-4 text-skerry-orange-500 hover:text-skerry-orange-700 text-2xl font-bold"
-                        onClick={() => setIsKasperModalOpen(false)}
-                        aria-label="Stäng"
-                      >
-                        ×
-                      </button>
-                      <div className="flex flex-col items-center w-full">
-                        <h3 className="text-xl font-bold text-center mb-2 text-skerry-orange-600">Om Kasper Pärlklo</h3>
-                        <p className="text-center text-sm text-gray-600 leading-relaxed">
-                          Kasper har en masterexamen från HEC Paris och har erfarenhet från dussintals webbprojekt i olika former. Målet med Skerry är att erbjuda professionella webbtjänster till marknadens bästa pris för mindre företagare som tidigare kanske inte känt att det varit värt investeringen.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-            </Card>
-            {/* Sales */}
-            <Card className="flex flex-col items-center p-8 relative max-w-sm bg-black/30 backdrop-blur-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:border-skerry-orange-400/50 shadow-xl">
-              <CardHeader className="flex flex-col items-center">
-                <div className="flex items-center justify-center w-32 h-32 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 mb-4 ring-4 ring-white/20">
-                  <UserRound className="text-gray-400" size={52} />
-                </div>
-                <CardTitle className="text-center text-xl text-white">Edward Leiman</CardTitle>
-                <CardDescription className="text-center text-base mt-1 text-gray-300 font-medium">Sälj & Affärsutveckling</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center">
-                <p className="text-center text-sm text-gray-300 mb-3">Kontakt: edwardleiman@skerry.ai</p>
-                <p className="text-center text-sm text-transparent select-none">placeholder</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+
       </div>
     </section>
     </div>
   );
 }
+
+
