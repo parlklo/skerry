@@ -390,45 +390,18 @@ export default function DigitalMarketing() {
               
               <div className="relative z-10">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-skerry-orange-500 rounded-full mb-6">
-                  <Sparkles className="w-8 h-8 text-white" />
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                  Redo att komma igång?
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+                  Intresserad av digital marknadsföring?
                 </h2>
-                <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-                  Låt oss diskutera hur vi kan hjälpa ditt företag att växa med digital marknadsföring.
-                </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                  <Link href="/contact">
-                    <Button className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl">
-                      <TrendingUp className="mr-3 h-6 w-6" />
-                      Kontakta oss idag
-                    </Button>
-                  </Link>
-                  <Link href="/services">
-                    <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300">
-                      Se alla tjänster
-                      <ArrowRight className="ml-3 h-6 w-6" />
-                    </Button>
-                  </Link>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-6 text-base text-gray-300">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    <span>Personlig rådgivning</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    <span>Transparent kommunikation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    <span>Skräddarsydda lösningar</span>
-                  </div>
-                </div>
+                <Link href="/contact">
+                  <Button className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-12 py-4 rounded-xl text-xl font-bold">
+                    Kontakta oss
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

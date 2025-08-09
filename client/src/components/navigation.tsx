@@ -22,7 +22,7 @@ export function Navigation() {
       dropdownItems: [
         { path: "/website", label: "Hemsidor" },
         { path: "/digital-marketing", label: "Digital Marknadsföring" },
-        { path: "/automation", label: "Automation" },
+        { path: "/automation", label: "AI Agenter & Automation" },
       ]
     },
     { path: "/contact", label: "Kontakt" },

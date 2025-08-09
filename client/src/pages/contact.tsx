@@ -229,7 +229,7 @@ export default function Contact() {
                 <Clock className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={18} />
                 <div>
                   <div className="font-semibold text-green-300 mb-1 text-sm">Svar inom 24h</div>
-                  <div className="text-green-200 text-xs">Vi återkommer snabbt</div>
+                  <div className="text-green-200 text-xs">Oftast inom 24h</div>
                 </div>
               </div>
             </div>
