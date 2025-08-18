@@ -101,7 +101,7 @@ export default function Website() {
                       className="w-full bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-6 py-4 text-lg font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-skerry-orange-400/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                     >
                       <Gift className="mr-3 h-5 w-5" />
-                      {isSubmitting ? 'Skickar...' : 'Få ditt formulär kostnadsfritt'}
+                      {isSubmitting ? 'Skickar...' : 'Få ditt formulär'}
                       {!isSubmitting && <ArrowRight className="ml-3 h-5 w-5" />}
                     </Button>
 
@@ -476,7 +476,7 @@ export default function Website() {
                   className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   <Gift className="mr-2 h-5 w-5" />
-                  {isSubmitting ? 'Skickar...' : 'Få formuläret'}
+                  {isSubmitting ? 'Skickar...' : 'Få ditt formulär'}
                 </Button>
 
                 {/* Compact status message for CTA section - Fixed height */}

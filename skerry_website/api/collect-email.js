@@ -123,9 +123,7 @@ export default async function handler(req, res) {
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0; padding: 20px; color: #333; line-height: 1.6;">
           <p>Hej!</p>
           
-          <p>Tack för ditt intresse för en kostnadsfri hemsida.</p>
-          
-          <p>Fyll i formuläret nedan så återkommer vi med ett förslag på hemsida:</p>
+          <p>För att komma igång behöver vi veta lite mer om vad du tänker kring din hemsida.</p>
           
           <p style="margin: 25px 0;">
             <a href="${tallyLink}" 
@@ -141,6 +139,8 @@ export default async function handler(req, res) {
               Fyll i formuläret här
             </a>
           </p>
+          
+          <p>Efter att formuläret är inskickat kommer vi tillbaka med ett förslag på din hemsida inom 7 arbetsdagar.</p>
           
           <p>Mvh,<br>
           Kasper<br>
