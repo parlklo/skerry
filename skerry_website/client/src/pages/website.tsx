@@ -105,16 +105,18 @@ export default function Website() {
                       {!isSubmitting && <ArrowRight className="ml-3 h-5 w-5" />}
                     </Button>
 
-                    {/* Status Messages - Now under button */}
-                    {submitStatus.type && (
-                      <div className={`p-4 rounded-lg text-sm ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-400/30 backdrop-blur-sm' 
-                          : 'bg-red-500/20 text-red-300 border border-red-400/30 backdrop-blur-sm'
-                      }`}>
-                        {submitStatus.message}
-                      </div>
-                    )}
+                    {/* Status Messages - Fixed height to prevent layout shift */}
+                    <div className="h-16 flex items-center">
+                      {submitStatus.type && (
+                        <div className={`p-4 rounded-lg text-sm w-full ${
+                          submitStatus.type === 'success' 
+                            ? 'bg-green-500/20 text-green-300 border border-green-400/30 backdrop-blur-sm' 
+                            : 'bg-red-500/20 text-red-300 border border-red-400/30 backdrop-blur-sm'
+                        }`}>
+                          {submitStatus.message}
+                        </div>
+                      )}
+                    </div>
                   </form>
                 </div>
 
@@ -477,16 +479,18 @@ export default function Website() {
                   {isSubmitting ? 'Skickar...' : 'Få formuläret'}
                 </Button>
 
-                {/* Compact status message for CTA section - Now under button */}
-                {submitStatus.type && (
-                  <div className={`p-3 rounded-lg text-xs ${
-                    submitStatus.type === 'success' 
-                      ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                      : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                  }`}>
-                    {submitStatus.message}
-                  </div>
-                )}
+                {/* Compact status message for CTA section - Fixed height */}
+                <div className="h-10 flex items-center">
+                  {submitStatus.type && (
+                    <div className={`p-3 rounded-lg text-xs w-full ${
+                      submitStatus.type === 'success' 
+                        ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                        : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                    }`}>
+                      {submitStatus.message}
+                    </div>
+                  )}
+                </div>
               </form>
             </div>
 

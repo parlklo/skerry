@@ -162,16 +162,18 @@ export default function Home() {
                       {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
                     </Button>
 
-                    {/* Status Messages - Now under button */}
-                    {submitStatus.type && (
-                      <div className={`p-3 rounded-lg text-sm ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                      }`}>
-                        {submitStatus.message}
-                      </div>
-                    )}
+                    {/* Status Messages - Fixed height to prevent layout shift */}
+                    <div className="h-12 flex items-center">
+                      {submitStatus.type && (
+                        <div className={`p-3 rounded-lg text-sm w-full ${
+                          submitStatus.type === 'success' 
+                            ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                            : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                        }`}>
+                          {submitStatus.message}
+                        </div>
+                      )}
+                    </div>
                   </form>
                 </div>
 
