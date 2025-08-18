@@ -82,17 +82,6 @@ export default function Website() {
                 {/* Email Collection Form */}
                 <div className="max-w-md mb-8">
                   <form onSubmit={handleEmailSubmit} className="space-y-4">
-                    {/* Status Messages */}
-                    {submitStatus.type && (
-                      <div className={`p-4 rounded-lg text-sm ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-400/30 backdrop-blur-sm' 
-                          : 'bg-red-500/20 text-red-300 border border-red-400/30 backdrop-blur-sm'
-                      }`}>
-                        {submitStatus.message}
-                      </div>
-                    )}
-                    
                     <div className="relative">
                       <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
                       <Input
@@ -115,6 +104,17 @@ export default function Website() {
                       {isSubmitting ? 'Skickar...' : 'Få ditt formulär kostnadsfritt'}
                       {!isSubmitting && <ArrowRight className="ml-3 h-5 w-5" />}
                     </Button>
+
+                    {/* Status Messages - Now under button */}
+                    {submitStatus.type && (
+                      <div className={`p-4 rounded-lg text-sm ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 text-green-300 border border-green-400/30 backdrop-blur-sm' 
+                          : 'bg-red-500/20 text-red-300 border border-red-400/30 backdrop-blur-sm'
+                      }`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
                   </form>
                 </div>
 
@@ -455,17 +455,6 @@ export default function Website() {
                 </p>
               </div>
               <form onSubmit={handleEmailSubmit} className="space-y-3">
-                {/* Compact status message for CTA section */}
-                {submitStatus.type && (
-                  <div className={`p-3 rounded-lg text-xs ${
-                    submitStatus.type === 'success' 
-                      ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                      : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                  }`}>
-                    {submitStatus.message}
-                  </div>
-                )}
-                
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
                   <Input
@@ -487,6 +476,17 @@ export default function Website() {
                   <Gift className="mr-2 h-5 w-5" />
                   {isSubmitting ? 'Skickar...' : 'Få formuläret'}
                 </Button>
+
+                {/* Compact status message for CTA section - Now under button */}
+                {submitStatus.type && (
+                  <div className={`p-3 rounded-lg text-xs ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                      : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
               </form>
             </div>
 

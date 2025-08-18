@@ -116,65 +116,33 @@ export default async function handler(req, res) {
     const tallyLink = 'https://tally.so/r/w5gyeQ';
     
     const userEmailData = await resend.emails.send({
-      from: 'Skerry <noreply@skerry.ai>',
+      from: 'Kasper från Skerry <noreply@skerry.ai>',
       to: [email],
-      subject: 'Din kostnadsfria hemsida väntar! 🚀',
+      subject: 'Formulär för din kostnadsfria hemsida',
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb;">
-          <div style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); padding: 40px 20px; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 28px; font-weight: bold;">
-              Tack för ditt intresse! 🎉
-            </h1>
-            <p style="color: #fed7aa; margin: 10px 0 0 0; font-size: 16px;">
-              Din kostnadsfria hemsida är bara några klick bort
-            </p>
+        <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; color: #333;">
+          <p>Hej!</p>
+          
+          <p>Tack för ditt intresse för en kostnadsfri hemsida.</p>
+          
+          <p>Fyll i formuläret nedan så återkommer vi med ett förslag på hemsida:</p>
+          
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="${tallyLink}" 
+               style="background-color: #f97316; 
+                      color: white; 
+                      padding: 12px 24px; 
+                      text-decoration: none; 
+                      border-radius: 6px; 
+                      font-weight: bold;
+                      display: inline-block;">
+              Fyll i formuläret här
+            </a>
           </div>
           
-          <div style="padding: 40px 20px; background-color: white;">
-            <h2 style="color: #1f2937; margin-bottom: 20px;">Nästa steg:</h2>
-            
-            <p style="color: #4b5563; line-height: 1.6; margin-bottom: 25px;">
-              För att vi ska kunna skapa din perfekta hemsida behöver vi veta lite mer om dig och ditt företag. 
-              Klicka på knappen nedan för att fylla i vårt snabba formulär:
-            </p>
-            
-            <div style="text-align: center; margin: 35px 0;">
-              <a href="${tallyLink}" 
-                 style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); 
-                        color: white; 
-                        padding: 15px 30px; 
-                        text-decoration: none; 
-                        border-radius: 8px; 
-                        font-weight: bold; 
-                        font-size: 16px;
-                        display: inline-block;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                Fyll i formuläret här →
-              </a>
-            </div>
-            
-            <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e; margin: 25px 0;">
-              <h3 style="color: #166534; margin: 0 0 10px 0; font-size: 16px;">Vad händer sedan?</h3>
-              <ul style="color: #166534; margin: 0; padding-left: 20px;">
-                <li>Vi granskar din ansökan inom 24h</li>
-                <li>Du får en personlig design-skiss</li>
-                <li>Leverans inom cirka 1 vecka</li>
-                <li>Du betalar bara om du är 100% nöjd</li>
-              </ul>
-            </div>
-            
-            <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
-              Har du frågor? Svara bara på det här mailet så återkommer vi snabbt!
-            </p>
-            
-            <hr style="border: none; height: 1px; background-color: #e5e7eb; margin: 30px 0;">
-            
-            <p style="color: #9ca3af; font-size: 12px; text-align: center;">
-              Med vänliga hälsningar,<br>
-              <strong>Team Skerry</strong><br>
-              Stockholm, Sverige
-            </p>
-          </div>
+          <p>Mvh,<br>
+          Kasper<br>
+          <span style="color: #666;">Skerry</span></p>
         </div>
       `,
     });

@@ -141,17 +141,6 @@ export default function Home() {
 
                   {/* Email Collection Form */}
                   <form onSubmit={handleEmailSubmit} className="space-y-4">
-                    {/* Status Messages */}
-                    {submitStatus.type && (
-                      <div className={`p-3 rounded-lg text-sm ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                      }`}>
-                        {submitStatus.message}
-                      </div>
-                    )}
-                    
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
                       <Input
@@ -172,6 +161,17 @@ export default function Home() {
                     >
                       {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
                     </Button>
+
+                    {/* Status Messages - Now under button */}
+                    {submitStatus.type && (
+                      <div className={`p-3 rounded-lg text-sm ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                      }`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
                   </form>
                 </div>
 
