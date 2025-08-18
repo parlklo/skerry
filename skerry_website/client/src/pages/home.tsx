@@ -165,43 +165,34 @@ export default function Home() {
                         />
                       </div>
                       
-                      <Button 
-                        type="submit" 
-                        disabled={isSubmitting || !email.trim()}
-                        className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
-                      </Button>
-                    </form>
-                  </div>
-
-                  {/* Status Messages - Simple toast notification */}
-                  {submitStatus.type && (
-                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up">
-                      <div className={`px-6 py-3 rounded-lg shadow-lg backdrop-blur-md border text-sm font-medium ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-white/95 text-green-700 border-green-200' 
-                          : 'bg-white/95 text-red-700 border-red-200'
-                      }`}>
-                        <div className="flex items-center space-x-2">
+                      {submitStatus.type ? (
+                        // Show status message instead of button
+                        <div className={`w-full py-3 rounded-lg text-sm font-medium flex items-center justify-center space-x-2 transition-all duration-300 ${
+                          submitStatus.type === 'success' 
+                            ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                            : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                        }`}>
                           {submitStatus.type === 'success' ? (
-                            <CheckCircle className="w-4 h-4 text-green-600" />
+                            <CheckCircle className="w-4 h-4" />
                           ) : (
-                            <div className="w-4 h-4 bg-red-600 rounded-full flex items-center justify-center">
+                            <div className="w-4 h-4 bg-red-400 rounded-full flex items-center justify-center">
                               <span className="text-white text-xs font-bold">!</span>
                             </div>
                           )}
                           <span>{submitStatus.message}</span>
-                          <button 
-                            onClick={() => setSubmitStatus({ type: null, message: '' })}
-                            className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-                          >
-                            ×
-                          </button>
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      ) : (
+                        // Show normal button
+                        <Button 
+                          type="submit" 
+                          disabled={isSubmitting || !email.trim()}
+                          className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
+                        </Button>
+                      )}
+                    </form>
+                  </div>
                 </div>
 
 
