@@ -306,14 +306,11 @@ export default function Website() {
                 </div>
                 <div className="text-3xl font-extrabold text-white mb-4">180 kr<span className="text-base font-medium text-white/60">/mån exkl. moms</span></div>
                 <div className="text-white/70 text-sm italic mb-4">Passar dig som sällan gör ändringar och främst vill ha en trygg, snabb hemsida.</div>
-                <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <ul className="space-y-3 text-white/80 text-sm">
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Hosting, SSL och domänkoppling</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Övervakning & säkerhetskopior</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Support vid tekniska problem</li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/10">Välj Basleverans</Button>
-                </Link>
               </div>
 
               {/* Innehållsredigering */}
@@ -329,14 +326,11 @@ export default function Website() {
                 </div>
                 <div className="text-3xl font-extrabold text-white mb-4">380 kr<span className="text-base font-medium text-white/60">/mån exkl. moms</span></div>
                 <div className="text-white/70 text-sm italic mb-4">Passar dig som vill ändra texter och bilder enkelt själv.</div>
-                <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <ul className="space-y-3 text-white/80 text-sm">
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Enkelt CMS för texter och bilder</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Uppdatera befintligt innehåll själv</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Större ändringar och nya sidor kräver hjälp</li>
                 </ul>
-                <Link href="/contact">
-                  <Button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/10">Välj Innehållsredigering</Button>
-                </Link>
               </div>
 
               {/* Skräddarsytt */}
