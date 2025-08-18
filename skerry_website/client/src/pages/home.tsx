@@ -163,18 +163,39 @@ export default function Home() {
                         {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
                       </Button>
                     </form>
-
-                    {/* Status Messages - Absolutely positioned to avoid layout shift */}
-                    {submitStatus.type && (
-                      <div className={`absolute top-full left-0 right-0 mt-2 p-3 rounded-lg text-sm z-10 ${
-                        submitStatus.type === 'success' 
-                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                      }`}>
-                        {submitStatus.message}
-                      </div>
-                    )}
                   </div>
+
+                  {/* Status Messages - Fixed positioning overlay to avoid any layout shift */}
+                  {submitStatus.type && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                      <div className={`mx-4 p-6 rounded-2xl text-center shadow-2xl border-2 backdrop-blur-md max-w-md w-full transform transition-all duration-300 scale-100 ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-900/90 text-green-100 border-green-400/50' 
+                          : 'bg-red-900/90 text-red-100 border-red-400/50'
+                      }`}>
+                        <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${
+                          submitStatus.type === 'success' ? 'bg-green-500/20' : 'bg-red-500/20'
+                        }`}>
+                          {submitStatus.type === 'success' ? (
+                            <CheckCircle className="w-8 h-8 text-green-400" />
+                          ) : (
+                            <div className="w-8 h-8 text-red-400 font-bold text-2xl">!</div>
+                          )}
+                        </div>
+                        <p className="text-lg font-semibold mb-4">{submitStatus.message}</p>
+                        <Button 
+                          onClick={() => setSubmitStatus({ type: null, message: '' })}
+                          className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                            submitStatus.type === 'success'
+                              ? 'bg-green-600 hover:bg-green-700 text-white'
+                              : 'bg-red-600 hover:bg-red-700 text-white'
+                          }`}
+                        >
+                          Stäng
+                        </Button>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
 
