@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle, Star, Gift, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -12,6 +12,16 @@ export default function Home() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+
+  // Auto-hide success messages after 4 seconds
+  useEffect(() => {
+    if (submitStatus.type === 'success') {
+      const timer = setTimeout(() => {
+        setSubmitStatus({ type: null, message: '' });
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -165,34 +175,30 @@ export default function Home() {
                     </form>
                   </div>
 
-                  {/* Status Messages - Fixed positioning overlay to avoid any layout shift */}
+                  {/* Status Messages - Simple toast notification */}
                   {submitStatus.type && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-                      <div className={`mx-4 p-6 rounded-2xl text-center shadow-2xl border-2 backdrop-blur-md max-w-md w-full transform transition-all duration-300 scale-100 ${
+                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in-up">
+                      <div className={`px-6 py-3 rounded-lg shadow-lg backdrop-blur-md border text-sm font-medium ${
                         submitStatus.type === 'success' 
-                          ? 'bg-green-900/90 text-green-100 border-green-400/50' 
-                          : 'bg-red-900/90 text-red-100 border-red-400/50'
+                          ? 'bg-white/95 text-green-700 border-green-200' 
+                          : 'bg-white/95 text-red-700 border-red-200'
                       }`}>
-                        <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${
-                          submitStatus.type === 'success' ? 'bg-green-500/20' : 'bg-red-500/20'
-                        }`}>
+                        <div className="flex items-center space-x-2">
                           {submitStatus.type === 'success' ? (
-                            <CheckCircle className="w-8 h-8 text-green-400" />
+                            <CheckCircle className="w-4 h-4 text-green-600" />
                           ) : (
-                            <div className="w-8 h-8 text-red-400 font-bold text-2xl">!</div>
+                            <div className="w-4 h-4 bg-red-600 rounded-full flex items-center justify-center">
+                              <span className="text-white text-xs font-bold">!</span>
+                            </div>
                           )}
+                          <span>{submitStatus.message}</span>
+                          <button 
+                            onClick={() => setSubmitStatus({ type: null, message: '' })}
+                            className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
+                          >
+                            ×
+                          </button>
                         </div>
-                        <p className="text-lg font-semibold mb-4">{submitStatus.message}</p>
-                        <Button 
-                          onClick={() => setSubmitStatus({ type: null, message: '' })}
-                          className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                            submitStatus.type === 'success'
-                              ? 'bg-green-600 hover:bg-green-700 text-white'
-                              : 'bg-red-600 hover:bg-red-700 text-white'
-                          }`}
-                        >
-                          Stäng
-                        </Button>
                       </div>
                     </div>
                   )}
