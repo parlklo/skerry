@@ -120,7 +120,7 @@ export default async function handler(req, res) {
       to: [email],
       subject: 'Formulär för din kostnadsfria hemsida',
       html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 650px; margin: 0; padding: 20px; color: #333; line-height: 1.6;">
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1000px; margin: 0; padding: 20px; color: #333; line-height: 1.6;">
           <p>Hej!</p>
           
           <p>För att komma igång behöver vi veta lite mer om vad du tänker kring din hemsida.</p>
