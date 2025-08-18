@@ -1,10 +1,61 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Gift } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, CheckCircle, Star, Gift, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/collect-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          email, 
+          campaign: 'free_website_2025',
+          source: 'website_home' 
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Tack! Kolla din e-post för nästa steg.'
+        });
+        setEmail(''); // Reset form
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message || 'Ett fel uppstod. Försök igen senare.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting email:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Ett fel uppstod. Kontrollera din internetanslutning och försök igen.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <BackgroundPage 
       backgroundImage="/landingpage.png"
@@ -88,12 +139,40 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* CTA in card */}
-                  <Link href="/website">
-                    <Button className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300">
-                      Läs mer
+                  {/* Email Collection Form */}
+                  <form onSubmit={handleEmailSubmit} className="space-y-4">
+                    {/* Status Messages */}
+                    {submitStatus.type && (
+                      <div className={`p-3 rounded-lg text-sm ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                      }`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
+                    
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
+                      <Input
+                        type="email"
+                        placeholder="din@email.se"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={isSubmitting}
+                        required
+                        className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/60 transition-colors text-white placeholder-white/60 text-sm"
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting || !email.trim()}
+                      className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
                     </Button>
-                  </Link>
+                  </form>
                 </div>
 
 

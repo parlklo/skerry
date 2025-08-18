@@ -1,10 +1,60 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Globe, CheckCircle, ArrowRight, Clock, Star, FileText, Lightbulb, Zap, Gift, Sparkles, Wrench, Search, CreditCard } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Globe, CheckCircle, ArrowRight, Clock, Star, FileText, Lightbulb, Zap, Gift, Sparkles, Wrench, Search, CreditCard, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Website() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/collect-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          email, 
+          campaign: 'free_website_2025',
+          source: 'website_page' 
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Tack! Kolla din e-post för nästa steg.'
+        });
+        setEmail(''); // Reset form
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message || 'Ett fel uppstod. Försök igen senare.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting email:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Ett fel uppstod. Kontrollera din internetanslutning och försök igen.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <BackgroundPage backgroundImage="/tranquilizing picture.png">
@@ -29,15 +79,43 @@ export default function Website() {
                   <span className="text-skerry-orange-300 font-bold"> Du betalar bara om du är nöjd med resultatet.</span>
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                onClick={() => window.open('https://tally.so/r/w5gyeQ', '_blank', 'noopener,noreferrer')}
-                    className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-6 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-skerry-orange-400/20"
-              >
-                <Gift className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                <span className="text-sm sm:text-base lg:text-lg">Skapa min kostnadsfria hemsida</span>
-                <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
-              </Button>
+                {/* Email Collection Form */}
+                <div className="max-w-md mb-8">
+                  <form onSubmit={handleEmailSubmit} className="space-y-4">
+                    {/* Status Messages */}
+                    {submitStatus.type && (
+                      <div className={`p-4 rounded-lg text-sm ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 text-green-300 border border-green-400/30 backdrop-blur-sm' 
+                          : 'bg-red-500/20 text-red-300 border border-red-400/30 backdrop-blur-sm'
+                      }`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
+                    
+                    <div className="relative">
+                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
+                      <Input
+                        type="email"
+                        placeholder="Din e-postadress"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={isSubmitting}
+                        required
+                        className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl focus:ring-2 focus:ring-skerry-orange-400/50 focus:border-skerry-orange-400/60 transition-colors text-white placeholder-white/60 text-base"
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting || !email.trim()}
+                      className="w-full bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-6 py-4 text-lg font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-skerry-orange-400/20 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    >
+                      <Gift className="mr-3 h-5 w-5" />
+                      {isSubmitting ? 'Skickar...' : 'Få ditt formulär kostnadsfritt'}
+                      {!isSubmitting && <ArrowRight className="ml-3 h-5 w-5" />}
+                    </Button>
+                  </form>
                 </div>
 
 
@@ -376,13 +454,40 @@ export default function Website() {
                   Fyll i formuläret så bygger vi din hemsida kostnadsfritt
                 </p>
               </div>
-              <Button 
-                onClick={() => window.open('https://tally.so/r/w5gyeQ', '_blank', 'noopener,noreferrer')}
-                className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl w-full"
-              >
-                <Gift className="mr-2 h-5 w-5" />
-                Fyll i formuläret
-              </Button>
+              <form onSubmit={handleEmailSubmit} className="space-y-3">
+                {/* Compact status message for CTA section */}
+                {submitStatus.type && (
+                  <div className={`p-3 rounded-lg text-xs ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                      : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
+                
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
+                  <Input
+                    type="email"
+                    placeholder="din@email.se"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    disabled={isSubmitting}
+                    required
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-skerry-orange-400/50 focus:border-skerry-orange-400/60 transition-colors text-white placeholder-white/60 text-sm"
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting || !email.trim()}
+                  className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl w-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                >
+                  <Gift className="mr-2 h-5 w-5" />
+                  {isSubmitting ? 'Skickar...' : 'Få formuläret'}
+                </Button>
+              </form>
             </div>
 
             {/* Kontakt CTA */}
