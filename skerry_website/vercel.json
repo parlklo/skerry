@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd skerry_website/client && npm run build",
-  "outputDirectory": "skerry_website/client/dist",
+  "buildCommand": "cd client && npm run build",
+  "outputDirectory": "client/dist",
   "rewrites": [
     {
       "source": "/api/(.*)",
