@@ -120,7 +120,7 @@ export default async function handler(req, res) {
       to: [email],
       subject: 'Formulär för din kostnadsfria hemsida',
       html: `
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1000px; margin: 0; padding: 20px; color: #333; line-height: 1.6;">
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1000px; margin: 0; padding: 20px; color: #333; line-height: 1.6; font-size: 16px;">
           <p>Hej!</p>
           
           <p>För att komma igång behöver vi veta lite mer om vad du tänker kring din hemsida.</p>
@@ -129,22 +129,22 @@ export default async function handler(req, res) {
             <a href="${tallyLink}" 
                style="background-color: #2563eb; 
                       color: white; 
-                      padding: 8px 16px; 
+                      padding: 10px 18px; 
                       text-decoration: none; 
                       border-radius: 3px; 
                       font-weight: 500;
                       border: 1px solid #1d4ed8;
                       display: inline-block;
-                      font-size: 13px;">
+                      font-size: 16px;">
               Fyll i formuläret här
             </a>
           </p>
           
-          <p style="font-size: 14px; line-height: 1.4;">Efter att formuläret är inskickat kommer vi tillbaka med ett förslag på din hemsida inom 7 arbetsdagar.</p>
+          <p>Efter att formuläret är inskickat kommer vi tillbaka med ett förslag på din hemsida inom 7 arbetsdagar.</p>
           
           <p>Mvh,<br>
           Kasper<br>
-          <span style="color: #666; font-size: 14px;">Skerry</span></p>
+          <span style="color: #666;">Skerry</span></p>
         </div>
       `,
     });
