@@ -140,30 +140,32 @@ export default function Home() {
                   </div>
 
                   {/* Email Collection Form */}
-                  <form onSubmit={handleEmailSubmit} className="space-y-4">
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
-                      <Input
-                        type="email"
-                        placeholder="din@email.se"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        disabled={isSubmitting}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/60 transition-colors text-white placeholder-white/60 text-sm"
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting || !email.trim()}
-                      className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
-                    </Button>
+                  <div>
+                    <form onSubmit={handleEmailSubmit} className="space-y-4">
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
+                        <Input
+                          type="email"
+                          placeholder="din@email.se"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          disabled={isSubmitting}
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/60 transition-colors text-white placeholder-white/60 text-sm"
+                        />
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting || !email.trim()}
+                        className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
+                      </Button>
+                    </form>
 
-                    {/* Status Messages - Fixed height to prevent layout shift */}
-                    <div className="h-12 flex items-center">
+                    {/* Status Messages - Outside form to prevent spacing issues */}
+                    <div className="h-12 flex items-center mt-4">
                       {submitStatus.type && (
                         <div className={`p-3 rounded-lg text-sm w-full ${
                           submitStatus.type === 'success' 
@@ -174,7 +176,7 @@ export default function Home() {
                         </div>
                       )}
                     </div>
-                  </form>
+                  </div>
                 </div>
 
 

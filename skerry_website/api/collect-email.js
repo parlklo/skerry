@@ -127,17 +127,17 @@ export default async function handler(req, res) {
           
           <p>Fyll i formuläret nedan så återkommer vi med ett förslag på hemsida:</p>
           
-          <p style="margin: 30px 0;">
+          <p style="margin: 25px 0;">
             <a href="${tallyLink}" 
                style="background-color: #2563eb; 
                       color: white; 
-                      padding: 12px 20px; 
+                      padding: 8px 16px; 
                       text-decoration: none; 
-                      border-radius: 4px; 
+                      border-radius: 3px; 
                       font-weight: 500;
                       border: 1px solid #1d4ed8;
                       display: inline-block;
-                      font-size: 14px;">
+                      font-size: 13px;">
               Fyll i formuläret här
             </a>
           </p>
