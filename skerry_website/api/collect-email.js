@@ -120,29 +120,31 @@ export default async function handler(req, res) {
       to: [email],
       subject: 'Formulär för din kostnadsfria hemsida',
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; color: #333;">
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0; padding: 20px; color: #333; line-height: 1.6;">
           <p>Hej!</p>
           
           <p>Tack för ditt intresse för en kostnadsfri hemsida.</p>
           
           <p>Fyll i formuläret nedan så återkommer vi med ett förslag på hemsida:</p>
           
-          <div style="text-align: center; margin: 30px 0;">
+          <p style="margin: 30px 0;">
             <a href="${tallyLink}" 
-               style="background-color: #f97316; 
+               style="background-color: #2563eb; 
                       color: white; 
-                      padding: 12px 24px; 
+                      padding: 12px 20px; 
                       text-decoration: none; 
-                      border-radius: 6px; 
-                      font-weight: bold;
-                      display: inline-block;">
+                      border-radius: 4px; 
+                      font-weight: 500;
+                      border: 1px solid #1d4ed8;
+                      display: inline-block;
+                      font-size: 14px;">
               Fyll i formuläret här
             </a>
-          </div>
+          </p>
           
           <p>Mvh,<br>
           Kasper<br>
-          <span style="color: #666;">Skerry</span></p>
+          <span style="color: #666; font-size: 14px;">Skerry</span></p>
         </div>
       `,
     });
