@@ -140,7 +140,7 @@ export default function Home() {
                   </div>
 
                   {/* Email Collection Form */}
-                  <div>
+                  <div className="relative">
                     <form onSubmit={handleEmailSubmit} className="space-y-4">
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
@@ -164,18 +164,16 @@ export default function Home() {
                       </Button>
                     </form>
 
-                    {/* Status Messages - Outside form to prevent spacing issues */}
-                    <div className="h-12 flex items-center mt-4">
-                      {submitStatus.type && (
-                        <div className={`p-3 rounded-lg text-sm w-full ${
-                          submitStatus.type === 'success' 
-                            ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
-                            : 'bg-red-500/20 text-red-300 border border-red-400/30'
-                        }`}>
-                          {submitStatus.message}
-                        </div>
-                      )}
-                    </div>
+                    {/* Status Messages - Absolutely positioned to avoid layout shift */}
+                    {submitStatus.type && (
+                      <div className={`absolute top-full left-0 right-0 mt-2 p-3 rounded-lg text-sm z-10 ${
+                        submitStatus.type === 'success' 
+                          ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                          : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                      }`}>
+                        {submitStatus.message}
+                      </div>
+                    )}
                   </div>
                 </div>
 
