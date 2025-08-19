@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Globe, CheckCircle, ArrowRight, Clock, Star, FileText, Lightbulb, Zap, Gift, Sparkles, Wrench, Search, CreditCard, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
+import { useUTM } from "@/hooks/use-utm";
 import React, { useState } from "react";
 
 export default function Website() {
@@ -12,6 +13,9 @@ export default function Website() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+  
+  // UTM tracking
+  const { utmParams, isLoaded } = useUTM();
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +31,11 @@ export default function Website() {
         body: JSON.stringify({ 
           email, 
           campaign: 'free_website_2025',
-          source: 'website_page' 
+          source: 'website_page',
+          // Include UTM data
+          utm_platform: utmParams.utm_platform,
+          utm_content_type: utmParams.utm_content_type,
+          utm_creator: utmParams.utm_creator
         }),
       });
 

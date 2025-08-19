@@ -15,4 +15,9 @@ export interface EmailLead {
   email_sent_at?: string | null
   form_completed?: boolean
   notes?: string | null
+  // UTM tracking fields
+  utm_platform?: string | null      // instagram, facebook, tiktok
+  utm_content_type?: string | null  // story, post, reel, ad
+  utm_creator?: string | null       // edward, anna, marcus
+  lead_id?: string | null           // unique ID for Tally integration
 }
