@@ -58,7 +58,14 @@ export default async function handler(req, res) {
       });
     }
 
-    const { email, campaign = 'free_website_2025', source = 'website' } = req.body;
+    const { 
+      email, 
+      campaign = 'free_website_2025', 
+      source = 'website',
+      utm_platform,
+      utm_content_type, 
+      utm_creator
+    } = req.body;
 
     // Validate required fields
     if (!email) {
@@ -101,7 +108,11 @@ export default async function handler(req, res) {
           email,
           campaign,
           source,
-          email_sent_at: new Date().toISOString()
+          email_sent_at: new Date().toISOString(),
+          // UTM tracking data
+          utm_platform: utm_platform || null,
+          utm_content_type: utm_content_type || null,
+          utm_creator: utm_creator || null
         }
       ])
       .select()
@@ -112,8 +123,9 @@ export default async function handler(req, res) {
       return res.status(500).json({ message: 'Ett fel uppstod när e-postadressen skulle sparas.' });
     }
 
-    // Send Tally form link to user
-    const tallyLink = 'https://tally.so/r/w5gyeQ';
+    // Send Tally form link to user with lead_id for tracking
+    const leadId = newLead.lead_id;
+    const tallyLink = `https://tally.so/r/w5gyeQ?lead_id=${leadId}${utm_creator ? `&utm_creator=${utm_creator}` : ''}`;
     
     const userEmailData = await resend.emails.send({
       from: 'Kasper från Skerry <noreply@skerry.ai>',
@@ -163,6 +175,10 @@ export default async function handler(req, res) {
             <p><strong>Kampanj:</strong> ${campaign}</p>
             <p><strong>Källa:</strong> ${source}</p>
             <p><strong>Tid:</strong> ${new Date().toLocaleString('sv-SE')}</p>
+            ${utm_platform ? `<p><strong>Plattform:</strong> ${utm_platform}</p>` : ''}
+            ${utm_content_type ? `<p><strong>Innehållstyp:</strong> ${utm_content_type}</p>` : ''}
+            ${utm_creator ? `<p><strong>Skapare:</strong> ${utm_creator}</p>` : ''}
+            <p><strong>Lead ID:</strong> ${leadId}</p>
           </div>
           
           <p style="color: #6b7280; font-size: 14px;">
