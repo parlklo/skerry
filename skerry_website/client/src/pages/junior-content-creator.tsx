@@ -76,7 +76,7 @@ export default function JuniorContentCreator() {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-0.5 flex-shrink-0" />
-                    <span className="text-lg text-gray-700">Skapa innehåll för sociala medier (Instagram, Facebook, LinkedIn)</span>
+                    <span className="text-lg text-gray-700">Skapa engagerande innehåll för olika digitala plattformar</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-0.5 flex-shrink-0" />
@@ -106,7 +106,7 @@ export default function JuniorContentCreator() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-0.5 flex-shrink-0" />
-                    <span className="text-lg text-gray-700">Grundläggande kunskaper inom sociala medier</span>
+                    <span className="text-lg text-gray-700">Erfarenhet eller intresse för digitala marknadsföringskanaler</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-4 mt-0.5 flex-shrink-0" />
