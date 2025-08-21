@@ -4,6 +4,19 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { isBackgroundPage } from "@/lib/pageConfig";
 
+interface DropdownItem {
+  path: string;
+  label: string;
+  isSubcategory?: boolean;
+}
+
+interface NavItem {
+  path: string;
+  label: string;
+  hasDropdown?: boolean;
+  dropdownItems?: DropdownItem[];
+}
+
 export function Navigation() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +26,7 @@ export function Navigation() {
   // Check if current page should have transparent navigation
   const isTransparentPage = isBackgroundPage(location);
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { path: "/", label: "Hem" },
     { 
       path: "/services", 
@@ -22,6 +35,7 @@ export function Navigation() {
       dropdownItems: [
         { path: "/website", label: "Hemsidor" },
         { path: "/digital-marketing", label: "Digital Marknadsföring" },
+        { path: "/digital-marketing#social-media", label: "Social Media Partner", isSubcategory: true },
         { path: "/automation", label: "AI Agenter & Automation" },
       ]
     },
@@ -112,9 +126,16 @@ export function Navigation() {
                           {item.dropdownItems?.map((dropdownItem) => (
                             <Link key={dropdownItem.path} href={dropdownItem.path}>
                               <button
-                                className="block w-full text-left px-4 py-3 text-sm font-medium text-white/90 hover:text-white hover:bg-skerry-orange-500/20 transition-all duration-200 rounded-lg mx-2"
+                                className={`block w-full text-left py-3 font-medium text-white/90 hover:text-white hover:bg-skerry-orange-500/20 transition-all duration-200 rounded-lg mx-2 ${
+                                  dropdownItem.isSubcategory 
+                                    ? "pl-8 pr-4 text-xs text-white/70 hover:text-white/90" 
+                                    : "px-4 text-sm"
+                                }`}
                                 onClick={() => setIsServicesDropdownOpen(false)}
                               >
+                                {dropdownItem.isSubcategory && (
+                                  <span className="text-skerry-orange-400 mr-2">└</span>
+                                )}
                                 {dropdownItem.label}
                               </button>
                             </Link>
@@ -190,8 +211,15 @@ export function Navigation() {
                                   setIsMobileMenuOpen(false);
                                   setIsServicesDropdownOpen(false);
                                 }}
-                                className="block w-full text-left py-2 px-2 text-white/70 hover:text-white hover:bg-skerry-orange-500/20 rounded-lg transition-all duration-300"
+                                className={`block w-full text-left py-2 text-white/70 hover:text-white hover:bg-skerry-orange-500/20 rounded-lg transition-all duration-300 ${
+                                  dropdownItem.isSubcategory 
+                                    ? "pl-6 pr-2 text-xs text-white/60 hover:text-white/80" 
+                                    : "px-2 text-sm"
+                                }`}
                               >
+                                {dropdownItem.isSubcategory && (
+                                  <span className="text-skerry-orange-400 mr-2">└</span>
+                                )}
                                 {dropdownItem.label}
                               </button>
                             </Link>

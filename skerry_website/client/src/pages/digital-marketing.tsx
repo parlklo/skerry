@@ -41,10 +41,10 @@ export default function DigitalMarketing() {
               
               <h1 className="font-black leading-[0.9] mb-8 text-white">
                 <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-2">
-                  Få fler kunder med
+                  Väx ditt företag med smart
                 </div>
-                <div className="text-skerry-orange-400 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black">
-                  smart marknadsföring
+                <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black">
+                  <span className="text-skerry-orange-400">marknadsföring</span>
                 </div>
               </h1>
               
@@ -53,32 +53,21 @@ export default function DigitalMarketing() {
                 <span className="text-skerry-orange-300 font-bold"> effektiv digital marknadsföring</span>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Link href="/contact">
-                  <Button className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-10 py-5 text-xl font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-skerry-orange-400/20">
-                    Kom igång nu
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </Button>
-                </Link>
-                <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-10 py-5 text-xl font-bold rounded-xl transition-all duration-300">
-                  Läs mer om oss
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Button>
-              </div>
+
 
               {/* Trust indicators */}
               <div className="flex flex-wrap gap-6 text-base text-gray-300">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>Skräddarsydda lösningar</span>
+                  <span>Mätbara resultat</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>Transparent kommunikation</span>
+                  <span>Lokal expertis</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>Personlig service</span>
+                  <span>Allt innehåll inkluderat</span>
                 </div>
               </div>
             </div>
@@ -121,168 +110,78 @@ export default function DigitalMarketing() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               
               {/* Google Ads */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Search className="w-8 h-8 text-white" />
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <Search className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Google Ads</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Når kunder när de aktivt söker efter dina produkter eller tjänster. Betala endast för klick som verkligen räknas.
+                <h3 className="text-lg font-bold text-white mb-3">Google Ads</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Sökannonsering, Shopping-kampanjer och Remarketing för direkta resultat.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Sökannonsering</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Shopping-kampanjer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Remarketing</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
 
               {/* Meta Ads */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-white" />
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Meta Ads</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Nå din målgrupp på Facebook och Instagram med visuellt engagerande annonser som skapar varumärkesmedvetenhet.
+                <h3 className="text-lg font-bold text-white mb-3">Meta Ads</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Facebook & Instagram-annonser för ökad varumärkesmedvetenhet och reach.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Facebook-annonsering</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Instagram-kampanjer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Målgruppsanalys</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
 
               {/* SEO */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-8 h-8 text-white" />
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">SEO-Optimering</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Förbättra din synlighet i sökmotorerna och få organisk trafik som konverterar till betalande kunder.
+                <h3 className="text-lg font-bold text-white mb-3">SEO-Optimering</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Förbättra synlighet i sökmotorer med teknisk SEO och innehållsstrategi.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Nyckelordsanalys</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Teknisk SEO</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Innehållsstrategi</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
 
-              {/* Analytics & Rapportering */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <BarChart3 className="w-8 h-8 text-white" />
+              {/* Analytics */}
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <BarChart3 className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Analytics & Rapporter</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Få djupa insikter om dina kampanjer och kunder med detaljerad analys och månatlig rapportering.
+                <h3 className="text-lg font-bold text-white mb-3">Analytics & Rapporter</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Detaljerad analys och månatlig rapportering för alla digitala kampanjer.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Månatliga rapporter</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">ROI-uppföljning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Kundinsikter</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
 
               {/* Content Marketing */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <MessageSquare className="w-8 h-8 text-white" />
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <MessageSquare className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Content Marketing</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Engagera din målgrupp med värdefullt innehåll som bygger förtroende och driver konverteringar.
+                <h3 className="text-lg font-bold text-white mb-3">Content Marketing</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Bloggartiklar, social media-innehåll och strategisk innehållsplanering.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Bloggartiklar</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Social media-innehåll</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Innehållsstrategi</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
 
               {/* Email Marketing */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Mail className="w-8 h-8 text-white" />
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Bygg starka kundrelationer och öka återkommande försäljning med personliga email-kampanjer.
+                <h3 className="text-lg font-bold text-white mb-3">Email Marketing</h3>
+                <p className="text-sm text-gray-300 mb-4">
+                  Nyhetsbrev, automation och segmentering för starkare kundrelationer.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Nyhetsbrev</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Automation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">Segmentering</span>
-                  </li>
-                </ul>
-                <div className="text-center"></div>
               </div>
             </div>
           </div>
 
-          {/* Gemensam CTA under tjänster */}
-          <div className="flex justify-center mb-20">
+          {/* CTA under marknadsföringstjänster */}
+          <div className="flex justify-center mb-32">
             <Link href="/contact">
               <Button className="bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white px-12 py-6 rounded-xl text-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl">
                 Kontakta oss för offert
@@ -290,98 +189,285 @@ export default function DigitalMarketing() {
             </Link>
           </div>
 
-          {/* Exempel på Google Ads Kampanj */}
+          {/* Visual Separator */}
           <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Exempel: Google Ads Kampanj
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Se vad du kan förvänta dig med en av våra Google Ads kampanjer
-              </p>
-            </div>
-            
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 relative overflow-hidden">
-                {/* Decorative elements */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-skerry-orange-500/20 rounded-full -mr-12 -mt-12"></div>
-                <div className="absolute bottom-0 left-0 w-20 h-20 bg-skerry-orange-500/20 rounded-full -ml-10 -mb-10"></div>
-                
-                <div className="relative z-10">
-                  {/* Header with Target Icon */}
-                  <div className="flex items-center justify-center mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
-                      <Target className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="text-2xl font-bold text-white">Google Ads Kampanj</h3>
-                      <p className="text-gray-300">Inkluderad Annonsbudget: <span className="text-skerry-orange-400 font-bold">1 500 SEK</span></p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 text-center mb-8 leading-relaxed">
-                    Vi sätter upp kampanjen och arbetar för att hjälpa dig få nya kunder via din hemsida
-                  </p>
-                  
-                  {/* Results Grid */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
-                    {/* Annonsvisningar */}
-                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Eye className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-2xl font-bold text-white mb-2">3 000 - 8 000</div>
-                      <div className="text-sm text-gray-300">Annonsvisningar</div>
-                    </div>
-                    
-                    {/* Besökare */}
-                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <Globe className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-2xl font-bold text-white mb-2">50 - 100</div>
-                      <div className="text-sm text-gray-300">Besökare till hemsida</div>
-                    </div>
-                    
-                    {/* Nya kontakter */}
-                    <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/10">
-                      <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <MessageSquare className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-2xl font-bold text-white mb-2">2 - 5</div>
-                      <div className="text-sm text-gray-300">Nya kontakter</div>
-                    </div>
-                  </div>
-                  
-                  {/* Budget Info */}
-                  <div className="text-center mb-6">
-                    <div className="inline-block bg-skerry-orange-500/20 border border-skerry-orange-500/30 rounded-xl px-6 py-3">
-                      <span className="text-skerry-orange-300 font-semibold">Med 1 500 SEK budget</span>
-                    </div>
-                  </div>
-                  
-                  {/* Disclaimer */}
-                  <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6">
-                    <div className="flex items-start">
-                      <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                        <span className="text-black text-sm font-bold">!</span>
-                      </div>
-                      <div>
-                        <h4 className="text-yellow-300 font-bold mb-2">Viktigt att komma ihåg</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          Resultaten ovan är exempel baserade på branschsnitt. Verkliga resultat kan variera kraftigt 
-                          beroende på bransch, konkurrens och kampanjoptimering. Inga garantier ges för specifika resultat.
-                        </p>
-                      </div>
-                    </div>
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                </div>
+                <div className="relative flex justify-center">
+                  <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black px-6 py-2">
+                    <div className="w-2 h-2 bg-skerry-orange-500 rounded-full mx-auto mb-2"></div>
+                    <div className="w-4 h-4 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto opacity-60"></div>
+                    <div className="w-2 h-2 bg-skerry-orange-500 rounded-full mx-auto mt-2"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Social Media Partner Section */}
+          <div id="social-media" className="mb-20">
+            <div className="text-center mb-16">
+              <div className="relative inline-block mb-8">
+                <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-40 animate-pulse"></div>
+                <div className="relative bg-black/40 backdrop-blur-xl border-2 border-pink-500 text-white px-8 py-4 rounded-full text-lg font-bold uppercase tracking-wide shadow-xl">
+                  <Sparkles className="inline w-5 h-5 mr-2" />
+                  Social Media Partner
+                </div>
+              </div>
+              
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                Vi tar hand om era sociala medier
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Perfekt för små och lokala företagare som vill växa online men inte har tid att ta hand om sociala medier själva. 
+                Vi startar eller tar över era Instagram, TikTok och andra kanaler och skapar professionellt innehåll som engagerar er målgrupp.
+              </p>
+              
+              {/* ARR Benefits */}
+              <div className="flex flex-wrap justify-center gap-6 text-base text-gray-300 mb-12">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span>Månatlig prenumeration</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span>Kontinuerlig tillväxt</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span>Professionellt innehåll</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Package Cards */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+              
+              {/* Starter Package */}
+              <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden h-full flex flex-col">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-green-500/20 rounded-full -mr-10 -mt-10"></div>
+                
+                <div className="relative z-10 flex-1 flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Sparkles className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
+                  <p className="text-gray-300 mb-6">Perfekt för att komma igång</p>
+                  
+                  <div className="mb-8">
+                    <div className="text-4xl font-black text-white mb-2">
+                      2 995 <span className="text-lg font-normal text-gray-300">SEK/mån</span>
+                    </div>
+                    <div className="text-sm text-gray-400">exkl. moms</div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8 flex-1">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">1 plattform (t.ex. Instagram, TikTok)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">4 inlägg per månad</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">2 posts + 2 reels/videos</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Innehållsstrategi + SEO</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Community management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Månatlig rapport</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="mt-auto">
+                    <Link href="/contact">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold transition-all duration-300">
+                        Välj Starter
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
-          {/* CTA Section */}
+              {/* Pro Package */}
+              <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border-2 border-skerry-orange-500 hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden h-full flex flex-col">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-skerry-orange-500/20 rounded-full -mr-10 -mt-10"></div>
+                
+                <div className="relative z-10 flex-1 flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
+                  <p className="text-gray-300 mb-6">För seriös tillväxt</p>
+                  
+                  <div className="mb-8">
+                    <div className="text-4xl font-black text-white mb-2">
+                      4 995 <span className="text-lg font-normal text-gray-300">SEK/mån</span>
+                    </div>
+                    <div className="text-sm text-gray-400">exkl. moms</div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8 flex-1">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">2 plattformar (t.ex. Instagram, TikTok)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">8 inlägg per månad</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">4 posts + 4 reels/videos</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Innehållsstrategi + SEO</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Community management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Månatlig rapport</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="mt-auto">
+                    <Link href="/contact">
+                      <Button className="w-full bg-gradient-to-r from-skerry-orange-500 to-orange-500 hover:from-skerry-orange-600 hover:to-orange-600 text-white py-3 rounded-xl font-bold transition-all duration-300">
+                        Välj Pro
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Premium Package */}
+              <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden h-full flex flex-col">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full -mr-10 -mt-10"></div>
+                
+                <div className="relative z-10 flex-1 flex flex-col">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
+                  <p className="text-gray-300 mb-6">Maximal exponering</p>
+                  
+                  <div className="mb-8">
+                    <div className="text-4xl font-black text-white mb-2">
+                      7 995 <span className="text-lg font-normal text-gray-300">SEK/mån</span>
+                    </div>
+                    <div className="text-sm text-gray-400">exkl. moms</div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8 flex-1">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">3+ plattformar (t.ex. Instagram, TikTok, Facebook)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">16 inlägg per månad</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">8 posts + 8 premium reels/videos</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Innehållsstrategi + SEO</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Community management</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">Månatlig rapport</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="mt-auto">
+                    <Link href="/contact">
+                      <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-bold transition-all duration-300">
+                        Välj Premium
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Process Description - Updated with strategy workshop first */}
+            <div className="max-w-6xl mx-auto mb-16">
+              <div className="text-center mb-12">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+                  Så här fungerar vårt Social Media partnerskap
+                </h3>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  En strukturerad process som säkerställer att vi levererar rätt innehåll för era mål
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-4 gap-6">
+                <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">1</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-3">Strategiformulär</h4>
+                  <p className="text-sm text-gray-300">Vi skickar ut ett formulär där ni definierar era mål: öka närvaro, få fler kunder, visa nya produkter/tjänster etc.</p>
+                </div>
+                
+                <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">2</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-3">Innehållsproduktion</h4>
+                  <p className="text-sm text-gray-300">Vi producerar professionellt innehåll baserat på er strategi - bilder, videos, texter och grafik.</p>
+                </div>
+                
+                <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-skerry-orange-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">3</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-3">Publicering & Community</h4>
+                  <p className="text-sm text-gray-300">Vi publicerar enligt schema och hanterar er community - kommentarer, meddelanden och engagemang.</p>
+                </div>
+                
+                <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 text-center border border-white/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">4</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-white mb-3">Analys & Optimering</h4>
+                  <p className="text-sm text-gray-300">Månadsrapporter med insikter, resultat och kontinuerlig optimering av strategin.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+          {/* Final CTA Section */}
           <div className="text-center max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-black/40 to-gray-900/60 backdrop-blur-xl rounded-3xl p-12 shadow-2xl border border-white/20 relative overflow-hidden">
               {/* Decorative elements */}
