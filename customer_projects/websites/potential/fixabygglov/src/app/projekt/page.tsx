@@ -100,12 +100,12 @@ export default function ProjektPage() {
   const categories = ["Alla", "Kommersiellt", "Bostäder", "Specialprojekt"]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-white to-green-50">
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20">
+      <section className="bg-gradient-to-r from-slate-800 to-slate-900 pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
+          <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-2xl mb-6">
             Referensprojekt
           </h1>
           <p className="text-xl md:text-2xl text-white/90 drop-shadow-lg">
@@ -129,9 +129,10 @@ export default function ProjektPage() {
                 key={category}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   category === "Alla" 
-                    ? "bg-amber-500 hover:bg-amber-600 text-white shadow-lg transform hover:scale-105" 
-                    : "bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20"
+                    ? "text-white shadow-lg transform hover:scale-105" 
+                    : "bg-white border border-slate-200 text-slate-700 hover:bg-green-50"
                 }`}
+                style={category === "Alla" ? {backgroundColor: '#16A34A'} : undefined}
               >
                 {category}
               </button>
@@ -143,27 +144,27 @@ export default function ProjektPage() {
             {projects.map((project, index) => {
               const IconComponent = project.icon
               return (
-                <div key={index} className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
+                <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
-                    <IconComponent className="h-10 w-10 text-amber-400" />
-                    <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full border border-white/30">
+                    <IconComponent className="h-10 w-10" style={{color: '#16A34A'}} />
+                    <span className="text-xs bg-green-50 text-slate-700 px-3 py-1 rounded-full border border-green-200">
                       {project.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">{project.title}</h3>
-                  <div className="flex items-center text-sm text-white/70 mb-2">
-                    <MapPin className="h-4 w-4 mr-1" />
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
+                  <div className="flex items-center text-sm text-slate-600 mb-2">
+                    <MapPin className="h-4 w-4 mr-1" style={{color: '#16A34A'}} />
                     {project.location}
                   </div>
-                  <div className="text-sm font-medium text-amber-300 mb-2">
+                  <div className="text-sm font-medium mb-2" style={{color: '#16A34A'}}>
                     {project.type}
                   </div>
                   {project.service && (
-                    <div className="text-xs bg-blue-500/20 backdrop-blur-sm text-blue-200 px-3 py-1 rounded-full border border-blue-300/30 mb-4 w-fit">
+                    <div className="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200 mb-4 w-fit">
                       {project.service}
                     </div>
                   )}
-                  <p className="text-white/80">
+                  <p className="text-slate-700">
                     {project.description}
                   </p>
                 </div>
@@ -175,16 +176,17 @@ export default function ProjektPage() {
 
           {/* CTA Section */}
           <div className="text-center mt-16">
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-12 shadow-2xl">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 drop-shadow-lg">
+            <div className="bg-white border border-slate-200 rounded-3xl p-12 shadow-xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                 Har du ett projekt i åtanke?
               </h2>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-md">
-                Låt oss hjälpa dig att förverkliga din vision. Vi erbjuder kostnadsfri konsultation och besöker dig på plats.
+              <p className="text-lg text-slate-700 mb-8 max-w-2xl mx-auto">
+                Behöver du bygglovsritningar eller projektering?
               </p>
               <Link 
                 href="/kontakt"
-                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                className="text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                style={{backgroundColor: '#16A34A'}}
               >
                 Kontakta oss
               </Link>

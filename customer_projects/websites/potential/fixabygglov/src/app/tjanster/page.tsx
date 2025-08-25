@@ -37,7 +37,7 @@ export default function TjansterPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
                   <img src="/skanska-logotype-skanska-logotype-2.png" alt="Skanska" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
                   <img src="/NCC_(Unternehmen)_logo.svg.png" alt="NCC" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
-                  <img src="/Veidekke_logo.svg.png" alt="Veidekke" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
+                  <img src="/veidekke bild.png" alt="Veidekke" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
                   <img src="/peab_logo.svg" alt="PEAB" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
                 </div>
               </div>
@@ -47,7 +47,7 @@ export default function TjansterPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-2xl">
                 <img 
-                  src="/tjanster 2.png" 
+                  src="/architect desk.png" 
                   alt="Professionella bygglovstjänster" 
                   className="w-full max-w-md object-contain rounded-xl"
                 />
@@ -59,7 +59,7 @@ export default function TjansterPage() {
       </section>
 
       {/* Main Services */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-white to-green-50">
         <div className="max-w-6xl mx-auto px-4">
           
           {/* Service 1: Bygglov & Kontrollansvar */}
@@ -75,45 +75,66 @@ export default function TjansterPage() {
                 <p className="text-slate-600 mb-6">
                   Vi erbjuder SITAC/certifierade kontrollansvariga med behörighetsnummer SC0477-11 där vi ser till att ditt projekt följer de lagkrav som finns. Hos oss får du hjälp med att få alla tillstånd, dokumentationer och ritningar som behövs för ny- och tillbyggnationer, samt ombyggnationer.
                 </p>
+                <div className="mt-auto">
+                  <Link 
+                    href="/projekt"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300 group"
+                  >
+                    Visa referensprojekt
+                    <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
 
               </div>
               
               {/* Pricing Table for Bygglov */}
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <h3 className="text-2xl font-bold mb-6 text-slate-700">
-                  Bygglovsritningar & Kontrollansvar
-                </h3>
-                <div className="space-y-4 flex-grow">
-                  <div className="flex justify-between items-center py-3 border-b border-slate-200">
-                    <span className="text-lg text-slate-700">1-25 kvm</span>
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                  <h3 className="text-2xl font-bold text-slate-700">
+                    Bygglovsritningar & Kontrollansvar
+                  </h3>
+                </div>
+                
+                <div className="space-y-3 flex-grow">
+                  <div className="flex justify-between items-center py-2 border-b border-slate-200">
+                    <div>
+                      <span className="text-lg text-slate-700 font-medium">1-25 kvm</span>
+                      <div className="text-xs text-slate-500">4 700 + 4 500 SEK KA</div>
+                    </div>
                     <span className="text-xl font-bold text-slate-800">9 700 SEK</span>
                   </div>
-                  <div className="text-sm text-slate-500 mb-2">4 700 SEK + 4 500 SEK KA</div>
                   
-                  <div className="flex justify-between items-center py-3 border-b border-slate-200">
-                    <span className="text-lg text-slate-700">26-70 kvm</span>
+                  <div className="flex justify-between items-center py-2 border-b border-slate-200">
+                    <div>
+                      <span className="text-lg text-slate-700 font-medium">26-70 kvm</span>
+                      <div className="text-xs text-slate-500">6 700 + 6 500 SEK KA</div>
+                    </div>
                     <span className="text-xl font-bold text-slate-800">13 200 SEK</span>
                   </div>
-                  <div className="text-sm text-slate-500 mb-2">6 700 SEK + 6 500 SEK KA</div>
                   
-                  <div className="flex justify-between items-center py-3 border-b border-slate-200">
-                    <span className="text-lg text-slate-700">71-150 kvm</span>
+                  <div className="flex justify-between items-center py-2 border-b border-slate-200">
+                    <div>
+                      <span className="text-lg text-slate-700 font-medium">71-150 kvm</span>
+                      <div className="text-xs text-slate-500">9 700 + 9 500 SEK KA</div>
+                    </div>
                     <span className="text-xl font-bold text-slate-800">19 200 SEK</span>
                   </div>
-                  <div className="text-sm text-slate-500 mb-2">9 700 SEK + 9 500 SEK KA</div>
                   
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-lg text-slate-700">150+ kvm</span>
-                    <span className="text-xl font-bold text-amber-600">Offert</span>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-lg text-slate-700 font-medium">150+ kvm</span>
+                    <span className="text-xl font-bold" style={{color: '#16A34A'}}>Offert</span>
                   </div>
                 </div>
                 
                 <div className="mt-8">
                   <a 
                     href="/kontakt" 
-                    className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-fit mx-auto text-white py-3 px-8 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
                   >
-                    Kontakta oss för offert
+                    Kontakta oss
                   </a>
                 </div>
               </div>
@@ -147,23 +168,25 @@ export default function TjansterPage() {
               </div>
               
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <h3 className="text-2xl font-bold mb-6 text-slate-700">
-                  Fastighetsutveckling
-                </h3>
-                <div className="space-y-4 mb-6 text-slate-600 flex-grow">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                  <h3 className="text-2xl font-bold text-slate-700">
+                    Fastighetsutveckling
+                  </h3>
+                </div>
+                <div className="space-y-3 mb-6 text-base text-slate-600 flex-grow">
                   <div>• Planering och behovsanalyser</div>
                   <div>• Snabba 3D-skisser</div>
                   <div>• Analyser av ytor och volymer</div>
                   <div>• Skuggstudier</div>
                   <div>• Hållbarhetsanalys</div>
                   <div>• Rådgivning genom hela processen</div>
-
                 </div>
                 
                 <div className="mt-8">
                   <a 
                     href="/kontakt" 
-                    className="w-full bg-slate-500 hover:bg-slate-600 text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-fit mx-auto text-white py-3 px-8 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
                   >
                     Kontakta oss för offert
                   </a>
@@ -188,10 +211,13 @@ export default function TjansterPage() {
               </div>
               
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <h3 className="text-2xl font-bold mb-6 text-slate-700">
-                  Kontrollansvar
-                </h3>
-                <div className="space-y-4 mb-6 text-slate-600 flex-grow">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                  <h3 className="text-2xl font-bold text-slate-700">
+                    Kontrollansvar
+                  </h3>
+                </div>
+                <div className="space-y-3 mb-6 text-base text-slate-600 flex-grow">
                   <div>• SITAC-certifierad kontrollansvarig</div>
                   <div>• Kontrollplan och uppföljning</div>
                   <div>• Byggsamråd och kvalitetskontroll</div>
@@ -204,7 +230,7 @@ export default function TjansterPage() {
                 <div className="mt-8">
                   <a 
                     href="/kontakt" 
-                    className="w-full bg-slate-600 hover:bg-slate-700 text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-fit mx-auto text-white py-3 px-8 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
                   >
                     Kontakta oss för offert
                   </a>
@@ -232,10 +258,13 @@ export default function TjansterPage() {
               </div>
               
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <h3 className="text-2xl font-bold mb-6 text-slate-700">
-                  VVS och konstruktion
-                </h3>
-                <div className="grid grid-cols-1 gap-2 text-sm mb-6 text-slate-600 flex-grow">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                  <h3 className="text-2xl font-bold text-slate-700">
+                    VVS och konstruktion
+                  </h3>
+                </div>
+                <div className="space-y-3 mb-6 text-base text-slate-600 flex-grow">
                   <div>• Detaljritningar (Väggar, tak & grund)</div>
                   <div>• Konstruktionsberäkningar</div>
                   <div>• Dimensionering</div>
@@ -246,7 +275,7 @@ export default function TjansterPage() {
                 <div className="mt-8">
                   <a 
                     href="/kontakt" 
-                    className="w-full bg-slate-800 hover:bg-slate-900 text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-fit mx-auto text-white py-3 px-8 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
                   >
                     Kontakta oss för offert
                   </a>
@@ -269,10 +298,13 @@ export default function TjansterPage() {
               </div>
               
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <h3 className="text-2xl font-bold mb-6 text-slate-700">
-                  Extra tjänster
-                </h3>
-                <div className="grid grid-cols-1 gap-2 text-sm mb-6 text-slate-600 flex-grow">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                  <h3 className="text-2xl font-bold text-slate-700">
+                    Extra tjänster
+                  </h3>
+                </div>
+                <div className="space-y-3 mb-6 text-base text-slate-600 flex-grow">
                   <div>• Detaljritningar (Väggar, tak & grund)</div>
                   <div>• Konstruktionsberäkningar</div>
                   <div>• Dimensionering</div>
@@ -289,7 +321,7 @@ export default function TjansterPage() {
                 <div className="mt-8">
                   <a 
                     href="/kontakt" 
-                    className="w-full bg-slate-700 hover:bg-slate-800 text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="w-fit mx-auto text-white py-3 px-8 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
                   >
                     Kontakta oss för offert
                   </a>
@@ -312,7 +344,7 @@ export default function TjansterPage() {
               </p>
               <a 
                 href="/kontakt" 
-                className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-4 rounded-xl text-lg font-bold inline-block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="text-white px-8 py-4 rounded-xl text-lg font-bold inline-block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
               >
                 Kontakta oss för offert
               </a>

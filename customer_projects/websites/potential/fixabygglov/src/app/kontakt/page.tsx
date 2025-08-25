@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin } from "lucide-react"
 
 export default function KontaktPage() {
   const [formData, setFormData] = useState({
@@ -32,16 +32,16 @@ export default function KontaktPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-white to-green-50">
       {/* Hero Section */}
-      <section className="bg-slate-800 text-white py-16">
+      <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Kontakta oss
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Hos oss får du alltid gratis offert, professionell konsultation och vi besöker dig på plats.
+              Behöver du bygglovsritningar eller projektering? Hör av dig så hjälper vi dig.
             </p>
           </div>
         </div>
@@ -54,17 +54,17 @@ export default function KontaktPage() {
             
             {/* Contact Form */}
             <div>
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle className="text-2xl">Skicka meddelande</CardTitle>
                   <p className="text-gray-600">
-                    Fyll i formuläret så kontaktar vi dig inom 24 timmar
+                    Fyll i formuläret så kontaktar vi dig
                   </p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
+                      <div className="space-y-2">
                         <Label htmlFor="name">Namn *</Label>
                         <Input
                           id="name"
@@ -76,7 +76,7 @@ export default function KontaktPage() {
                           placeholder="Ditt namn"
                         />
                       </div>
-                      <div>
+                      <div className="space-y-2">
                         <Label htmlFor="phone">Telefon</Label>
                         <Input
                           id="phone"
@@ -89,7 +89,7 @@ export default function KontaktPage() {
                       </div>
                     </div>
 
-                    <div>
+                    <div className="space-y-2">
                       <Label htmlFor="email">Email *</Label>
                       <Input
                         id="email"
@@ -102,7 +102,7 @@ export default function KontaktPage() {
                       />
                     </div>
 
-                    <div>
+                    <div className="space-y-2">
                       <Label htmlFor="subject">Ämne</Label>
                       <Input
                         id="subject"
@@ -114,7 +114,7 @@ export default function KontaktPage() {
                       />
                     </div>
 
-                    <div>
+                    <div className="space-y-2">
                       <Label htmlFor="message">Meddelande *</Label>
                       <Textarea
                         id="message"
@@ -127,9 +127,13 @@ export default function KontaktPage() {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
+                    <button 
+                      type="submit" 
+                      className="w-full text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      style={{backgroundColor: '#16A34A'}}
+                    >
                       Skicka meddelande
-                    </Button>
+                    </button>
                   </form>
                 </CardContent>
               </Card>
@@ -139,36 +143,32 @@ export default function KontaktPage() {
             <div className="space-y-8">
               
               {/* Contact Details */}
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle className="text-2xl">Kontaktuppgifter</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   
                   <div className="flex items-start space-x-4">
-                    <Phone className="h-6 w-6 text-blue-600 mt-1" />
+                    <Phone className="h-6 w-6 mt-1" style={{color: '#16A34A'}} />
                     <div>
                       <h3 className="font-semibold">Telefon</h3>
                       <p className="text-gray-600">+46 768 68 59 02</p>
-                      <Button variant="outline" size="sm" className="mt-2" asChild>
-                        <a href="tel:+46768685902">Ring nu</a>
-                      </Button>
+
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Mail className="h-6 w-6 text-blue-600 mt-1" />
+                    <Mail className="h-6 w-6 mt-1" style={{color: '#16A34A'}} />
                     <div>
                       <h3 className="font-semibold">Email</h3>
                       <p className="text-gray-600">info@ark-kon.com</p>
-                      <Button variant="outline" size="sm" className="mt-2" asChild>
-                        <a href="mailto:info@ark-kon.com">Skicka email</a>
-                      </Button>
+
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <MapPin className="h-6 w-6 text-blue-600 mt-1" />
+                    <MapPin className="h-6 w-6 mt-1" style={{color: '#16A34A'}} />
                     <div>
                       <h3 className="font-semibold">Adress</h3>
                       <p className="text-gray-600">
@@ -178,92 +178,58 @@ export default function KontaktPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Clock className="h-6 w-6 text-blue-600 mt-1" />
-                    <div>
-                      <h3 className="font-semibold">Öppettider</h3>
-                      <p className="text-gray-600">
-                        Måndag - Fredag: 08:00 - 17:00<br />
-                        Lördag - Söndag: Efter överenskommelse
-                      </p>
+                  {/* Modern architectural illustration */}
+                  <div className="mt-8 pt-6 border-t border-slate-200">
+                    <div className="bg-gradient-to-br from-green-50 to-slate-50 rounded-xl p-6">
+                      <div className="flex items-center justify-center">
+                        <div className="relative w-full max-w-xs">
+                          <svg className="w-full h-24" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            {/* Simple house illustration */}
+                            <g opacity="0.7">
+                              {/* House base */}
+                              <rect x="60" y="35" width="80" height="40" fill="#16A34A" rx="2" />
+                              {/* Roof */}
+                              <polygon points="55,35 100,15 145,35" fill="#064e3b" />
+                              {/* Door */}
+                              <rect x="90" y="50" width="12" height="25" fill="white" rx="1" />
+                              {/* Windows */}
+                              <rect x="70" y="45" width="12" height="12" fill="white" rx="1" />
+                              <rect x="118" y="45" width="12" height="12" fill="white" rx="1" />
+                              {/* Chimney */}
+                              <rect x="120" y="20" width="8" height="15" fill="#064e3b" />
+                            </g>
+                            
+                            {/* Decorative elements */}
+                            <g opacity="0.4">
+                              {/* Trees */}
+                              <circle cx="30" cy="55" r="12" fill="#16A34A" />
+                              <rect x="28" y="60" width="4" height="15" fill="#065f46" />
+                              
+                              <circle cx="170" cy="50" r="10" fill="#16A34A" />
+                              <rect x="168" y="55" width="4" height="20" fill="#065f46" />
+                              
+                              {/* Ground line */}
+                              <line x1="10" y1="75" x2="190" y2="75" stroke="#16A34A" strokeWidth="2" opacity="0.3" />
+                            </g>
+                          </svg>
+                          
+                          {/* Text below illustration */}
+                          <div className="text-center mt-3">
+                            <div className="text-sm font-medium text-slate-700">
+                              Vi hjälper dig med ditt byggprojekt
+                            </div>
+                            <div className="text-xs text-slate-500 mt-1">
+                              Från idé till färdig ritning
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Why Choose Us */}
-              <Card className="bg-blue-50 border-blue-200">
-                <CardHeader>
-                  <CardTitle className="text-xl text-blue-900">Varför välja oss?</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3 text-blue-800">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span>Gratis offert och konsultation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span>Vi besöker dig på plats</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span>Certifierade kontrollansvariga</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span>Konkurrenskraftiga priser</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span>Erfarenhet från större konsultföretag</span>
-                  </div>
-                </CardContent>
-              </Card>
 
-              {/* Process */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Så här går det till</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Kontakt</h4>
-                      <p className="text-sm text-gray-600">Du kontaktar oss via telefon, email eller formulär</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Konsultation</h4>
-                      <p className="text-sm text-gray-600">Vi besöker dig på plats för gratis konsultation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Offert</h4>
-                      <p className="text-sm text-gray-600">Du får en detaljerad och kostnadsfri offert</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Projektstart</h4>
-                      <p className="text-sm text-gray-600">Vi påbörjar arbetet och följer projektet hela vägen</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>

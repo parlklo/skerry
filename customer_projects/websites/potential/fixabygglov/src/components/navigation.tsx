@@ -42,13 +42,14 @@ export function Navigation() {
                 className="text-white/90 hover:text-white text-sm font-medium transition-all duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             {/* Kontakt as special CTA */}
             <Link
               href="/kontakt"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 text-sm font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="text-white px-6 py-2.5 text-sm font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              style={{backgroundColor: '#16A34A'}}
             >
               Kontakt
             </Link>
@@ -83,9 +84,10 @@ export function Navigation() {
                   href={item.href}
                   className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
                     item.label === "Kontakt" 
-                      ? "bg-amber-500 hover:bg-amber-600 text-white font-semibold shadow-lg text-center" 
+                      ? "text-white font-semibold shadow-lg text-center" 
                       : "text-white/90 hover:text-white hover:bg-white/20"
                   }`}
+                  style={item.label === "Kontakt" ? {backgroundColor: '#16A34A'} : undefined}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
