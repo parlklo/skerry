@@ -1,7 +1,10 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Building, Home, Factory, MapPin } from "lucide-react"
+import { useState } from "react"
 
 export default function ProjektPage() {
   const projects = [
@@ -98,6 +101,11 @@ export default function ProjektPage() {
   ]
 
   const categories = ["Alla", "Kommersiellt", "Bostäder", "Specialprojekt"]
+  const [activeCategory, setActiveCategory] = useState("Alla")
+
+  const filteredProjects = activeCategory === "Alla" 
+    ? projects 
+    : projects.filter(project => project.category === activeCategory)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-green-50">
@@ -122,17 +130,18 @@ export default function ProjektPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Category Filter */}
+          {/* Category Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  category === "Alla" 
-                    ? "text-white shadow-lg transform hover:scale-105" 
-                    : "bg-white border border-slate-200 text-slate-700 hover:bg-green-50"
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+                  activeCategory === category
+                    ? "text-white shadow-lg transform scale-105" 
+                    : "bg-slate-100 border border-slate-200 text-slate-600 hover:bg-slate-200 hover:border-slate-300"
                 }`}
-                style={category === "Alla" ? {backgroundColor: '#16A34A'} : undefined}
+                style={activeCategory === category ? {backgroundColor: '#16A34A'} : undefined}
               >
                 {category}
               </button>
@@ -141,7 +150,7 @@ export default function ProjektPage() {
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => {
+            {filteredProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
                 <div key={index} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">

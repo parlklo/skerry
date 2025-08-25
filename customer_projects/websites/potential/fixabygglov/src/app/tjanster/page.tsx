@@ -2,8 +2,9 @@ import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Tjänster - FixaBygglov",
-  description: "Vi erbjuder tjänster inom arkitektur, konstruktion, VVS, kontrollansvar, projektering och fastighetsutveckling. SITAC-certifierade konsulter.",
+  title: "Tjänster - FixaBygglov | Malmö & Skåne",
+  description: "Professionella bygglovstjänster i Malmö och Skåne. Bygglovsritningar, kontrollansvar, fastighetsutveckling och VVS-projektering. SITAC-certifierade konsulter för alla byggprojekt i Södra Sverige.",
+  keywords: "bygglovsritningar malmö, kontrollansvarig skåne, fastighetsutveckling malmö, vvs projektering södra sverige, arkitekt malmö, sitac certifierad",
 }
 
 export default function TjansterPage() {
@@ -208,6 +209,19 @@ export default function TjansterPage() {
                 <p className="text-slate-600 mb-6 flex-grow">
                   Vi är certifierade kontrollansvariga och tillhandahåller denna tjänst. När du anlitar oss hjälper vi dig att följa de lagkrav som finns för hållbarhet, säkerhet, tillgänglighet, energi och hygien. Det innebär att vi är ett stöd för byggherren och dig som beställare där vi utformar projektet samt anpassar en kontrollplan. Vi finns med på byggsamråd, följer upp hur bygget utvecklar sig och ser till att både lagstadgade krav och kontroller fullföljs.
                 </p>
+                <div className="mb-6">
+                  <a 
+                    href="https://ark-kon.com/files/PDF/36640-1637678407-1.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300 group"
+                  >
+                    Visa vårt SITAC-certifikat
+                    <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
               </div>
               
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
@@ -330,24 +344,89 @@ export default function TjansterPage() {
             </div>
           </div>
 
-          {/* Projektledning */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-12 shadow-lg">
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-slate-800">
-                Projektledningssystem
+          {/* Vårt arbetssätt */}
+          <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-3xl p-12 shadow-lg mb-20">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-6 text-slate-800">
+                  Vårt arbetssätt
+                </h2>
+                <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+                  Vårt effektiva projektledningssystem innebär att vi tar in offerter från alla konsulter och entreprenörer som behövs för ditt projekt. Vi leder sedan ditt projekt i samråd med dig – från skisstadiet till färdigt projekt.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2">Helhetslösning</h3>
+                  <p className="text-slate-600">Vi samordnar konsulter och entreprenörer för ditt projekt</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2">Projektledning</h3>
+                  <p className="text-slate-600">Vi leder projektet i samråd med dig</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-800 mb-2">Professionell försäkring</h3>
+                  <p className="text-slate-600">Ansvarsförsäkring för våra tjänster och verksamhet</p>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <a 
+                  href="https://ark-kon.com/files/PDF/36640-1637678407-0.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300 group"
+                >
+                  Visa våra försäkringsuppgifter
+                  <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Avslutande CTA */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-12 text-white text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Redo att starta ditt byggprojekt?
               </h2>
-              <p className="text-xl mb-8 text-slate-700">
-                Vårt effektiva projektledningssystem innebär att vi tar in offerter från alla konsulter och entreprenörer som behövs för ditt projekt.
+              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                Vi hjälper dig från skiss till färdigt projekt.
               </p>
-              <p className="text-lg text-slate-600 mb-8">
-                Vi leder sedan ditt projekt i samråd med dig – från skisstadiet till färdigt projekt.
-              </p>
-              <a 
-                href="/kontakt" 
-                className="text-white px-8 py-4 rounded-xl text-lg font-bold inline-block transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
-              >
-                Kontakta oss för offert
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/kontakt" 
+                  className="text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg" style={{backgroundColor: '#16A34A'}}
+                >
+                  Kontakta oss för offert
+                </a>
+                <a 
+                  href="/projekt" 
+                  className="bg-white text-slate-800 px-8 py-4 rounded-xl text-lg font-bold hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Se våra projekt
+                </a>
+              </div>
             </div>
           </div>
 
