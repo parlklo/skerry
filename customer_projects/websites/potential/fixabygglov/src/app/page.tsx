@@ -17,7 +17,7 @@ export default function Home() {
                   <span style={{color: '#16A34A'}}>hela byggprocessen</span>
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-3xl font-medium">
-                  Vi erbjuder allt som krävs för byggprojekt – bygglovsritningar, kontrollansvar, konstruktions- och VVS-ritningar samt energiberäkningar.
+                  Vi hanterar allt som krävs för bygglov – bygglovsritningar, kontrollansvar, konstruktions- och VVS-ritningar samt energiberäkningar.
                 </p>
               </div>
               
