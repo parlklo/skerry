@@ -13,26 +13,26 @@ export default function Home() {
             <div className="lg:col-span-2 space-y-8 max-w-4xl">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-2xl">
-                  <span className="text-white">Vi hjälper dig med</span><br />
-                  <span style={{color: '#16A34A'}}>hela byggprocessen</span>
+                  <span className="text-white">Din bygglovspartner</span><br />
+                  <span style={{color: '#16A34A'}}>i södra Sverige</span>
                 </h1>
                 <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-3xl font-medium">
                   Vi hanterar allt som krävs för bygglov – bygglovsritningar, kontrollansvar, konstruktions- och VVS-ritningar samt energiberäkningar.
                 </p>
               </div>
               
-              {/* Enhanced CTA - Phone number */}
+              {/* Enhanced CTA - Contact form */}
               <div className="bg-black/20 backdrop-blur-md border border-white/30 p-4 lg:p-6 rounded-2xl w-fit shadow-2xl">
-                <a 
-                  href="tel:+46768685902" 
+                <Link 
+                  href="/kontakt" 
                   className="text-white px-8 py-4 lg:px-10 lg:py-5 rounded-xl text-lg lg:text-xl font-bold inline-block transition-all duration-300 transform hover:scale-105 text-center shadow-lg whitespace-nowrap flex items-center gap-3"
                   style={{backgroundColor: '#16A34A'}}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
-                  Ring 0768 68 59 02
-                </a>
+                  Kontakta oss
+                </Link>
               </div>
             </div>
 

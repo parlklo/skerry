@@ -55,7 +55,7 @@ export default function ProjektPage() {
     },
     {
       title: "Passivhus",
-      location: "Olika platser",
+      location: "Södra Sverige",
       type: "Nybyggnation",
       service: "Projektering och bygglov",
       description: "Nybyggnationer av passivhus med fokus på energieffektivitet.",
@@ -64,7 +64,7 @@ export default function ProjektPage() {
     },
     {
       title: "Lågenergihus",
-      location: "Olika platser",
+      location: "Södra Sverige",
       type: "Nybyggnation",
       service: "Projektering och bygglov",
       description: "Nybyggnationer av lågenergihus med optimal energiprestanda.",
@@ -73,7 +73,7 @@ export default function ProjektPage() {
     },
     {
       title: "Kulturskyddade hus",
-      location: "Olika platser",
+      location: "Södra Sverige",
       type: "Om- och tillbyggnation",
       service: "Projektering och bygglov",
       description: "Om- och tillbyggnationer av äldre och kulturskyddade hus med varsam hantering.",
@@ -82,7 +82,7 @@ export default function ProjektPage() {
     },
     {
       title: "Gårdar till andligt centrum",
-      location: "Olika platser",
+      location: "Södra Sverige",
       type: "Ombyggnation",
       service: "Fastighetsutveckling",
       description: "Ombyggnation av flera gårdar till andligt centrum.",
@@ -91,7 +91,7 @@ export default function ProjektPage() {
     },
     {
       title: "Pensionat med verksamheter",
-      location: "Olika platser", 
+      location: "Södra Sverige", 
       type: "Ombyggnation",
       service: "Fastighetsutveckling",
       description: "Pensionat med tillhörande butik, konstnärsverkstad och övernattningslägenheter.",
@@ -126,8 +126,141 @@ export default function ProjektPage() {
 
 
 
+      {/* Service Area Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+            Vårt verksamhetsområde
+          </h2>
+          <p className="text-lg text-slate-700 mb-12 max-w-3xl mx-auto">
+            Vi arbetar främst i Södra Sverige med fokus på Malmö och omkringliggande kommuner i Skåne.
+          </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Visual Coverage Illustration */}
+            <div className="bg-gradient-to-br from-slate-50 to-green-50 border border-slate-200 rounded-2xl p-8 h-80 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                {/* Central network visualization */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Main coverage circle */}
+                  <div className="relative">
+                    <div className="w-32 h-32 bg-green-100 rounded-full border-4 border-green-300 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                        <MapPin className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                    
+                    {/* Surrounding location dots */}
+                    {/* Top */}
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Top Right */}
+                    <div className="absolute -top-6 -right-6">
+                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Right */}
+                    <div className="absolute top-1/2 -right-8 transform -translate-y-1/2">
+                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Bottom Right */}
+                    <div className="absolute -bottom-6 -right-6">
+                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Bottom */}
+                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Bottom Left */}
+                    <div className="absolute -bottom-6 -left-6">
+                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Left */}
+                    <div className="absolute top-1/2 -left-8 transform -translate-y-1/2">
+                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Top Left */}
+                    <div className="absolute -top-6 -left-6">
+                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
+                    </div>
+                    
+                    {/* Connection lines */}
+                    <div className="absolute inset-0 opacity-30">
+                      <svg className="w-full h-full" viewBox="0 0 128 128">
+                        <circle cx="64" cy="64" r="50" fill="none" stroke="#16a34a" strokeWidth="1" strokeDasharray="3,3" />
+                        <circle cx="64" cy="64" r="30" fill="none" stroke="#16a34a" strokeWidth="1" strokeDasharray="2,2" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Bottom indicator */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-green-200 shadow-sm">
+                    <span className="text-xs font-medium text-slate-700">Södra Sverige</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side - Coverage areas */}
+            <div className="text-left">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Primära verksamhetsområden</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Malmö</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Lund</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Helsingborg</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Landskrona</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Höganäs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Ängelholm</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Vellinge</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
+                    <span className="text-slate-700">Trelleborg</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm text-slate-600 mt-6 italic">
+                Vi tar även uppdrag i andra delar av Södra Sverige efter överenskommelse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-white to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Category Filter Buttons */}

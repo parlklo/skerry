@@ -618,6 +618,46 @@ video {
   left: 50%;
 }
 
+.-bottom-6 {
+  bottom: -1.5rem;
+}
+
+.-bottom-8 {
+  bottom: -2rem;
+}
+
+.-left-6 {
+  left: -1.5rem;
+}
+
+.-left-8 {
+  left: -2rem;
+}
+
+.-right-6 {
+  right: -1.5rem;
+}
+
+.-right-8 {
+  right: -2rem;
+}
+
+.-top-6 {
+  top: -1.5rem;
+}
+
+.-top-8 {
+  top: -2rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -922,6 +962,10 @@ video {
   height: 16rem;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
 .min-h-16 {
   min-height: 4rem;
 }
@@ -1076,6 +1120,11 @@ video {
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1378,6 +1427,10 @@ video {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1523,6 +1576,11 @@ video {
 .border-green-100 {
   --tw-border-opacity: 1;
   border-color: rgb(220 252 231 / var(--tw-border-opacity, 1));
+}
+
+.border-green-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(134 239 172 / var(--tw-border-opacity, 1));
 }
 
 .bg-blue-100 {
@@ -1756,6 +1814,10 @@ video {
   background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1893,6 +1955,18 @@ video {
 
 .fill-blue-600 {
   fill: #2563eb;
+}
+
+.fill-slate-600 {
+  fill: #475569;
+}
+
+.fill-slate-700 {
+  fill: #334155;
+}
+
+.fill-slate-800 {
+  fill: #1e293b;
 }
 
 .object-contain {
@@ -2165,6 +2239,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .leading-none {
@@ -3019,6 +3097,14 @@ video {
     position: absolute;
   }
 
+  .md\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .md\:inline {
+    display: inline;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -3061,6 +3147,10 @@ video {
 
   .md\:gap-16 {
     gap: 4rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:p-12 {

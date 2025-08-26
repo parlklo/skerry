@@ -17,17 +17,25 @@ export function Footer() {
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 text-sm">
-            <div className="flex items-center space-x-4 text-white/70">
-              <a href="mailto:info@fixabygglov.com" className="hover:text-amber-400 transition-colors">
-                info@fixabygglov.com
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-white/70">
+              <div className="flex items-center space-x-4">
+                              <a href="mailto:info@ark-kon.com" className="hover:text-amber-400 transition-colors">
+                info@ark-kon.com
               </a>
-              <span className="text-white/40">|</span>
-              <a href="tel:+46768685902" className="hover:text-amber-400 transition-colors">
-                +46 768 68 59 02
-              </a>
+                <span className="text-white/40">|</span>
+                <a href="tel:+46768685902" className="hover:text-amber-400 transition-colors">
+                  +46 768 68 59 02
+                </a>
+              </div>
+              <div className="flex items-center">
+                <span className="text-white/40 hidden md:inline">|</span>
+                <span className="text-white/60 text-xs md:ml-4">
+                  Husmansvägen 11, 218 45 Vintrie
+                </span>
+              </div>
             </div>
             <div className="text-white/50 text-xs">
-              &copy; {new Date().getFullYear()} FixaBygglov. Alla rättigheter förbehållna.
+              &copy; {new Date().getFullYear()} FixaBygglov.
             </div>
           </div>
         </div>
