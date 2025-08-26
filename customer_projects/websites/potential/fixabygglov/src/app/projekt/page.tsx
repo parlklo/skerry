@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Building, Home, Factory, MapPin } from "lucide-react"
+import ServiceAreaMap from "@/components/ServiceAreaMap"
 import { useState } from "react"
 
 export default function ProjektPage() {
@@ -138,77 +139,7 @@ export default function ProjektPage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Visual Coverage Illustration */}
-            <div className="bg-gradient-to-br from-slate-50 to-green-50 border border-slate-200 rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="relative w-full h-full">
-                {/* Central network visualization */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Main coverage circle */}
-                  <div className="relative">
-                    <div className="w-32 h-32 bg-green-100 rounded-full border-4 border-green-300 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                        <MapPin className="h-8 w-8 text-white" />
-                      </div>
-                    </div>
-                    
-                    {/* Surrounding location dots */}
-                    {/* Top */}
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Top Right */}
-                    <div className="absolute -top-6 -right-6">
-                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Right */}
-                    <div className="absolute top-1/2 -right-8 transform -translate-y-1/2">
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Bottom Right */}
-                    <div className="absolute -bottom-6 -right-6">
-                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Bottom */}
-                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Bottom Left */}
-                    <div className="absolute -bottom-6 -left-6">
-                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Left */}
-                    <div className="absolute top-1/2 -left-8 transform -translate-y-1/2">
-                      <div className="w-4 h-4 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Top Left */}
-                    <div className="absolute -top-6 -left-6">
-                      <div className="w-3 h-3 bg-green-400 rounded-full shadow-md"></div>
-                    </div>
-                    
-                    {/* Connection lines */}
-                    <div className="absolute inset-0 opacity-30">
-                      <svg className="w-full h-full" viewBox="0 0 128 128">
-                        <circle cx="64" cy="64" r="50" fill="none" stroke="#16a34a" strokeWidth="1" strokeDasharray="3,3" />
-                        <circle cx="64" cy="64" r="30" fill="none" stroke="#16a34a" strokeWidth="1" strokeDasharray="2,2" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Bottom indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-green-200 shadow-sm">
-                    <span className="text-xs font-medium text-slate-700">Södra Sverige</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ServiceAreaMap />
             
             {/* Right side - Coverage areas */}
             <div className="text-left">
