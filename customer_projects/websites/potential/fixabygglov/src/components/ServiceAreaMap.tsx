@@ -95,11 +95,7 @@ const ServiceAreaMap = () => {
         </g>
       </svg>
 
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6">
-        <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-green-200 shadow-sm">
-          <span className="text-xs font-medium text-slate-700">Södra Sverige</span>
-        </div>
-      </div>
+
     </div>
   )
 }
