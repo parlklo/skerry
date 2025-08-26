@@ -30,21 +30,7 @@ export default function TjansterPage() {
                 FixaBygglov består av erfarna konsulter inom arkitektur, konstruktion och VVS med bred branschbakgrund från större konsultföretag.
               </p>
 
-              {/* Previous Experience */}
-              <div>
-                <p className="text-slate-400 text-sm font-medium mb-6 uppercase tracking-wider">
-                  Teamets tidigare projektinvolvering via konsultuppdrag
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center opacity-70 hover:opacity-100 transition-opacity duration-500 mb-6">
-                  <img src="/skanska-logotype-skanska-logotype-2.png" alt="Skanska" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
-                  <img src="/NCC_(Unternehmen)_logo.svg.png" alt="NCC" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
-                  <img src="/veidekke bild.png" alt="Veidekke" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
-                  <img src="/peab_logo.svg" alt="PEAB" className="h-8 object-contain filter brightness-0 invert justify-self-center" />
-                </div>
-                <p className="text-slate-400 text-xs text-center italic">
-                  *Genom tidigare anställningar på etablerade konsultbolag
-                </p>
-              </div>
+              
             </div>
             
             {/* Right side - Image */}
