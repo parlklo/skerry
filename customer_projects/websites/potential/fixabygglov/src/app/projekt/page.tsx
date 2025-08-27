@@ -91,7 +91,7 @@ export default function ProjektPage() {
     }
   ]
 
-  const categories = ["Alla", "Kommersiellt", "Hotell", "Bostäder & Specialprojekt", "Industri & Logistik"]
+  const categories = ["Alla", "Hotell", "Bostäder & Specialprojekt", "Industri & Logistik"]
   const [activeCategory, setActiveCategory] = useState("Alla")
   const [currentImageIndex, setCurrentImageIndex] = useState<{[key: number]: number}>({})
   
