@@ -7,7 +7,7 @@ export default function Integritetspolicy() {
             Integritetspolicy
           </h1>
           <p className="text-sm text-warm-gray-500 mt-4">
-            Senast uppdaterad: 15-06-2024
+            Senast uppdaterad: 27-08-2025
           </p>
         </div>
 
@@ -63,14 +63,24 @@ export default function Integritetspolicy() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">4. Delning med tredje part</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">4. Betalningar</h2>
+                <p className="text-warm-gray-700 leading-relaxed mb-4">
+                  Betalningshantering sker via Stripe, en certifierad betalningsleverantör som följer branschstandarder för säkerhet. All betalningsinformation behandlas direkt av Stripe enligt deras gällande integritetspolicy.
+                </p>
                 <p className="text-warm-gray-700 leading-relaxed">
-                  Vi delar inte dina personuppgifter med tredje part, utöver vad som krävs för teknisk drift eller enligt lag. Vi säljer aldrig din information.
+                  Stripe hanterar all betalningsrelaterad databehandling och säkerhet enligt gällande säkerhetsstandarder.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">5. Dina rättigheter</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">5. Delning med tredje part</h2>
+                <p className="text-warm-gray-700 leading-relaxed">
+                  Vi delar inte dina personuppgifter med tredje part, utöver vad som krävs för teknisk drift (som hosting och e-posttjänster) eller betalningshantering via Stripe. Vi säljer aldrig din information.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">6. Dina rättigheter</h2>
                 <p className="text-warm-gray-700 leading-relaxed mb-4">
                   Du har rätt att:
                 </p>
@@ -85,14 +95,14 @@ export default function Integritetspolicy() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">6. Cookies</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">7. Cookies</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
                   Skerry använder endast cookies för grundläggande funktionalitet och anonym besöksstatistik. Vi använder inte tredjeparts spårning för annonsering.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">7. Ändringar i policyn</h2>
+                <h2 className="text-2xl font-bold text-warm-gray-900 mb-4">8. Ändringar i policyn</h2>
                 <p className="text-warm-gray-700 leading-relaxed">
                   Vi kan komma att uppdatera denna policy. Den senaste versionen finns alltid tillgänglig på vår webbplats.
                 </p>
