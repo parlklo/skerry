@@ -81,11 +81,14 @@ export default function TjansterPage() {
               
               {/* Pricing Table for Bygglov */}
               <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-lg flex flex-col">
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-3 h-3 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
-                  <h3 className="text-2xl font-bold text-slate-700">
-                    Bygglovsritningar & Kontrollansvar
-                  </h3>
+                <div className="flex items-start gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full mt-3" style={{backgroundColor: '#16A34A'}}></div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-700 mb-1">
+                      Bygglovsritningar & Kontrollansvar
+                    </h3>
+                    <p className="text-sm text-slate-500">Alla priser exklusive moms</p>
+                  </div>
                 </div>
                 
                 <div className="space-y-3 flex-grow">

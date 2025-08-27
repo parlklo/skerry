@@ -1,7 +1,6 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+
 import Link from "next/link"
 import { Building, Home, Factory, MapPin } from "lucide-react"
 import ServiceAreaMap from "@/components/ServiceAreaMap"
@@ -9,42 +8,81 @@ import { useState } from "react"
 
 export default function ProjektPage() {
   const projects = [
+    // Kommersiella projekt
     {
-      title: "Kvarteret Björnen",
-      location: "Centrala Malmö",
-      type: "Ombyggnation",
-      service: "Projektering och bygglov",
-      description: "Ombyggnation av kvarteret Björnen i centrala Malmö.",
+      title: "World Trade Center",
+      location: "Lund",
+      service: "Huvudarkitekt",
+      description: "Kommersiellt center med moderna kontorslokaler.",
       icon: Building,
       category: "Kommersiellt"
     },
     {
-      title: "Baltzar City",
-      location: "Centrala Malmö", 
-      type: "Nybyggnation",
-      service: "Projektering och bygglov",
-      description: "Nybyggnation av Baltzar City i centrala Malmö.",
+      title: "Point Hyllie",
+      location: "Malmö",
+      service: "Deltagande arkitekt",
+      description: "Modern kommersiell utveckling i Hyllie.",
       icon: Building,
       category: "Kommersiellt"
     },
     {
-      title: "TNT Logistik- och kontorsbyggnader",
-      location: "Sturups flygplats",
-      type: "Nybyggnation",
-      service: "Projektering och bygglov",
-      description: "TNT:s logistik- och kontorsbyggnader vid Sturups flygplats.",
+      title: "Parking House World Trade Center",
+      location: "Lund",
+      service: "Huvudarkitekt",
+      description: "Parkeringshus kopplat till World Trade Center.",
       icon: Building,
-      category: "Kommersiellt"
+      category: "Industri & Logistik"
+    },
+    // Hotellprojekt (Hotels Residential från portfolion)
+    {
+      title: "SAS Park Inn Hotel",
+      location: "Malmö",
+      service: "Deltagande arkitekt",
+      description: "Modernt hotell i centrala Malmö.",
+      icon: Building,
+      category: "Hotell"
     },
     {
-      title: "Menzies Logistik- och kontorsbyggnader",
-      location: "Sturups flygplats",
-      type: "Nybyggnation",
-      service: "Projektering och bygglov", 
-      description: "Menzies logistik- och kontorsbyggnader vid Sturups flygplats.",
-      icon: Building,
-      category: "Kommersiellt"
+      title: "Kabbarp Orangerihousing",
+      location: "Malmö",
+      service: "Huvudarkitekt",
+      description: "Innovativa bostäder med växthusintegrering.",
+      icon: Home,
+      category: "Hotell"
     },
+    {
+      title: "Flaggskep 6",
+      location: "Malmö",
+      service: "Huvudarkitekt",
+      description: "Moderna bostäder i attraktivt läge.",
+      icon: Home,
+      category: "Hotell"
+    },
+    {
+      title: "Kaptens Housing",
+      location: "Malmö",
+      service: "Deltagande arkitekt",
+      description: "Bostadsprojekt med maritim anknytning.",
+      icon: Home,
+      category: "Hotell"
+    },
+    {
+      title: "Radisson Blue Hotel",
+      location: "Helsingborg",
+      service: "Huvudarkitekt",
+      description: "Lyxhotell med modern design i Helsingborg.",
+      icon: Building,
+      category: "Hotell"
+    },
+    {
+      title: "Zero Energi Housing",
+      location: "Glumslöv",
+      service: "Deltagande arkitekt",
+      description: "Energieffektiva bostäder med nollenergikoncept.",
+      icon: Home,
+      category: "Hotell"
+    },
+    // Bostadsprojekt (mindre egna projekt)
     {
       title: "Ringberga 7",
       location: "Malmö",
@@ -52,7 +90,7 @@ export default function ProjektPage() {
       service: "Fastighetsutveckling",
       description: "Utredning för utveckling av Ringberga 7 bestående av sex LSS-lägenheter samt tio radhus.",
       icon: Home,
-      category: "Bostäder"
+      category: "Bostäder & Specialprojekt"
     },
     {
       title: "Passivhus",
@@ -61,7 +99,7 @@ export default function ProjektPage() {
       service: "Projektering och bygglov",
       description: "Nybyggnationer av passivhus med fokus på energieffektivitet.",
       icon: Home,
-      category: "Bostäder"
+      category: "Bostäder & Specialprojekt"
     },
     {
       title: "Lågenergihus",
@@ -70,8 +108,26 @@ export default function ProjektPage() {
       service: "Projektering och bygglov",
       description: "Nybyggnationer av lågenergihus med optimal energiprestanda.",
       icon: Home,
-      category: "Bostäder"
+      category: "Bostäder & Specialprojekt"
     },
+    // Industri & Logistikprojekt
+    {
+      title: "Max Lab IV",
+      location: "Lund",
+      service: "Deltagande arkitekt",
+      description: "Avancerat laboratorium för vetenskaplig forskning.",
+      icon: Factory,
+      category: "Industri & Logistik"
+    },
+    {
+      title: "Menzies Aviation",
+      location: "Malmö Airport",
+      service: "Huvudarkitekt",
+      description: "Logistik- och kontorsbyggnader för flygplatsverksamhet.",
+      icon: Factory,
+      category: "Industri & Logistik"
+    },
+    // Specialprojekt
     {
       title: "Kulturskyddade hus",
       location: "Södra Sverige",
@@ -79,7 +135,7 @@ export default function ProjektPage() {
       service: "Projektering och bygglov",
       description: "Om- och tillbyggnationer av äldre och kulturskyddade hus med varsam hantering.",
       icon: Building,
-      category: "Specialprojekt"
+      category: "Bostäder & Specialprojekt"
     },
     {
       title: "Gårdar till andligt centrum",
@@ -88,7 +144,7 @@ export default function ProjektPage() {
       service: "Fastighetsutveckling",
       description: "Ombyggnation av flera gårdar till andligt centrum.",
       icon: Building,
-      category: "Specialprojekt"
+      category: "Bostäder & Specialprojekt"
     },
     {
       title: "Pensionat med verksamheter",
@@ -97,11 +153,11 @@ export default function ProjektPage() {
       service: "Fastighetsutveckling",
       description: "Pensionat med tillhörande butik, konstnärsverkstad och övernattningslägenheter.",
       icon: Building,
-      category: "Specialprojekt"
+      category: "Bostäder & Specialprojekt"
     }
   ]
 
-  const categories = ["Alla", "Kommersiellt", "Bostäder", "Specialprojekt"]
+  const categories = ["Alla", "Kommersiellt", "Hotell", "Bostäder & Specialprojekt", "Industri & Logistik"]
   const [activeCategory, setActiveCategory] = useState("Alla")
 
   const filteredProjects = activeCategory === "Alla" 
@@ -229,9 +285,11 @@ export default function ProjektPage() {
                     <MapPin className="h-4 w-4 mr-1" style={{color: '#16A34A'}} />
                     {project.location}
                   </div>
-                  <div className="text-sm font-medium mb-2" style={{color: '#16A34A'}}>
-                    {project.type}
-                  </div>
+                  {project.type && (
+                    <div className="text-sm font-medium mb-2" style={{color: '#16A34A'}}>
+                      {project.type}
+                    </div>
+                  )}
                   {project.service && (
                     <div className="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full border border-slate-200 mb-4 w-fit">
                       {project.service}
