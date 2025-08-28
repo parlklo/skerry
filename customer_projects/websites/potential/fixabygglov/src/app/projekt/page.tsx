@@ -31,7 +31,11 @@ export default function ProjektPage() {
       service: "Fastighetsutveckling",
       description: "Utredning för utveckling av Ringberga 7 bestående av sex LSS-lägenheter samt tio radhus.",
       icon: Home,
-      category: "Bostäder & Specialprojekt"
+      category: "Bostäder & Specialprojekt",
+      images: [
+        "/Ringberga projekt 1.jpg",
+        "/Ringberga projekt 2.jpg"
+      ]
     },
     {
       title: "Passivhus",
