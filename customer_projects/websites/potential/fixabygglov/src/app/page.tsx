@@ -36,61 +36,50 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Enhanced Pricing Card */}
+            {/* Right: Simple Value Card */}
             <div className="lg:col-span-1 flex justify-center lg:justify-end">
               <div className="w-full max-w-md">
                 
-                {/* Minimalistisk miljövänlig pricing card */}
+                {/* Enkel kostnadsfri skissförslag card */}
                 <div className="bg-white border border-slate-200 shadow-xl">
                   
-                  {/* Enkel naturlig header */}
+                  {/* Enkel header */}
                   <div className="p-6 bg-slate-50 border-b border-slate-200">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-6 h-6 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
-                      <h2 className="text-lg font-bold text-slate-900">Bygglovsritningar</h2>
+                      <h2 className="text-lg font-bold text-slate-900">Kostnadsfri skissförslag</h2>
                     </div>
-                    <p className="text-sm text-slate-600">Professionella ritningar med kontrollansvar</p>
+                    <p className="text-sm text-slate-600">Vi hjälper dig visualisera ditt projekt</p>
                   </div>
 
-                  {/* Clean prislista */}
+                  {/* Enkel lista */}
                   <div className="p-6 space-y-4">
                     
                     <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                      <div className="font-medium text-slate-700">1-25 kvm</div>
-                      <div className="font-bold text-slate-900">9 700 SEK</div>
+                      <div className="font-medium text-slate-700">Professionell rådgivning</div>
+                      <div className="font-bold text-slate-900">✓</div>
                     </div>
 
                     <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                      <div className="font-medium text-slate-700">26-70 kvm</div>
-                      <div className="font-bold text-slate-900">13 200 SEK</div>
-                    </div>
-
-                    <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                      <div className="font-medium text-slate-700">71-150 kvm</div>
-                      <div className="font-bold text-slate-900">19 200 SEK</div>
+                      <div className="font-medium text-slate-700">Kostnadskalkyl</div>
+                      <div className="font-bold text-slate-900">✓</div>
                     </div>
 
                     <div className="flex justify-between items-center py-3">
-                      <div className="font-medium text-slate-700">150+ kvm</div>
-                      <div className="font-bold text-slate-900">Offert</div>
+                      <div className="font-medium text-slate-700">Inga förpliktelser</div>
+                      <div className="font-bold text-slate-900">✓</div>
                     </div>
                   </div>
 
-                  {/* Naturlig footer */}
+                  {/* Enkel footer */}
                   <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs text-slate-500">Alla priser exkl moms</div>
-                      <a 
-                        href="/tjanster" 
-                        className="text-sm font-medium hover:underline flex items-center gap-1"
-                        style={{color: '#16A34A'}}
-                      >
-                        Se mer info
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
+                    <a 
+                      href="/kontakt" 
+                      className="w-full text-white py-3 px-6 rounded-xl font-bold text-center block transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      style={{backgroundColor: '#16A34A'}}
+                    >
+                      Få ditt skissförslag
+                    </a>
                   </div>
                 </div>
 
