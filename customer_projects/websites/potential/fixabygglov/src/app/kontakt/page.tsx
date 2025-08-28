@@ -157,14 +157,14 @@ export default function KontaktPage() {
                       />
                     </div>
 
-                    <button 
+                    <Button 
                       type="submit" 
                       disabled={isSubmitting}
                       className="w-full text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       style={{backgroundColor: '#16A34A'}}
                     >
                       {isSubmitting ? 'Skickar...' : 'Skicka meddelande'}
-                    </button>
+                    </Button>
 
                     {/* Status meddelanden */}
                     {submitStatus === 'success' && (
@@ -178,7 +178,7 @@ export default function KontaktPage() {
                     {submitStatus === 'error' && (
                       <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                         <p className="text-red-800 font-medium">
-                          ❌ Något gick fel. Försök igen eller ring oss på +46 768 68 59 02.
+                          ❌ Något gick fel. Försök igen eller kontakta oss direkt via e-post.
                         </p>
                       </div>
                     )}

@@ -5,6 +5,15 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
+    // Kontrollera API-nyckel
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY saknas')
+      return NextResponse.json(
+        { error: 'Server-konfigurationsfel' },
+        { status: 500 }
+      )
+    }
+
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
@@ -15,6 +24,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    console.log('Försöker skicka e-post...', { name, email, subject })
 
     // Skicka e-post med Resend
     const { data, error } = await resend.emails.send({
@@ -63,10 +74,12 @@ Detta meddelande skickades från kontaktformuläret på fixabygglov.se
     if (error) {
       console.error('Resend error:', error)
       return NextResponse.json(
-        { error: 'Något gick fel vid skickandet av e-post' },
+        { error: 'Något gick fel vid skickandet av e-post', details: error },
         { status: 500 }
       )
     }
+
+    console.log('E-post skickad framgångsrikt:', data)
 
     return NextResponse.json(
       { message: 'E-post skickad framgångsrikt', id: data?.id },
