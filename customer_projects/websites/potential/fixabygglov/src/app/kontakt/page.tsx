@@ -17,11 +17,41 @@ export default function KontaktPage() {
     message: ""
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // You can integrate with your email service here
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -129,11 +159,29 @@ export default function KontaktPage() {
 
                     <button 
                       type="submit" 
-                      className="w-full text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      disabled={isSubmitting}
+                      className="w-full text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       style={{backgroundColor: '#16A34A'}}
                     >
-                      Skicka meddelande
+                      {isSubmitting ? 'Skickar...' : 'Skicka meddelande'}
                     </button>
+
+                    {/* Status meddelanden */}
+                    {submitStatus === 'success' && (
+                      <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <p className="text-green-800 font-medium">
+                          ✅ Tack! Ditt meddelande har skickats. Vi kontaktar dig inom kort.
+                        </p>
+                      </div>
+                    )}
+
+                    {submitStatus === 'error' && (
+                      <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                        <p className="text-red-800 font-medium">
+                          ❌ Något gick fel. Försök igen eller ring oss på +46 768 68 59 02.
+                        </p>
+                      </div>
+                    )}
                   </form>
                 </CardContent>
               </Card>
