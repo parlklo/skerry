@@ -63,7 +63,7 @@ export default function ProjektPage() {
       description: "Logistik- och kontorsbyggnader för flygplatsverksamhet.",
       icon: Factory,
       category: "Industri & Logistik",
-      images: ["/Menzies Aviation Malmo Airport.png"]
+      images: ["/logistik menzies.webp"]
     },
     // Specialprojekt
     {
@@ -73,7 +73,8 @@ export default function ProjektPage() {
       service: "Projektering och bygglov",
       description: "Om- och tillbyggnationer av äldre och kulturskyddade hus med varsam hantering.",
       icon: Building,
-      category: "Bostäder & Specialprojekt"
+      category: "Bostäder & Specialprojekt",
+      images: ["/kulturskyddade bilder.jpg"]
     },
     {
       title: "Gårdar till andligt centrum",
