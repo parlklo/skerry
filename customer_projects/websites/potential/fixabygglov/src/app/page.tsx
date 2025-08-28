@@ -49,7 +49,7 @@ export default function Home() {
                       <div className="w-6 h-6 rounded-full" style={{backgroundColor: '#16A34A'}}></div>
                       <h2 className="text-lg font-bold text-slate-900">Kostnadsfri skissförslag</h2>
                     </div>
-                    <p className="text-sm text-slate-600">Vi hjälper dig visualisera ditt projekt</p>
+                    <p className="text-sm text-slate-600">Professionell konsultation för ditt byggprojekt</p>
                   </div>
 
                   {/* Enkel lista */}
@@ -61,7 +61,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                      <div className="font-medium text-slate-700">Kostnadskalkyl</div>
+                      <div className="font-medium text-slate-700">Gratis offert</div>
                       <div className="font-bold text-slate-900">✓</div>
                     </div>
 
