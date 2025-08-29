@@ -29,8 +29,8 @@ export async function POST(request: NextRequest) {
 
     // Skicka e-post med Resend
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev', // Använder Resends standard-domän för nu
-      to: ['info@ark-kon.com'],
+      from: 'noreply@fixabygglov.se', // Använder verifierad domän
+      to: ['info@ark-kon.com'], // Produktions e-post
       subject: subject || 'Ny förfrågan från hemsidan',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
