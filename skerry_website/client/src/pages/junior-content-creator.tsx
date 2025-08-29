@@ -9,10 +9,23 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 
+// Declare gtag for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 export default function JuniorContentCreator() {
   const [, setLocation] = useLocation();
 
   const handleApplyClick = () => {
+    // Track conversion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'job_application', {
+        event_category: 'career',
+        event_label: 'junior_content_creator_detail',
+        value: 1
+      });
+    }
     // Open Tally form in new tab/window
     window.open('https://karriar.skerry.ai/', '_blank');
   };

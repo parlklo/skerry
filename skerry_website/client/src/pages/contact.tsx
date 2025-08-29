@@ -6,6 +6,11 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Clock, Phone, UserRound } from "lucide-react";
 import { Link } from "wouter";
 
+// Declare gtag for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -53,6 +58,15 @@ export default function Contact() {
       console.log('Response data:', data); // Debug log
 
       if (response.ok) {
+        // Track conversion in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            event_category: 'contact',
+            event_label: 'contact_form',
+            value: 1
+          });
+        }
+        
         setSubmitStatus({
           type: 'success',
           message: data.message || 'Meddelandet har skickats!'

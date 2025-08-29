@@ -6,6 +6,11 @@ import { BackgroundPage } from "@/components/BackgroundPage";
 import { useUTM } from "@/hooks/use-utm";
 import React, { useState } from "react";
 
+// Declare gtag for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 export default function Website() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,6 +47,15 @@ export default function Website() {
       const data = await response.json();
 
       if (response.ok) {
+        // Track conversion in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'lead', {
+            event_category: 'email_signup',
+            event_label: 'website_page',
+            value: 1
+          });
+        }
+        
         setSubmitStatus({
           type: 'success',
           message: data.message || 'Tack! Kolla din e-post för nästa steg.'

@@ -5,6 +5,11 @@ import { ArrowRight, CheckCircle, Star, Gift, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
 import React, { useState, useEffect } from "react";
 
+// Declare gtag for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 export default function Home() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,6 +49,15 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok) {
+        // Track conversion in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'lead', {
+            event_category: 'email_signup',
+            event_label: 'home_page',
+            value: 1
+          });
+        }
+        
         setSubmitStatus({
           type: 'success',
           message: data.message || 'Tack! Kolla din e-post för nästa steg.'

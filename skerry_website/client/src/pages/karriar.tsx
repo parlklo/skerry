@@ -9,18 +9,47 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
+// Declare gtag for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+}
+
 export default function Karriar() {
   const handleApplyClick = () => {
+    // Track conversion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'job_application', {
+        event_category: 'career',
+        event_label: 'junior_content_creator',
+        value: 1
+      });
+    }
     // Open Tally form in new tab/window
     window.open('https://karriar.skerry.ai/', '_blank');
   };
 
   const handleSalesApplyClick = () => {
+    // Track conversion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'job_application', {
+        event_category: 'career',
+        event_label: 'sales_role',
+        value: 1
+      });
+    }
     // Open email client for sales role
     window.open('mailto:kasperparlklo@gmail.com?subject=Ansökan - Deltidsroll Försäljning&body=Hej Kasper,%0D%0A%0D%0AJag är intresserad av deltidsrollen inom försäljning.%0D%0A%0D%0AOm mig:%0D%0A[Berätta kort om dig själv]%0D%0A%0D%0AVarför jag skulle vara en bra match:%0D%0A[Dina tankar här]%0D%0A%0D%0AMvh,%0D%0A[Ditt namn]');
   };
 
   const handleOpenApplicationClick = () => {
+    // Track conversion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'job_application', {
+        event_category: 'career',
+        event_label: 'open_application',
+        value: 1
+      });
+    }
     // Open email client for open application
     window.open('mailto:kasperparlklo@gmail.com?subject=Öppen ansökan - Skerry&body=Hej Kasper,%0D%0A%0D%0AJag är intresserad av att arbeta hos Skerry men ser ingen specifik roll som passar.%0D%0A%0D%0AOm mig:%0D%0A[Berätta om din bakgrund]%0D%0A%0D%0AVad jag kan bidra med:%0D%0A[Dina färdigheter och intressen]%0D%0A%0D%0AMvh,%0D%0A[Ditt namn]');
   };
