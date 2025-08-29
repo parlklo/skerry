@@ -3,7 +3,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Tjänster - FixaBygglov | Malmö & Skåne",
-  description: "Professionella bygglovstjänster i Malmö och Skåne. Bygglovsritningar, kontrollansvar, fastighetsutveckling och VVS-projektering. SITAC-certifierade konsulter för alla byggprojekt i Södra Sverige.",
+  description: "Professionella bygglovs- och kontrollansvartjänster i Malmö och Skåne. Bygglovsritningar, kontrollansvar, fastighetsutveckling och VVS-projektering. SITAC-certifierade konsulter för alla byggprojekt i Södra Sverige.",
   keywords: "bygglovsritningar malmö, kontrollansvarig skåne, fastighetsutveckling malmö, vvs projektering södra sverige, arkitekt malmö, sitac certifierad",
 }
 
@@ -24,12 +24,21 @@ export default function TjansterPage() {
             {/* Left side - Company description */}
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
-                Professionella bygglovstjänster
+                Professionella bygglovs- och kontrollansvartjänster
               </h1>
               <p className="text-xl md:text-2xl text-white leading-relaxed mb-8">
                 FixaBygglov består av erfarna konsulter inom arkitektur, konstruktion och VVS med bred branschbakgrund från större konsultföretag.
               </p>
 
+              {/* Certifieringsinformation - textbaserad */}
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 max-w-fit">
+                <div className="text-white text-sm font-medium mb-1">
+                  SITAC & Swedac certifierade kontrollansvariga
+                </div>
+                <div className="text-white/80 text-xs">
+                  Kvalificerade för komplicerade konstruktioner (RISE Nivå K)
+                </div>
+              </div>
               
             </div>
             
@@ -206,11 +215,12 @@ export default function TjansterPage() {
                   Vi är certifierade kontrollansvariga och tillhandahåller denna tjänst. När du anlitar oss hjälper vi dig att följa de lagkrav som finns för hållbarhet, säkerhet, tillgänglighet, energi och hygien. Det innebär att vi är ett stöd för byggherren och dig som beställare där vi utformar projektet samt anpassar en kontrollplan. Vi finns med på byggsamråd, följer upp hur bygget utvecklar sig och ser till att både lagstadgade krav och kontroller fullföljs.
                 </p>
                 <div className="mb-6">
+
                   <a 
                     href="https://ark-kon.com/files/PDF/36640-1637678407-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300 group"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300 group text-sm"
                   >
                     Visa vårt SITAC-certifikat
                     <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,6 +239,7 @@ export default function TjansterPage() {
                 </div>
                 <div className="space-y-3 mb-6 text-base text-slate-600 flex-grow">
                   <div>• SITAC-certifierad kontrollansvarig</div>
+                  <div>• RISE certifierad nivå K (komplicerade konstruktioner)</div>
                   <div>• Kontrollplan och uppföljning</div>
                   <div>• Byggsamråd och kvalitetskontroll</div>
                   <div>• Lagstadgade krav för hållbarhet</div>

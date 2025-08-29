@@ -3,8 +3,8 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="relative">
-      {/* Hero Section - Generous height for better proportions */}
-      <section className="relative min-h-[85vh] flex items-center py-8 lg:py-12">
+      {/* Hero Section - More reduced spacing to navbar */}
+      <section className="relative min-h-[75vh] flex items-center py-2 lg:py-4 pt-6 lg:pt-8">
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
@@ -19,6 +19,28 @@ export default function Home() {
                 <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-3xl font-medium">
                   Vi hanterar allt som krävs för bygglov – bygglovsritningar, kontrollansvar, konstruktions- och VVS-ritningar samt energiberäkningar.
                 </p>
+                
+                {/* Certifieringar */}
+                <div className="flex flex-wrap items-center gap-4 mt-6">
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2 min-w-[200px]">
+                    <img 
+                      src="/Rise certifikat Kontrollansvarig.png" 
+                      alt="RISE Certifikat" 
+                      className="w-6 h-6 object-contain"
+                    />
+                    <span className="text-white text-sm font-medium">RISE Certifierad Nivå K</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2 min-w-[200px]">
+                    <div className="bg-white/90 rounded px-1.5 py-1">
+                      <img 
+                        src="/swedac.png" 
+                        alt="Swedac Ackreditering" 
+                        className="w-5 h-5 object-contain"
+                      />
+                    </div>
+                    <span className="text-white text-sm font-medium">Swedac Ackrediterat</span>
+                  </div>
+                </div>
               </div>
               
               {/* Enhanced CTA - Contact form */}

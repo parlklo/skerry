@@ -226,53 +226,55 @@ export default function KontaktPage() {
                     </div>
                   </div>
 
-                  {/* Modern architectural illustration */}
+                  {/* Certifieringar - RISE i fokus */}
                   <div className="mt-8 pt-6 border-t border-slate-200">
-                    <div className="bg-gradient-to-br from-green-50 to-slate-50 rounded-xl p-6">
-                      <div className="flex items-center justify-center">
-                        <div className="relative w-full max-w-xs">
-                          <svg className="w-full h-24" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            {/* Simple house illustration */}
-                            <g opacity="0.7">
-                              {/* House base */}
-                              <rect x="60" y="35" width="80" height="40" fill="#16A34A" rx="2" />
-                              {/* Roof */}
-                              <polygon points="55,35 100,15 145,35" fill="#064e3b" />
-                              {/* Door */}
-                              <rect x="90" y="50" width="12" height="25" fill="white" rx="1" />
-                              {/* Windows */}
-                              <rect x="70" y="45" width="12" height="12" fill="white" rx="1" />
-                              <rect x="118" y="45" width="12" height="12" fill="white" rx="1" />
-                              {/* Chimney */}
-                              <rect x="120" y="20" width="8" height="15" fill="#064e3b" />
-                            </g>
-                            
-                            {/* Decorative elements */}
-                            <g opacity="0.4">
-                              {/* Trees */}
-                              <circle cx="30" cy="55" r="12" fill="#16A34A" />
-                              <rect x="28" y="60" width="4" height="15" fill="#065f46" />
-                              
-                              <circle cx="170" cy="50" r="10" fill="#16A34A" />
-                              <rect x="168" y="55" width="4" height="20" fill="#065f46" />
-                              
-                              {/* Ground line */}
-                              <line x1="10" y1="75" x2="190" y2="75" stroke="#16A34A" strokeWidth="2" opacity="0.3" />
-                            </g>
-                          </svg>
-                          
-                          {/* Text below illustration */}
-                          <div className="text-center mt-3">
-                            <div className="text-sm font-medium text-slate-700">
-                              Vi hjälper dig med ditt byggprojekt
-                            </div>
-                            <div className="text-xs text-slate-500 mt-1">
-                              Från idé till färdig ritning
-                            </div>
-                          </div>
+                    <h3 className="font-medium text-slate-800 mb-4">Våra certifieringar</h3>
+                    
+                    {/* RISE i fokus - flyttad överst */}
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                      <div className="flex items-center gap-3 mb-3">
+                        <img 
+                          src="/Rise certifikat Kontrollansvarig.png" 
+                          alt="RISE" 
+                          className="h-10 w-10 object-contain"
+                        />
+                        <div>
+                          <div className="text-base font-bold text-green-800">RISE Nivå K</div>
+                          <div className="text-sm text-green-600">Komplicerade konstruktioner</div>
                         </div>
                       </div>
+                      <div className="text-sm text-slate-700 leading-relaxed">
+                        Vår RISE-certifiering på nivå K utfärdas inom ramen för Swedac-systemet och innebär kvalifikation 
+                        för komplicerade konstruktioner med högsta kvalitetsstandard.
+                      </div>
                     </div>
+                    
+                    {/* Huvudcertifieringar - mindre framträdande */}
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="bg-white border border-slate-200 rounded-lg p-3 text-center hover:shadow-md transition-shadow">
+                        <img 
+                          src="/SP Sitac.png" 
+                          alt="SP SITAC" 
+                          className="w-full h-10 object-contain mb-2"
+                        />
+                        <div className="text-xs font-medium text-slate-700">SITAC Certifierad</div>
+                        <div className="text-xs text-slate-500">SC0477-11</div>
+                      </div>
+                      
+                      <div className="bg-white border border-slate-200 rounded-lg p-3 text-center hover:shadow-md transition-shadow">
+                        <img 
+                          src="/swedac.png" 
+                          alt="Swedac" 
+                          className="w-full h-10 object-contain mb-2"
+                        />
+                        <div className="text-xs font-medium text-slate-700">Swedac Ackrediterat</div>
+                        <div className="text-xs text-slate-500">Kvalitetssäkring</div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-xs text-slate-600">
+                      Certifierade inom kontrollansvar, kvalitetssäkring och komplicerade konstruktioner
+                    </p>
                   </div>
                 </CardContent>
               </Card>
