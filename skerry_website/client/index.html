@@ -33,6 +33,38 @@
 
       gtag('config', 'AW-17510129124');
     </script>
+    
+    <!-- Event snippet for Contact conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17510129124/25sMCIaQyY4bEOS7vZ1B',
+          'value': 1.0,
+          'currency': 'SEK',
+          'event_callback': callback
+        });
+        return false;
+      }
+
+      // Helper function to track contact button clicks
+      function gtag_track_contact_click(url) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'click', {
+            'event_category': 'contact',
+            'event_label': 'contact_button_click',
+            'transport_type': 'beacon'
+          });
+        }
+        if (url) {
+          window.location = url;
+        }
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     

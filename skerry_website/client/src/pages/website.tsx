@@ -6,9 +6,10 @@ import { BackgroundPage } from "@/components/BackgroundPage";
 import { useUTM } from "@/hooks/use-utm";
 import React, { useState } from "react";
 
-// Declare gtag for TypeScript
+// Declare gtag and gtag_report_conversion for TypeScript
 declare global {
   function gtag(...args: any[]): void;
+  function gtag_report_conversion(url?: string): boolean;
 }
 
 export default function Website() {
@@ -54,6 +55,11 @@ export default function Website() {
             event_label: 'website_page',
             value: 1
           });
+        }
+
+        // Track Google Ads conversion for email signup
+        if (typeof gtag_report_conversion !== 'undefined') {
+          gtag_report_conversion();
         }
         
         setSubmitStatus({

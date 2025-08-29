@@ -5,9 +5,10 @@ import { ArrowRight, CheckCircle, Star, Gift, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
 import React, { useState, useEffect } from "react";
 
-// Declare gtag for TypeScript
+// Declare gtag and gtag_report_conversion for TypeScript
 declare global {
   function gtag(...args: any[]): void;
+  function gtag_report_conversion(url?: string): boolean;
 }
 
 export default function Home() {
@@ -56,6 +57,11 @@ export default function Home() {
             event_label: 'home_page',
             value: 1
           });
+        }
+
+        // Track Google Ads conversion for email signup
+        if (typeof gtag_report_conversion !== 'undefined') {
+          gtag_report_conversion();
         }
         
         setSubmitStatus({

@@ -6,9 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Clock, Phone, UserRound } from "lucide-react";
 import { Link } from "wouter";
 
-// Declare gtag for TypeScript
+// Declare gtag and gtag_report_conversion for TypeScript
 declare global {
   function gtag(...args: any[]): void;
+  function gtag_report_conversion(url?: string): boolean;
 }
 
 interface ContactFormData {
@@ -65,6 +66,11 @@ export default function Contact() {
             event_label: 'contact_form',
             value: 1
           });
+        }
+
+        // Track Google Ads conversion
+        if (typeof gtag_report_conversion !== 'undefined') {
+          gtag_report_conversion();
         }
         
         setSubmitStatus({
