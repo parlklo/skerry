@@ -36,6 +36,21 @@ export default function KontaktPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
+        
+        // Spåra konvertering i Google Analytics
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'form_submit', {
+            event_category: 'Contact',
+            event_label: 'Contact Form Submission',
+            value: 1
+          });
+          
+          // Rapportera konvertering till Google Ads
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-1000313032'
+          });
+        }
+        
         setFormData({
           name: "",
           email: "",
@@ -201,8 +216,21 @@ export default function KontaktPage() {
                     <Phone className="h-6 w-6 mt-1" style={{color: '#16A34A'}} />
                     <div>
                       <h3 className="font-semibold">Telefon</h3>
-                      <p className="text-gray-600">+46 768 68 59 02</p>
-
+                      <a 
+                        href="tel:+46768685902"
+                        className="text-gray-600 hover:text-green-600 transition-colors"
+                        onClick={() => {
+                          if (typeof window !== 'undefined' && window.gtag) {
+                            window.gtag('event', 'phone_click', {
+                              event_category: 'Contact',
+                              event_label: 'Phone Number Click',
+                              value: 1
+                            });
+                          }
+                        }}
+                      >
+                        +46 768 68 59 02
+                      </a>
                     </div>
                   </div>
 
@@ -210,8 +238,21 @@ export default function KontaktPage() {
                     <Mail className="h-6 w-6 mt-1" style={{color: '#16A34A'}} />
                     <div>
                       <h3 className="font-semibold">Email</h3>
-                      <p className="text-gray-600">info@ark-kon.com</p>
-
+                      <a 
+                        href="mailto:info@ark-kon.com"
+                        className="text-gray-600 hover:text-green-600 transition-colors"
+                        onClick={() => {
+                          if (typeof window !== 'undefined' && window.gtag) {
+                            window.gtag('event', 'email_click', {
+                              event_category: 'Contact',
+                              event_label: 'Email Click',
+                              value: 1
+                            });
+                          }
+                        }}
+                      >
+                        info@ark-kon.com
+                      </a>
                     </div>
                   </div>
 
