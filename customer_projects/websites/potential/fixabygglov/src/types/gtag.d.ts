@@ -4,14 +4,14 @@ declare global {
       command: 'config' | 'event' | 'js',
       targetId: string | Date,
       config?: {
-        [key: string]: any;
+        [key: string]: string | number | boolean;
         event_category?: string;
         event_label?: string;
         value?: number;
         send_to?: string;
       }
     ) => void;
-    dataLayer: any[];
+    dataLayer: Record<string, unknown>[];
   }
 }
 
