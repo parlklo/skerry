@@ -5,5 +5,8 @@
   "dependencies": {
     "stripe": "^18.2.1",
     "resend": "^4.0.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.19"
   }
 }
