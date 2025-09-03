@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "cd client && npm ci && npm run build"
+  },
   "dependencies": {
     "stripe": "^18.2.1",
     "resend": "^4.0.1"
