@@ -25,6 +25,7 @@ export function Navigation() {
         { path: "/automation", label: "AI Agenter & Automation" },
       ]
     },
+    { path: "/karriar", label: "Karriär" },
     { path: "/contact", label: "Kontakt" },
   ];
 

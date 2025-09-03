@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
+    <!-- Cookiebot CMP -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="bdfa1882-dabd-46a5-8ca4-c1b35ff95ce6" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <!-- Google Consent Mode (must come before gtag.js) -->
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough", false);
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17510129124"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17510129124');
+    </script>
+    
+    <!-- Event snippet for Contact conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17510129124/25sMCIaQyY4bEOS7vZ1B',
+          'value': 1.0,
+          'currency': 'SEK',
+          'event_callback': callback
+        });
+        return false;
+      }
+
+      // Helper function to track contact button clicks
+      function gtag_track_contact_click(url) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'click', {
+            'event_category': 'contact',
+            'event_label': 'contact_button_click',
+            'transport_type': 'beacon'
+          });
+        }
+        if (url) {
+          window.location = url;
+        }
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Skerry - Digital Partner för Småföretag</title>
-    <meta name="description" content="Skerry hjälper småföretag att modernisera sin digitala närvaro med professionella webbplatser och löpande underhåll. Samarbeta med oss för att ta igen det digitala och växa ditt lokala företag.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ff8c00">
+    
+    <!-- SEO Meta Tags -->
+    <title>Skerry - Digital Partner för Småföretag | Hemsidor & Digital Marknadsföring</title>
+    <meta name="description" content="Skerry hjälper småföretag att modernisera sin digitala närvaro med professionella webbplatser, digital marknadsföring och AI-agenter. Billigt, modernt och enkelt att komma igång. Kostnadsfri hemsida för nya kunder.">
+    <meta name="keywords" content="hemsida, webbplats, digital marknadsföring, småföretag, AI-agenter, automation, webbdesign, SEO, sociala medier">
+    <meta name="author" content="Skerry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skerry.ai">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Open Graph-taggar -->
-    <meta property="og:title" content="Skerry - Digital Partner för Småföretag">
-    <meta property="og:description" content="Professionella webbplatser och digitalt underhåll för småföretag. Modernisera din närvaro online med löpande support.">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://skerry.co">
+    <meta property="og:url" content="https://skerry.ai">
+    <meta property="og:title" content="Skerry - Digital Partner för Småföretag">
+    <meta property="og:description" content="Kostnadsfri hemsida för småföretag. Professionella webbplatser, digital marknadsföring och AI-agenter. Billigt, modernt och enkelt att komma igång.">
+    <meta property="og:image" content="https://skerry.ai/skerry-social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Skerry">
+    <meta property="og:locale" content="sv_SE">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://skerry.ai">
+    <meta name="twitter:title" content="Skerry - Digital Partner för Småföretag">
+    <meta name="twitter:description" content="Kostnadsfri hemsida för småföretag. Professionella webbplatser, digital marknadsföring och AI-agenter.">
+    <meta name="twitter:image" content="https://skerry.ai/skerry-social-preview.png">
+    
+    <!-- Additional SEO -->
+    <meta name="geo.region" content="SE">
+    <meta name="geo.placename" content="Sweden">
+    <meta name="language" content="Swedish">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
   </head>
   <body>
     <div id="root"></div>

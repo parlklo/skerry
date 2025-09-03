@@ -7,6 +7,9 @@ import Services from "@/pages/services";
 import Website from "@/pages/website";
 import DigitalMarketing from "@/pages/digital-marketing";
 import Automation from "@/pages/automation";
+import Karriar from "@/pages/karriar";
+import JuniorContentCreator from "@/pages/junior-content-creator";
+import SalesRole from "@/pages/sales-role";
 import Contact from "@/pages/contact";
 import AlmannaVillkor from "@/pages/allmanna-villkor";
 import Integritetspolicy from "@/pages/integritetspolicy";
@@ -25,6 +28,9 @@ function Router() {
           <Route path="/website" component={Website} />
           <Route path="/digital-marketing" component={DigitalMarketing} />
           <Route path="/automation" component={Automation} />
+          <Route path="/karriar" component={Karriar} />
+          <Route path="/karriar/junior-content-creator" component={JuniorContentCreator} />
+          <Route path="/karriar/sales" component={SalesRole} />
           <Route path="/contact" component={Contact} />
           <Route path="/allmanna-villkor" component={AlmannaVillkor} />
           <Route path="/integritetspolicy" component={Integritetspolicy} />

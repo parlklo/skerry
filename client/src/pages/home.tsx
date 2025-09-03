@@ -1,10 +1,91 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Star, Gift } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, CheckCircle, Star, Gift, Mail } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+// Declare gtag and gtag_report_conversion for TypeScript
+declare global {
+  function gtag(...args: any[]): void;
+  function gtag_report_conversion(url?: string): boolean;
+}
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  // Auto-hide success messages after 4 seconds
+  useEffect(() => {
+    if (submitStatus.type === 'success') {
+      const timer = setTimeout(() => {
+        setSubmitStatus({ type: null, message: '' });
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/collect-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          email, 
+          campaign: 'free_website_2025',
+          source: 'website_home' 
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Track conversion in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'lead', {
+            event_category: 'email_signup',
+            event_label: 'home_page',
+            value: 1
+          });
+        }
+
+        // Track Google Ads conversion for email signup
+        if (typeof gtag_report_conversion !== 'undefined') {
+          gtag_report_conversion();
+        }
+        
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Tack! Kolla din e-post för nästa steg.'
+        });
+        setEmail(''); // Reset form
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message || 'Ett fel uppstod. Försök igen senare.'
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting email:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Ett fel uppstod. Kontrollera din internetanslutning och försök igen.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <BackgroundPage 
       backgroundImage="/landingpage.png"
@@ -88,12 +169,50 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* CTA in card */}
-                  <Link href="/website">
-                    <Button className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300">
-                      Läs mer
-                    </Button>
-                  </Link>
+                  {/* Email Collection Form */}
+                  <div className="relative">
+                    <form onSubmit={handleEmailSubmit} className="space-y-4">
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60 w-4 h-4" />
+                        <Input
+                          type="email"
+                          placeholder="din@email.se"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          disabled={isSubmitting}
+                          required
+                          className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white/60 transition-colors text-white placeholder-white/60 text-sm"
+                        />
+                      </div>
+                      
+                      {submitStatus.type ? (
+                        // Show status message instead of button
+                        <div className={`w-full py-3 rounded-lg text-sm font-medium flex items-center justify-center space-x-2 transition-all duration-300 ${
+                          submitStatus.type === 'success' 
+                            ? 'bg-green-500/20 text-green-300 border border-green-400/30' 
+                            : 'bg-red-500/20 text-red-300 border border-red-400/30'
+                        }`}>
+                          {submitStatus.type === 'success' ? (
+                            <CheckCircle className="w-4 h-4" />
+                          ) : (
+                            <div className="w-4 h-4 bg-red-400 rounded-full flex items-center justify-center">
+                              <span className="text-white text-xs font-bold">!</span>
+                            </div>
+                          )}
+                          <span>{submitStatus.message}</span>
+                        </div>
+                      ) : (
+                        // Show normal button
+                        <Button 
+                          type="submit" 
+                          disabled={isSubmitting || !email.trim()}
+                          className="w-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border border-white/40 hover:border-white/60 py-3 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {isSubmitting ? 'Skickar...' : 'Få ditt formulär →'}
+                        </Button>
+                      )}
+                    </form>
+                  </div>
                 </div>
 
 
