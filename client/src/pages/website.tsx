@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Globe, CheckCircle, ArrowRight, Clock, Star, FileText, Lightbulb, Zap, Gift, Sparkles, Wrench, Search, CreditCard, Mail } from "lucide-react";
+import { Globe, CheckCircle, ArrowRight, Clock, Star, FileText, Lightbulb, Zap, Gift, Sparkles, Wrench, Search, CreditCard, Mail, RefreshCw } from "lucide-react";
 import { BackgroundPage } from "@/components/BackgroundPage";
 import { useUTM } from "@/hooks/use-utm";
 import React, { useState } from "react";
@@ -98,13 +98,13 @@ export default function Website() {
               
                             <h1 className="font-black leading-[0.85] mb-6 sm:mb-8 text-white">
                 <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3" style={{ textShadow: '0 8px 16px rgba(0, 0, 0, 0.8)' }}>
-                  Vi bygger din hemsida <span className="text-skerry-orange-400" style={{ textShadow: '0 8px 16px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(255, 140, 0, 0.4)' }}>helt kostnadsfritt</span>
+                  Professionella <span className="text-skerry-orange-400" style={{ textShadow: '0 8px 16px rgba(0, 0, 0, 0.8), 0 4px 8px rgba(255, 140, 0, 0.4)' }}>hemsidelösningar</span>
                 </div>
               </h1>
               
                 <p className="text-lg sm:text-xl md:text-2xl text-white mb-8 sm:mb-12 leading-relaxed max-w-2xl font-medium" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
-                  Fyll i formuläret så bygger vi en färdig, professionell hemsida åt dig. 
-                  <span className="text-skerry-orange-300 font-bold"> Du betalar bara om du är nöjd med resultatet.</span>
+                  Vi hjälper företag att lyckas online med moderna, snabba och SEO-optimerade hemsidor. 
+                  <span className="text-skerry-orange-300 font-bold"> Välj den lösning som passar ditt företag bäst.</span>
                 </p>
 
                 {/* Email Collection Form */}
@@ -152,7 +152,7 @@ export default function Website() {
               </div>
 
               {/* Right Content - Process Mockup */}
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-5 lg:mt-0 mt-8">
                 <div className="bg-black/60 backdrop-blur-xl rounded-3xl p-4 sm:p-6 shadow-2xl border border-white/20">
                   {/* Mock browser frame */}
                   <div className="mb-5">
@@ -207,213 +207,227 @@ export default function Website() {
                   </div>
                 </div>
               </div>
-            </div>
+                      </div>
+        </div>
+
+        {/* Choose Your Solution Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
+              Vilken typ av hemsida behöver du?
+            </h2>
+            <div className="h-1 w-16 bg-gradient-to-r from-skerry-orange-400 to-orange-400 mx-auto rounded-full"></div>
           </div>
-
-
-
-
-
-                    
-
-          {/* What's Included Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
-                Vad ingår i din hemsida?
-              </h2>
-              <div className="h-1 w-16 bg-gradient-to-r from-skerry-orange-400 to-orange-400 mx-auto rounded-full"></div>
-            </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             
-            <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              
-              {/* Professionell Webbplatsutveckling */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-skerry-orange-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 border border-skerry-orange-400/30">
-                    <Globe className="text-skerry-orange-400" size={36} />
+            {/* New Website */}
+            <div className="bg-black/30 backdrop-blur-xl rounded-xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300 group flex flex-col">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 bg-green-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30 group-hover:scale-110 transition-transform">
+                  <Globe className="text-green-400" size={36} />
                 </div>
-                  <h4 className="text-2xl font-bold text-white mb-3">Professionell Webbplatsutveckling</h4>
-                  <p className="text-white/70 mb-6">
-                    Modern, professionell hemsida som stärker ditt varumärke.
-                  </p>
+                <h3 className="text-2xl font-bold text-white mb-3">Ny hemsida</h3>
+                <p className="text-white/70 mb-6">
+                  För företag som behöver en modern, professionell hemsida
+                </p>
+              </div>
+              <ul className="space-y-3 text-white/80 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Vill starta från början med en modern hemsida</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Behöver en hemsida som får folk att kontakta er</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Vill veta exakt vad ni betalar för</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Vill ha en hemsida som fungerar på alla enheter</span>
+                </li>
+              </ul>
+              <Link href="/website/digital-business-start">
+                <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl">
+                  Läs mer om Digital Business Start
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+
+            {/* Website Modernization */}
+            <div className="bg-black/30 backdrop-blur-xl rounded-xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300 group flex flex-col">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 bg-blue-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30 group-hover:scale-110 transition-transform">
+                  <RefreshCw className="text-blue-400" size={36} />
                 </div>
-                <ul className="space-y-3 text-white/80 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Modern teknik & säkerhet</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Design baserad på dina önskemål</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Optimerad för konvertering</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Mobilanpassad & SEO-optimerad</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-skerry-orange-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Nöjdhetsgaranti</span>
-                  </li>
-                </ul>
+                <h3 className="text-2xl font-bold text-white mb-3">Modernisering</h3>
+                <p className="text-white/70 mb-6">
+                  För företag som vill förbättra sin befintliga hemsida
+                </p>
+              </div>
+              <ul className="space-y-3 text-white/80 mb-8 flex-grow">
+                <li className="flex items-start">
+                  <CheckCircle className="text-blue-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Din nuvarande hemsida är långsam eller gammal</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-blue-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Du förlorar kunder till konkurrenter</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-blue-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Vill behålla befintligt innehåll men förbättra prestanda</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-blue-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
+                  <span>Behöver bättre SEO och Google-ranking</span>
+                </li>
+              </ul>
+              <Link href="/contact">
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl">
+                  Kontakta oss om modernisering
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Combined What's Included & Pricing Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
+              Vad ingår och vad kostar det?
+            </h2>
+            <div className="h-1 w-16 bg-gradient-to-r from-skerry-orange-400 to-orange-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            {/* Hemsida med detaljerad info */}
+            <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-skerry-orange-500/20 backdrop-blur-sm rounded-full mb-4 border border-skerry-orange-400/30">
+                  <Globe className="w-8 h-8 text-skerry-orange-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Professionell hemsida</h3>
+                <div className="h-0.5 w-12 bg-white/50 mx-auto"></div>
               </div>
 
-              {/* Drift & Support */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-xl p-8 shadow-2xl border border-white/20 hover:shadow-3xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-green-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">
-                    <Wrench className="text-green-400" size={36} />
+              <div className="text-center mb-6">
+                <div className="text-4xl font-black text-white mb-1">Från 5 000 kr</div>
+                <div className="text-sm text-white/80 font-medium">exkl. moms • engångskostnad</div>
+                <div className="inline-block bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full mt-3 shadow-lg">
+                  Kostnadsfri byggning först!
                 </div>
-                  <h4 className="text-2xl font-bold text-white mb-3">Drift & Support</h4>
-                  <p className="text-white/70 mb-6">
-                    Säker hosting och support så din webbplats alltid fungerar.
-                  </p>
+              </div>
+
+              <div className="space-y-3 text-white/80 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>5 professionella sidor</span>
                 </div>
-                <ul className="space-y-3 text-white/80 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Professionell hosting & skalning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>SSL-certifikat & säkerhet</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Globalt CDN för snabb laddning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Kontinuerlig övervakning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Automatiska säkerhetskopior</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-green-400 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                    <span>Support vid tekniska problem</span>
-                  </li>
-                </ul>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>Modern teknik & säkerhet</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>Design baserad på dina önskemål</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>Mobilanpassad & SEO-optimerad</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>Optimerad för konvertering</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-skerry-orange-400" size={16} />
+                  <span>Nöjdhetsgaranti</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Supportavtal med detaljerad info */}
+            <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 backdrop-blur-sm rounded-full mb-4 border border-green-400/30">
+                  <Wrench className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Drift & Support</h3>
+                <div className="h-0.5 w-12 bg-white/50 mx-auto"></div>
+              </div>
+
+              <div className="text-center mb-6">
+                <div className="text-4xl font-black text-white mb-1">Från 180 kr</div>
+                <div className="text-sm text-white/80 font-medium">exkl. moms • per månad</div>
+                <div className="inline-block bg-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full mt-3 shadow-lg">
+                  Beror på valt servicepaket
+                </div>
+              </div>
+
+              <div className="space-y-3 text-white/80 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>Professionell hosting & skalning</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>SSL-certifikat & säkerhet</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>Globalt CDN för snabb laddning</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>Kontinuerlig övervakning</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>Automatiska säkerhetskopior</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="text-green-400" size={16} />
+                  <span>Support vid tekniska problem</span>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Pricing Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
-                Transparent prissättning
-              </h2>
-              <div className="h-1 w-16 bg-gradient-to-r from-skerry-orange-400 to-orange-400 mx-auto rounded-full"></div>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              
-              {/* Hemsida */}
-              <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-skerry-orange-500/20 backdrop-blur-sm rounded-full mb-4 border border-skerry-orange-400/30">
-                    <Globe className="w-8 h-8 text-skerry-orange-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Hemsida</h3>
-                  <div className="h-0.5 w-12 bg-white/50 mx-auto"></div>
-                </div>
-
-                <div className="text-center mb-6">
-                  <div className="text-4xl font-black text-white mb-1">Från 5 000 kr</div>
-                  <div className="text-sm text-white/80 font-medium">exkl. moms • engångskostnad</div>
-                  <div className="inline-block bg-skerry-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full mt-3 shadow-lg">
-                    Slutpris beror på valda funktioner
-                  </div>
-                </div>
-
-                <div className="space-y-3 text-white/80 text-sm">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-skerry-orange-400" size={16} />
-                    <span>5 sidor inkluderat</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-skerry-orange-400" size={16} />
-                    <span>Responsiv design</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-skerry-orange-400" size={16} />
-                    <span>SEO-optimerad</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-skerry-orange-400" size={16} />
-                    <span>Nöjdhetsgaranti</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Drift & Support */}
-              <div className="bg-black/60 backdrop-blur-3xl rounded-3xl p-8 shadow-2xl border border-white/30">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 backdrop-blur-sm rounded-full mb-4 border border-green-400/30">
-                    <Wrench className="w-8 h-8 text-green-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Drift & Support</h3>
-                  <div className="h-0.5 w-12 bg-white/50 mx-auto"></div>
-                </div>
-
-                <div className="text-center mb-6">
-                  <div className="text-4xl font-black text-white mb-1">180 – 380 kr</div>
-                  <div className="text-sm text-white/80 font-medium">exkl. moms • per månad</div>
-                  <div className="inline-block bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full mt-3 shadow-lg">
-                    Beror på valt servicepaket
-                  </div>
-                </div>
-
-                <div className="space-y-3 text-white/80 text-sm">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-green-400" size={16} />
-                    <span>Hosting & SSL-certifikat</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-green-400" size={16} />
-                    <span>Säkerhetskopior</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-green-400" size={16} />
-                    <span>Övervakning</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-green-400" size={16} />
-                    <span>Teknisk support</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>          {/* Service Packages Section */}
+        </div>          {/* Service Packages Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ textShadow: '0 6px 12px rgba(0, 0, 0, 0.6)' }}>
                 Välj servicepaket
               </h2>
+              <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+                Välj det servicepaket som passar ditt företags behov bäst
+              </p>
               <div className="h-1 w-16 bg-gradient-to-r from-skerry-orange-400 to-orange-400 mx-auto rounded-full" />
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Basleverans */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <FileText className="text-white/90" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center">
+                    <FileText className="text-blue-400" size={20} />
                   </div>
                   <div>
-                    <div className="text-white font-bold text-xl">Basleverans</div>
-                    <div className="text-white/70 text-sm">Passiv hemsidaleverans</div>
+                    <h3 className="text-xl font-bold text-white">Basleverans</h3>
+                    <p className="text-white/70 text-sm">Passiv hemsidaleverans</p>
                   </div>
                 </div>
+
                 <div className="text-3xl font-extrabold text-white mb-4">180 kr<span className="text-base font-medium text-white/60">/mån exkl. moms</span></div>
                 <div className="text-white/70 text-sm italic mb-4">Passar dig som sällan gör ändringar och främst vill ha en trygg, snabb hemsida.</div>
+                
                 <ul className="space-y-3 text-white/80 text-sm">
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Hosting, SSL och domänkoppling</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Övervakning & säkerhetskopior</li>
@@ -421,44 +435,27 @@ export default function Website() {
                 </ul>
               </div>
 
-              {/* Innehållsredigering */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <Wrench className="text-white/90" />
-                  </div>
-                  <div>
-                    <div className="text-white font-bold text-xl">Innehållsredigering</div>
-                    <div className="text-white/70 text-sm">Redigera texter & bilder själv</div>
-                  </div>
-                </div>
-                <div className="text-3xl font-extrabold text-white mb-4">380 kr<span className="text-base font-medium text-white/60">/mån exkl. moms</span></div>
-                <div className="text-white/70 text-sm italic mb-4">Passar dig som vill ändra texter och bilder enkelt själv.</div>
-                <ul className="space-y-3 text-white/80 text-sm">
-                  <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Enkelt CMS för texter och bilder</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Uppdatera befintligt innehåll själv</li>
-                  <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Större ändringar och nya sidor kräver hjälp</li>
-                </ul>
-              </div>
-
               {/* Skräddarsytt */}
-              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+              <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                    <CreditCard className="text-white/90" />
+                  <div className="w-12 h-12 rounded-xl bg-skerry-orange-500/20 border border-skerry-orange-400/30 flex items-center justify-center">
+                    <CreditCard className="text-skerry-orange-400" size={20} />
                   </div>
                   <div>
-                    <div className="text-white font-bold text-xl">Skräddarsytt</div>
-                    <div className="text-white/70 text-sm">Behöver du något annat?</div>
+                    <h3 className="text-xl font-bold text-white">Skräddarsytt</h3>
+                    <p className="text-white/70 text-sm">Behöver du något annat?</p>
                   </div>
                 </div>
+                
                 <div className="text-3xl font-extrabold text-white mb-4">Offert</div>
                 <div className="text-white/70 text-sm italic mb-4">Har du särskilda behov eller funktioner?</div>
+                
                 <ul className="space-y-3 text-white/80 text-sm mb-6">
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Enkla tillägg och anpassningar</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Kontaktformulär och bokningssystem</li>
                   <li className="flex items-start gap-2"><CheckCircle className="text-green-400 mt-0.5" size={16} />Personlig support och rådgivning</li>
                 </ul>
+                
                 <Link href="/contact">
                   <Button className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/10">Prata med oss</Button>
                 </Link>

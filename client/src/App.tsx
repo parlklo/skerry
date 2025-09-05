@@ -1,16 +1,20 @@
-import React from "react";
-import { Switch, Route } from "wouter";
+import React, { useEffect } from "react";
+import { Switch, Route, useLocation } from "wouter";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Home from "@/pages/home";
 import Services from "@/pages/services";
 import Website from "@/pages/website";
+import DigitalBusinessStart from "@/pages/digital-business-start";
+import Modernisering from "@/pages/modernisering";
 import DigitalMarketing from "@/pages/digital-marketing";
 import Automation from "@/pages/automation";
 import Karriar from "@/pages/karriar";
 import JuniorContentCreator from "@/pages/junior-content-creator";
 import SalesRole from "@/pages/sales-role";
 import Contact from "@/pages/contact";
+import Blog from "@/pages/blog";
+import BlogPostPage from "@/pages/blog-post";
 import AlmannaVillkor from "@/pages/allmanna-villkor";
 import Integritetspolicy from "@/pages/integritetspolicy";
 import NotFound from "@/pages/not-found";
@@ -18,6 +22,13 @@ import Success from "@/pages/success";
 import Cancel from "@/pages/cancel";
 
 function Router() {
+  const [location] = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -26,11 +37,15 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/services" component={Services} />
           <Route path="/website" component={Website} />
+          <Route path="/website/digital-business-start" component={DigitalBusinessStart} />
+          <Route path="/website/modernisering" component={Modernisering} />
           <Route path="/digital-marketing" component={DigitalMarketing} />
           <Route path="/automation" component={Automation} />
           <Route path="/karriar" component={Karriar} />
           <Route path="/karriar/junior-content-creator" component={JuniorContentCreator} />
           <Route path="/karriar/sales" component={SalesRole} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/blog/:slug" component={BlogPostPage} />
           <Route path="/contact" component={Contact} />
           <Route path="/allmanna-villkor" component={AlmannaVillkor} />
           <Route path="/integritetspolicy" component={Integritetspolicy} />
