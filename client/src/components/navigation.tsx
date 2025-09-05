@@ -20,6 +20,7 @@ export function Navigation() {
       label: "Tjänster",
       hasDropdown: true,
       dropdownItems: [
+        { path: "/website/digital-business-start", label: "Digital Business Start" },
         { path: "/website", label: "Hemsidor" },
         { path: "/digital-marketing", label: "Digital Marknadsföring" },
         { path: "/automation", label: "AI Agenter & Automation" },
